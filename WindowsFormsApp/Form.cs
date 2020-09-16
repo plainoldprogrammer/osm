@@ -9,6 +9,7 @@ namespace WindowsFormsApp
         public Form()
         {
             InitializeComponent();
+            this.Text = "Other Snippet Manager";
             DatabaseAccess databaseAccess = new DatabaseAccess();
             snippetsTitles.Text = databaseAccess.GetSnippetsTitles();
         }
