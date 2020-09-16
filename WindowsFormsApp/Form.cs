@@ -10,7 +10,7 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             DatabaseAccess databaseAccess = new DatabaseAccess();
-            textBox1.Text = databaseAccess.GetSnippetsTitles();
+            snippetsTitles.Text = databaseAccess.GetSnippetsTitles();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
