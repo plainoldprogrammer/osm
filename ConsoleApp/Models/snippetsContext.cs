@@ -2,15 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace ConsoleApp
+namespace ConsoleApp.Models
 {
-    public partial class snippets_copyContext : DbContext
+    public partial class snippetsContext : DbContext
     {
-        public snippets_copyContext()
+        public snippetsContext()
         {
         }
 
-        public snippets_copyContext(DbContextOptions<snippets_copyContext> options)
+        public snippetsContext(DbContextOptions<snippetsContext> options)
             : base(options)
         {
         }
@@ -23,7 +23,7 @@ namespace ConsoleApp
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlite("DataSource=C:\\\\Plainoldprogrammer\\\\osm\\\\db\\\\snippets_copy.db");
+                optionsBuilder.UseSqlite("DataSource=C:\\Plainoldprogrammer\\osm\\db\\snippets.db");
             }
         }
 
