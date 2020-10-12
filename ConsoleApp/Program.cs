@@ -7,7 +7,7 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             DatabaseAccess databaseAccess = new DatabaseAccess();
-            databaseAccess.CreateSnippet("C", "Hello World", "printf(\"%s\", \"hello world\")");
+            databaseAccess.EmptySnippetsTable();
         }
     }
 }

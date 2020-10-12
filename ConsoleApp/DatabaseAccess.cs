@@ -34,5 +34,14 @@ namespace ConsoleApp
             context.Add(snippet);
             context.SaveChanges();
         }
+
+        public void EmptySnippetsTable()
+        {
+            var context = new snippetsContext();
+            var snippets = context.Snippets.Select(x => x);
+
+            context.Snippets.RemoveRange(snippets);
+            context.SaveChanges();
+        }
     }
 }
