@@ -1,0 +1,1 @@
+Scaffold-DbContext "DataSource=C:\Plainoldprogrammer\osm\db\snippets.db" Microsoft.EntityFrameworkCore.Sqlite -OutputDir Models
