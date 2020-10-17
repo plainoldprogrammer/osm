@@ -30,6 +30,7 @@
         {
             this.snippetsCategories = new System.Windows.Forms.TextBox();
             this.snippetsTitles = new System.Windows.Forms.TextBox();
+            this.snippetContent = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // snippetsCategories
@@ -50,11 +51,20 @@
             this.snippetsTitles.Size = new System.Drawing.Size(247, 474);
             this.snippetsTitles.TabIndex = 1;
             // 
+            // snippetContent
+            // 
+            this.snippetContent.Location = new System.Drawing.Point(514, 57);
+            this.snippetContent.Multiline = true;
+            this.snippetContent.Name = "snippetContent";
+            this.snippetContent.Size = new System.Drawing.Size(514, 474);
+            this.snippetContent.TabIndex = 2;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 585);
+            this.Controls.Add(this.snippetContent);
             this.Controls.Add(this.snippetsTitles);
             this.Controls.Add(this.snippetsCategories);
             this.Name = "Form";
@@ -68,5 +78,6 @@
 
         private System.Windows.Forms.TextBox snippetsCategories;
         private System.Windows.Forms.TextBox snippetsTitles;
+        private System.Windows.Forms.TextBox snippetContent;
     }
 }
