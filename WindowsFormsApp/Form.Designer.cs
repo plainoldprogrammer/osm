@@ -31,23 +31,23 @@
             this.snippetsTitles = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // snippetsTitles
             // 
-            this.snippetsTitles.Location = new System.Drawing.Point(26, 43);
+            this.snippetsTitles.Location = new System.Drawing.Point(8, 57);
             this.snippetsTitles.Multiline = true;
-            this.snippetsTitles.Name = "textBox1";
-            this.snippetsTitles.Size = new System.Drawing.Size(238, 351);
+            this.snippetsTitles.Name = "snippetsTitles";
+            this.snippetsTitles.Size = new System.Drawing.Size(238, 474);
             this.snippetsTitles.TabIndex = 0;
             this.snippetsTitles.WordWrap = false;
             this.snippetsTitles.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // Form1
+            // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1040, 585);
             this.Controls.Add(this.snippetsTitles);
-            this.Name = "Form1";
+            this.Name = "Form";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

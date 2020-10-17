@@ -7,7 +7,7 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             DatabaseAccess databaseAccess = new DatabaseAccess();
-            databaseAccess.EmptySnippetsTable();
+            Console.WriteLine(databaseAccess.GetSnippetsTitles());
         }
     }
 }
