@@ -33,6 +33,7 @@
             this.snippetContent = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // snippetsCategories
@@ -79,11 +80,19 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Snippets";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(514, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(514, 23);
+            this.textBox1.TabIndex = 5;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 585);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.snippetContent);
@@ -103,5 +112,6 @@
         private System.Windows.Forms.TextBox snippetContent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
