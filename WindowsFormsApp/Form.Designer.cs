@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.snippetContent = new System.Windows.Forms.TextBox();
+            this.textBoxContent = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -36,13 +36,13 @@
             this.listBoxSnippets = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // snippetContent
+            // textBoxContent
             // 
-            this.snippetContent.Location = new System.Drawing.Point(514, 57);
-            this.snippetContent.Multiline = true;
-            this.snippetContent.Name = "snippetContent";
-            this.snippetContent.Size = new System.Drawing.Size(514, 484);
-            this.snippetContent.TabIndex = 2;
+            this.textBoxContent.Location = new System.Drawing.Point(514, 57);
+            this.textBoxContent.Multiline = true;
+            this.textBoxContent.Name = "textBoxContent";
+            this.textBoxContent.Size = new System.Drawing.Size(514, 484);
+            this.textBoxContent.TabIndex = 2;
             // 
             // label1
             // 
@@ -97,7 +97,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.snippetContent);
+            this.Controls.Add(this.textBoxContent);
             this.Name = "Form";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -106,7 +106,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox snippetContent;
+        private System.Windows.Forms.TextBox textBoxContent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
