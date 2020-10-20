@@ -9,7 +9,7 @@ namespace WindowsFormsApp
         public MainWindow()
         {
             InitializeComponent();
-            this.Text = "Osm";
+            this.Text = "Osm v0.1";
             DatabaseAccess databaseAccess = new DatabaseAccess();
         }
     }
