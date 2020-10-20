@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBoxCategories = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBoxSnippets = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // snippetContent
@@ -78,21 +78,21 @@
             this.listBoxCategories.Size = new System.Drawing.Size(247, 484);
             this.listBoxCategories.TabIndex = 6;
             // 
-            // listBox2
+            // listBoxSnippets
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(261, 57);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(247, 484);
-            this.listBox2.TabIndex = 7;
+            this.listBoxSnippets.FormattingEnabled = true;
+            this.listBoxSnippets.ItemHeight = 15;
+            this.listBoxSnippets.Location = new System.Drawing.Point(261, 57);
+            this.listBoxSnippets.Name = "listBoxSnippets";
+            this.listBoxSnippets.Size = new System.Drawing.Size(247, 484);
+            this.listBoxSnippets.TabIndex = 7;
             // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 585);
-            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBoxSnippets);
             this.Controls.Add(this.listBoxCategories);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -112,5 +112,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListBox listBoxCategories;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBoxSnippets;
     }
 }
