@@ -95,16 +95,16 @@
             // 
             this.buttonNewCategory.Location = new System.Drawing.Point(8, 557);
             this.buttonNewCategory.Name = "buttonNewCategory";
-            this.buttonNewCategory.Size = new System.Drawing.Size(118, 23);
+            this.buttonNewCategory.Size = new System.Drawing.Size(120, 23);
             this.buttonNewCategory.TabIndex = 8;
             this.buttonNewCategory.Text = "New Category";
             this.buttonNewCategory.UseVisualStyleBackColor = true;
             // 
             // buttonRemoveCategory
             // 
-            this.buttonRemoveCategory.Location = new System.Drawing.Point(132, 557);
+            this.buttonRemoveCategory.Location = new System.Drawing.Point(135, 556);
             this.buttonRemoveCategory.Name = "buttonRemoveCategory";
-            this.buttonRemoveCategory.Size = new System.Drawing.Size(123, 23);
+            this.buttonRemoveCategory.Size = new System.Drawing.Size(120, 23);
             this.buttonRemoveCategory.TabIndex = 9;
             this.buttonRemoveCategory.Text = "Remove Category";
             this.buttonRemoveCategory.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@
             // 
             this.buttonNewSnippet.Location = new System.Drawing.Point(261, 557);
             this.buttonNewSnippet.Name = "buttonNewSnippet";
-            this.buttonNewSnippet.Size = new System.Drawing.Size(122, 23);
+            this.buttonNewSnippet.Size = new System.Drawing.Size(120, 23);
             this.buttonNewSnippet.TabIndex = 10;
             this.buttonNewSnippet.Text = "New Snippet";
             this.buttonNewSnippet.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@
             // 
             this.buttonRemoveSnippet.Location = new System.Drawing.Point(389, 556);
             this.buttonRemoveSnippet.Name = "buttonRemoveSnippet";
-            this.buttonRemoveSnippet.Size = new System.Drawing.Size(119, 23);
+            this.buttonRemoveSnippet.Size = new System.Drawing.Size(120, 23);
             this.buttonRemoveSnippet.TabIndex = 11;
             this.buttonRemoveSnippet.Text = "Remove Snippet";
             this.buttonRemoveSnippet.UseVisualStyleBackColor = true;
