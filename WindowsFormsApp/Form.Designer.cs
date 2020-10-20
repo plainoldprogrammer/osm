@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 585);
+            this.ClientSize = new System.Drawing.Size(1040, 592);
             this.Controls.Add(this.listBoxSnippets);
             this.Controls.Add(this.listBoxCategories);
             this.Controls.Add(this.textBoxSnippetTitle);
