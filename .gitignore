@@ -2,4 +2,5 @@ WindowsFormsApp/bin/
 WindowsFormsApp/obj/
 ConsoleApp/bin/
 ConsoleApp/obj/
+.vs/*
 
