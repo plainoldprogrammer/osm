@@ -36,6 +36,7 @@
             this.listBoxSnippets = new System.Windows.Forms.ListBox();
             this.buttonNewCategory = new System.Windows.Forms.Button();
             this.buttonRemoveCategory = new System.Windows.Forms.Button();
+            this.buttonNewSnippet = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxSnippetContent
@@ -107,11 +108,21 @@
             this.buttonRemoveCategory.Text = "Remove Category";
             this.buttonRemoveCategory.UseVisualStyleBackColor = true;
             // 
+            // buttonNewSnippet
+            // 
+            this.buttonNewSnippet.Location = new System.Drawing.Point(261, 557);
+            this.buttonNewSnippet.Name = "buttonNewSnippet";
+            this.buttonNewSnippet.Size = new System.Drawing.Size(122, 23);
+            this.buttonNewSnippet.TabIndex = 10;
+            this.buttonNewSnippet.Text = "New Snippet";
+            this.buttonNewSnippet.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 592);
+            this.Controls.Add(this.buttonNewSnippet);
             this.Controls.Add(this.buttonRemoveCategory);
             this.Controls.Add(this.buttonNewCategory);
             this.Controls.Add(this.listBoxSnippets);
@@ -137,5 +148,6 @@
         private System.Windows.Forms.ListBox listBoxSnippets;
         private System.Windows.Forms.Button buttonNewCategory;
         private System.Windows.Forms.Button buttonRemoveCategory;
+        private System.Windows.Forms.Button buttonNewSnippet;
     }
 }
