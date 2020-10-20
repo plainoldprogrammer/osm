@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp
 {
-    partial class Form
+    partial class MainWindow
     {
         /// <summary>
         ///  Required designer variable.

@@ -4,9 +4,9 @@ using ConsoleApp;
 
 namespace WindowsFormsApp
 {
-    public partial class Form : System.Windows.Forms.Form
+    public partial class MainWindow : System.Windows.Forms.Form
     {
-        public Form()
+        public MainWindow()
         {
             InitializeComponent();
             this.Text = "Other Snippet Manager";
