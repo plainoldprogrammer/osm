@@ -14,6 +14,7 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             this.Text = "Osm v0.1";
+            this.menuStrip.Items.Add("File");
 
             databaseAccess = new DatabaseAccess();
             InitializeListBoxCategories();

@@ -38,7 +38,7 @@
             this.buttonRemoveCategory = new System.Windows.Forms.Button();
             this.buttonNewSnippet = new System.Windows.Forms.Button();
             this.buttonRemoveSnippet = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.SuspendLayout();
             // 
             // textBoxSnippetContent
@@ -128,13 +128,13 @@
             this.buttonRemoveSnippet.Text = "Remove Snippet";
             this.buttonRemoveSnippet.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1040, 24);
-            this.menuStrip1.TabIndex = 12;
-            this.menuStrip1.Text = "menuStrip";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(1040, 24);
+            this.menuStrip.TabIndex = 12;
+            this.menuStrip.Text = "menuStrip";
             // 
             // MainWindow
             // 
@@ -151,8 +151,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSnippetContent);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.menuStrip);
+            this.MainMenuStrip = this.menuStrip;
             this.Name = "MainWindow";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -171,6 +171,6 @@
         private System.Windows.Forms.Button buttonRemoveCategory;
         private System.Windows.Forms.Button buttonNewSnippet;
         private System.Windows.Forms.Button buttonRemoveSnippet;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip;
     }
 }
