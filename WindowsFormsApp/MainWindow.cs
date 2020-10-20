@@ -17,6 +17,7 @@ namespace WindowsFormsApp
             this.menuStrip.Items.Add("File");
             this.menuStrip.Items.Add("Edit");
             this.menuStrip.Items.Add("Tools");
+            this.menuStrip.Items.Add("Help");
 
             databaseAccess = new DatabaseAccess();
             InitializeListBoxCategories();
