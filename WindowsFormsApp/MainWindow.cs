@@ -16,6 +16,7 @@ namespace WindowsFormsApp
             this.Text = "Osm v0.1";
             this.menuStrip.Items.Add("File");
             this.menuStrip.Items.Add("Edit");
+            this.menuStrip.Items.Add("Tools");
 
             databaseAccess = new DatabaseAccess();
             InitializeListBoxCategories();
