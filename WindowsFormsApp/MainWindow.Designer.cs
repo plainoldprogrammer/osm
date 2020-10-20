@@ -155,7 +155,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxSnippetTitle;
         private System.Windows.Forms.ListBox listBoxCategories;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBoxSnippets;
         private System.Windows.Forms.Button buttonNewCategory;
         private System.Windows.Forms.Button buttonRemoveCategory;
