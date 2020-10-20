@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using ConsoleApp.Models;
 
@@ -7,6 +8,21 @@ namespace ConsoleApp
 {
     public class DatabaseAccess
     {
+        public  String GetCategories()
+        {
+            String categories = "";
+
+            var context = new snippetsContext();
+            List<String> allSnippetCategories = context.Categories.Select(x => x.Category).ToList();
+
+            foreach (String category in allSnippetCategories)
+            {
+                categories += category + "\r\n";
+            }
+
+            return categories;
+        }
+
         public String GetSnippetsTitles()
         {
             String titles = "";
