@@ -11,7 +11,6 @@ namespace WindowsFormsApp
             InitializeComponent();
             this.Text = "Other Snippet Manager";
             DatabaseAccess databaseAccess = new DatabaseAccess();
-            snippetsTitles.Text = databaseAccess.GetSnippetsTitles();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
