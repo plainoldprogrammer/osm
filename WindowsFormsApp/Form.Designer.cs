@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxCategories = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -69,14 +69,14 @@
             this.textBox1.Size = new System.Drawing.Size(514, 23);
             this.textBox1.TabIndex = 5;
             // 
-            // listBox1
+            // listBoxCategories
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(8, 57);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(247, 484);
-            this.listBox1.TabIndex = 6;
+            this.listBoxCategories.FormattingEnabled = true;
+            this.listBoxCategories.ItemHeight = 15;
+            this.listBoxCategories.Location = new System.Drawing.Point(8, 57);
+            this.listBoxCategories.Name = "listBoxCategories";
+            this.listBoxCategories.Size = new System.Drawing.Size(247, 484);
+            this.listBoxCategories.TabIndex = 6;
             // 
             // listBox2
             // 
@@ -93,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 585);
             this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxCategories);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -110,7 +110,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxCategories;
         private System.Windows.Forms.ListBox listBox2;
     }
 }
