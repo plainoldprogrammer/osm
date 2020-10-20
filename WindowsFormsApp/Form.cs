@@ -12,10 +12,5 @@ namespace WindowsFormsApp
             this.Text = "Other Snippet Manager";
             DatabaseAccess databaseAccess = new DatabaseAccess();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
