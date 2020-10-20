@@ -34,6 +34,7 @@
             this.textBoxSnippetTitle = new System.Windows.Forms.TextBox();
             this.listBoxCategories = new System.Windows.Forms.ListBox();
             this.listBoxSnippets = new System.Windows.Forms.ListBox();
+            this.buttonNewCategory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxSnippetContent
@@ -87,18 +88,28 @@
             this.listBoxSnippets.Size = new System.Drawing.Size(247, 484);
             this.listBoxSnippets.TabIndex = 7;
             // 
-            // Form
+            // buttonNewCategory
+            // 
+            this.buttonNewCategory.Location = new System.Drawing.Point(8, 557);
+            this.buttonNewCategory.Name = "buttonNewCategory";
+            this.buttonNewCategory.Size = new System.Drawing.Size(118, 23);
+            this.buttonNewCategory.TabIndex = 8;
+            this.buttonNewCategory.Text = "New Category";
+            this.buttonNewCategory.UseVisualStyleBackColor = true;
+            // 
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 592);
+            this.Controls.Add(this.buttonNewCategory);
             this.Controls.Add(this.listBoxSnippets);
             this.Controls.Add(this.listBoxCategories);
             this.Controls.Add(this.textBoxSnippetTitle);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSnippetContent);
-            this.Name = "Form";
+            this.Name = "MainWindow";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,5 +124,6 @@
         private System.Windows.Forms.ListBox listBoxCategories;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBoxSnippets;
+        private System.Windows.Forms.Button buttonNewCategory;
     }
 }
