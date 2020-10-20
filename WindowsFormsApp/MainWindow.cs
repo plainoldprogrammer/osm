@@ -9,7 +9,7 @@ namespace WindowsFormsApp
         public MainWindow()
         {
             InitializeComponent();
-            this.Text = "Other Snippet Manager";
+            this.Text = "Osm";
             DatabaseAccess databaseAccess = new DatabaseAccess();
         }
     }
