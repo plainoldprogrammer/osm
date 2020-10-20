@@ -28,23 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.snippetsCategories = new System.Windows.Forms.TextBox();
             this.snippetsTitles = new System.Windows.Forms.TextBox();
             this.snippetContent = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // snippetsCategories
-            // 
-            this.snippetsCategories.Location = new System.Drawing.Point(8, 57);
-            this.snippetsCategories.Multiline = true;
-            this.snippetsCategories.Name = "snippetsCategories";
-            this.snippetsCategories.Size = new System.Drawing.Size(247, 474);
-            this.snippetsCategories.TabIndex = 0;
-            this.snippetsCategories.WordWrap = false;
-            this.snippetsCategories.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // snippetsTitles
             // 
@@ -87,17 +77,26 @@
             this.textBox1.Size = new System.Drawing.Size(514, 23);
             this.textBox1.TabIndex = 5;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(8, 57);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(247, 484);
+            this.listBox1.TabIndex = 6;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 585);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.snippetContent);
             this.Controls.Add(this.snippetsTitles);
-            this.Controls.Add(this.snippetsCategories);
             this.Name = "Form";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -106,12 +105,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox snippetsCategories;
         private System.Windows.Forms.TextBox snippetsTitles;
         private System.Windows.Forms.TextBox snippetContent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
