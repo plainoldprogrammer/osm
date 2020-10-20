@@ -8,16 +8,16 @@ namespace ConsoleApp
 {
     public class DatabaseAccess
     {
-        public  String GetCategories()
+        public  List<String> GetCategories()
         {
-            String categories = "";
+            List<String> categories = new List<String>();
 
             var context = new snippetsContext();
             List<String> allSnippetCategories = context.Categories.Select(x => x.Category).ToList();
 
             foreach (String category in allSnippetCategories)
             {
-                categories += category + "\r\n";
+                categories.Add(category);
             }
 
             return categories;
