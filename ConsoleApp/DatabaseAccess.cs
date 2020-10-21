@@ -29,7 +29,7 @@ namespace ConsoleApp
             var context = new snippetsContext();
             String snippet = context.Snippets.Where(x => x.Category == category && x.Title == title).Select(x => x.Snippet).FirstOrDefault();
 
-            return snippet;
+            return snippet.Replace("\n", "\r\n");
         }
 
         public void CreateSnippet(string category, string title, string code)
