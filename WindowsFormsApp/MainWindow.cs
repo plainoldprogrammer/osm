@@ -9,18 +9,38 @@ namespace WindowsFormsApp
     public partial class MainWindow : System.Windows.Forms.Form
     {
         private DatabaseAccess databaseAccess;
+        ToolStripMenuItem menuItemFile;
+        ToolStripMenuItem menuItemEdit;
+        ToolStripMenuItem menuItemTools;
+        ToolStripMenuItem menuItemAbout;
 
         public MainWindow()
         {
             InitializeComponent();
-            this.Text = "Osm v0.1";
+            InitializeDatabaseAcess();
+            InitializeGui();
+        }
 
-            ToolStripMenuItem menuItemFile = new ToolStripMenuItem("File");
+        private void InitializeDatabaseAcess()
+        {
+            databaseAccess = new DatabaseAccess();
+        }
+
+        private void InitializeGui()
+        {
+            this.Text = "Osm v0.1";
+            InitializeMenuStrip();
+            InitializeListBoxCategories();
+        }
+
+        private void InitializeMenuStrip()
+        {
+            menuItemFile = new ToolStripMenuItem("File");
             ToolStripButton itemExit = new ToolStripButton("Exit");
             menuItemFile.DropDownItems.Add(itemExit);
             this.menuStrip.Items.Add(menuItemFile);
 
-            ToolStripMenuItem menuItemEdit = new ToolStripMenuItem("File");
+            menuItemEdit = new ToolStripMenuItem("File");
             ToolStripButton itemCut = new ToolStripButton("Cut");
             ToolStripButton itemCopy = new ToolStripButton("Copy");
             ToolStripButton itemPaste = new ToolStripButton("Paste");
@@ -29,18 +49,15 @@ namespace WindowsFormsApp
             menuItemEdit.DropDownItems.Add(itemPaste);
             this.menuStrip.Items.Add(menuItemEdit);
 
-            ToolStripMenuItem menuItemTools = new ToolStripMenuItem("Tools");
+            menuItemTools = new ToolStripMenuItem("Tools");
             ToolStripButton itemTools = new ToolStripButton("Tools");
             menuItemTools.DropDownItems.Add(itemTools);
             this.menuStrip.Items.Add(menuItemTools);
 
-            ToolStripMenuItem menuItemAbout = new ToolStripMenuItem("Help");
+            menuItemAbout = new ToolStripMenuItem("Help");
             ToolStripButton itemAbout = new ToolStripButton("About");
             menuItemAbout.DropDownItems.Add(itemAbout);
             this.menuStrip.Items.Add(menuItemAbout);
-
-            databaseAccess = new DatabaseAccess();
-            InitializeListBoxCategories();
         }
 
         private void InitializeListBoxCategories()
