@@ -29,8 +29,11 @@ namespace WindowsFormsApp
             menuItemEdit.DropDownItems.Add(itemPaste);
             this.menuStrip.Items.Add(menuItemEdit);
 
+            ToolStripMenuItem menuItemTools = new ToolStripMenuItem("Tools");
+            ToolStripButton itemTools = new ToolStripButton("Tools");
+            menuItemTools.DropDownItems.Add(itemTools);
+            this.menuStrip.Items.Add(menuItemTools);
 
-            this.menuStrip.Items.Add("Tools");
             this.menuStrip.Items.Add("Help");
 
             databaseAccess = new DatabaseAccess();
