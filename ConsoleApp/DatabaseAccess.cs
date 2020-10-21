@@ -24,6 +24,14 @@ namespace ConsoleApp
             return titles;
         }
 
+        public String GetSnippet(String category, String title)
+        {
+            var context = new snippetsContext();
+            String snippet = context.Snippets.Where(x => x.Category == category && x.Title == title).Select(x => x.Snippet).FirstOrDefault();
+
+            return snippet;
+        }
+
         public void CreateSnippet(string category, string title, string code)
         {
             var context = new snippetsContext();

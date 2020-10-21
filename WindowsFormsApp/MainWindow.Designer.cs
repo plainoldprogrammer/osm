@@ -92,6 +92,7 @@
             this.listBoxSnippets.Name = "listBoxSnippets";
             this.listBoxSnippets.Size = new System.Drawing.Size(247, 484);
             this.listBoxSnippets.TabIndex = 7;
+            this.listBoxSnippets.SelectedValueChanged += new System.EventHandler(this.listBoxSnippets_SelectedValueChanged);
             // 
             // buttonNewCategory
             // 

@@ -81,5 +81,14 @@ namespace WindowsFormsApp
                 listBoxSnippets.Items.Add(title);
             }
         }
+
+        private void listBoxSnippets_SelectedValueChanged(object sender, EventArgs e)
+        {
+            String category = listBoxCategories.SelectedItem.ToString();
+            String title = listBoxSnippets.SelectedItem.ToString();
+
+            textBoxSnippetTitle.Text = title;
+            textBoxSnippetContent.Text = databaseAccess.GetSnippet(category, title);
+        }
     }
 }
