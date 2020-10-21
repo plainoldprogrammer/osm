@@ -16,21 +16,6 @@ namespace ConsoleApp
             return categories;
         }
 
-        public String GetSnippetsTitles()
-        {
-            String titles = "";
-
-            var context = new snippetsContext();
-            List<Snippets> snippets = context.Snippets.Select(x => x).OrderBy(x => x.Title).ToList();
-
-            foreach (var snippet in snippets)
-            {
-                titles += snippet.Title + "\r\n";
-            }
-
-            return titles;
-        }
-
         public List<String> GetSnippetTitlesFromACategory(String category)
         {
             var context = new snippetsContext();
