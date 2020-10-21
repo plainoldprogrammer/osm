@@ -34,7 +34,10 @@ namespace WindowsFormsApp
             menuItemTools.DropDownItems.Add(itemTools);
             this.menuStrip.Items.Add(menuItemTools);
 
-            this.menuStrip.Items.Add("Help");
+            ToolStripMenuItem menuItemAbout = new ToolStripMenuItem("Help");
+            ToolStripButton itemAbout = new ToolStripButton("About Osm");
+            menuItemAbout.DropDownItems.Add(itemAbout);
+            this.menuStrip.Items.Add(menuItemAbout);
 
             databaseAccess = new DatabaseAccess();
             InitializeListBoxCategories();
