@@ -14,7 +14,12 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             this.Text = "Osm v0.1";
-            this.menuStrip.Items.Add("File");
+
+            ToolStripMenuItem menuItemFile = new ToolStripMenuItem("File");
+            ToolStripItem itemExit = new ToolStripButton("Exit");
+            menuItemFile.DropDownItems.Add(itemExit);
+            this.menuStrip.Items.Add(menuItemFile);
+
             this.menuStrip.Items.Add("Edit");
             this.menuStrip.Items.Add("Tools");
             this.menuStrip.Items.Add("Help");
