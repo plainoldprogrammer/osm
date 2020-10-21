@@ -16,11 +16,20 @@ namespace WindowsFormsApp
             this.Text = "Osm v0.1";
 
             ToolStripMenuItem menuItemFile = new ToolStripMenuItem("File");
-            ToolStripItem itemExit = new ToolStripButton("Exit");
+            ToolStripButton itemExit = new ToolStripButton("Exit");
             menuItemFile.DropDownItems.Add(itemExit);
             this.menuStrip.Items.Add(menuItemFile);
 
-            this.menuStrip.Items.Add("Edit");
+            ToolStripMenuItem menuItemEdit = new ToolStripMenuItem("File");
+            ToolStripButton itemCut = new ToolStripButton("Cut");
+            ToolStripButton itemCopy = new ToolStripButton("Copy");
+            ToolStripButton itemPaste = new ToolStripButton("Paste");
+            menuItemEdit.DropDownItems.Add(itemCut);
+            menuItemEdit.DropDownItems.Add(itemCopy);
+            menuItemEdit.DropDownItems.Add(itemPaste);
+            this.menuStrip.Items.Add(menuItemEdit);
+
+
             this.menuStrip.Items.Add("Tools");
             this.menuStrip.Items.Add("Help");
 
