@@ -35,7 +35,7 @@ namespace WindowsFormsApp
             this.menuStrip.Items.Add(menuItemTools);
 
             ToolStripMenuItem menuItemAbout = new ToolStripMenuItem("Help");
-            ToolStripButton itemAbout = new ToolStripButton("About Osm");
+            ToolStripButton itemAbout = new ToolStripButton("About");
             menuItemAbout.DropDownItems.Add(itemAbout);
             this.menuStrip.Items.Add(menuItemAbout);
 
