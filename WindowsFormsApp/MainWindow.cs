@@ -52,5 +52,17 @@ namespace WindowsFormsApp
                 this.listBoxCategories.Items.Add(category);
             }
         }
+
+        private void listBoxCategories_SelectedValueChanged(object sender, EventArgs e)
+        {
+            String category = listBoxCategories.SelectedItem.ToString();
+            List<String> titles = databaseAccess.GetSnippetTitlesFromACategory(category);
+            listBoxSnippets.Items.Clear();
+
+            foreach (String title in titles)
+            {
+                listBoxSnippets.Items.Add(title);
+            }
+        }
     }
 }

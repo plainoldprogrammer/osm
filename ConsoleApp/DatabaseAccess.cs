@@ -38,6 +38,14 @@ namespace ConsoleApp
             return titles;
         }
 
+        public List<String> GetSnippetTitlesFromACategory(String category)
+        {
+            var context = new snippetsContext();
+            List<String> titles = context.Snippets.Where(x => x.Category == category).Select(x => x.Title).ToList();
+
+            return titles;
+        }
+
         public void CreateSnippet(string category, string title, string code)
         {
             var context = new snippetsContext();

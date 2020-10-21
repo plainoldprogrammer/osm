@@ -82,6 +82,7 @@
             this.listBoxCategories.Name = "listBoxCategories";
             this.listBoxCategories.Size = new System.Drawing.Size(247, 484);
             this.listBoxCategories.TabIndex = 6;
+            this.listBoxCategories.SelectedValueChanged += new System.EventHandler(this.listBoxCategories_SelectedValueChanged);
             // 
             // listBoxSnippets
             // 
