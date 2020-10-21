@@ -10,15 +10,8 @@ namespace ConsoleApp
     {
         public  List<String> GetCategories()
         {
-            List<String> categories = new List<String>();
-
             var context = new snippetsContext();
-            List<String> allSnippetCategories = context.Categories.Select(x => x.Category).ToList();
-
-            foreach (String category in allSnippetCategories)
-            {
-                categories.Add(category);
-            }
+            List<String> categories = context.Categories.Select(x => x.Category).ToList();
 
             return categories;
         }
