@@ -74,7 +74,6 @@ namespace WindowsFormsApp
 
             itemExit.Click += itemExit_Clicked;
             itemAbout.Click += itemAbout_Clicked;
-            
         }
 
         private void ConfigureListBoxCategories()
