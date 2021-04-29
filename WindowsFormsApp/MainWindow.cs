@@ -68,6 +68,8 @@ namespace WindowsFormsApp
             this.menuStrip.Items.Add(menuItemAbout);
 
             itemExit.Click += itemExit_Clicked;
+            itemAbout.Click += itemAbout_Clicked;
+            
         }
 
         private void InitializeListBoxCategories()
@@ -119,6 +121,15 @@ namespace WindowsFormsApp
         private void itemExit_Clicked(Object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void itemAbout_Clicked(Object sender, EventArgs e)
+        {
+            String version = "0.1 (Alpha)";
+            String releaseDate = "2021 April 28";
+            String message = $"Osm\nOther Snippet Manager\nVersion: {version}\nRelease Date: {releaseDate}\nDeveloper: PlainOldProgrammer";
+
+            MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
