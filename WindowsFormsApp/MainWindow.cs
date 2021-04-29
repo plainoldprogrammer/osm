@@ -140,7 +140,7 @@ namespace WindowsFormsApp
             MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void listBoxCategories_DrawItem(object sender, System.Windows.Forms.DrawItemEventArgs e)
+        private void listBoxCategories_DrawItem(object sender, DrawItemEventArgs e)
         {
             e.DrawBackground();
             e.Graphics.DrawIcon(new Icon("icons/folder.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
