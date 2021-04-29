@@ -16,8 +16,13 @@ namespace WindowsFormsApp
         ToolStripMenuItem menuItemAbout;
         private const int EM_SETTABSTOPS = 0x00CB;
 
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool AllocConsole();
+
         public MainWindow()
         {
+            AllocConsole();
             InitializeComponent();
             InitializeDatabaseAcess();
             InitializeGui();
