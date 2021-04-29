@@ -186,6 +186,12 @@ namespace WindowsFormsApp
             string code = textBoxSnippetContent.ToString();
 
             databaseAccess.RemoveSnippet(category, title, code);
+
+            // Update the listBoxSnippets
+            int currentCategory = listBoxCategories.SelectedIndex - 1;
+            listBoxCategories.SelectedIndex = currentCategory;
+            currentCategory = listBoxCategories.SelectedIndex + 1;
+            listBoxCategories.SelectedIndex = currentCategory;
         }
     }
 }
