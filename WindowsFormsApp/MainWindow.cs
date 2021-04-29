@@ -178,5 +178,14 @@ namespace WindowsFormsApp
 
             e.DrawFocusRectangle();
         }
+
+        private void buttonRemoveSnippet_Click(object sender, EventArgs e)
+        {
+            string category = listBoxCategories.SelectedItem.ToString();
+            string title = listBoxSnippets.SelectedItem.ToString();
+            string code = textBoxSnippetContent.ToString();
+
+            databaseAccess.RemoveSnippet(category, title, code);
+        }
     }
 }

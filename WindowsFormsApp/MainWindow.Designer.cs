@@ -129,6 +129,7 @@
             this.buttonRemoveSnippet.TabIndex = 11;
             this.buttonRemoveSnippet.Text = "Remove Snippet";
             this.buttonRemoveSnippet.UseVisualStyleBackColor = true;
+            this.buttonRemoveSnippet.Click += new System.EventHandler(this.buttonRemoveSnippet_Click);
             // 
             // menuStrip
             // 

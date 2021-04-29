@@ -44,5 +44,19 @@ namespace ConsoleApp
             context.Add(snippet);
             context.SaveChanges();
         }
+
+        public void RemoveSnippet(string category, string title, string code)
+        {
+            var context = new snippetsContext();
+
+            Snippets snippet = new Snippets();
+            snippet.Id = context.Snippets.Where(x => x.Category.Equals(category) && x.Title.Equals(title)).Select(x => x.Id).FirstOrDefault();
+            snippet.Category = category;
+            snippet.Title = title;
+            snippet.Snippet = code;
+
+            context.Snippets.Remove(snippet);
+            context.SaveChanges();
+        }
     }
 }
