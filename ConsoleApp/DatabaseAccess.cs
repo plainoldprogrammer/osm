@@ -8,26 +8,26 @@ namespace ConsoleApp
 {
     public class DatabaseAccess
     {
-        public  List<String> GetCategories()
+        public  List<string> GetCategories()
         {
             var context = new snippetsContext();
-            List<String> categories = context.Categories.Select(x => x.Category).ToList();
+            List<string> categories = context.Categories.Select(x => x.Category).ToList();
 
             return categories;
         }
 
-        public List<String> GetSnippetTitlesFromACategory(String category)
+        public List<string> GetSnippetTitlesFromACategory(string category)
         {
             var context = new snippetsContext();
-            List<String> titles = context.Snippets.Where(x => x.Category == category).Select(x => x.Title).ToList();
+            List<string> titles = context.Snippets.Where(x => x.Category == category).Select(x => x.Title).ToList();
 
             return titles;
         }
 
-        public String GetSnippet(String category, String title)
+        public string GetSnippet(string category, string title)
         {
             var context = new snippetsContext();
-            String snippet = context.Snippets.Where(x => x.Category == category && x.Title == title).Select(x => x.Snippet).FirstOrDefault();
+            string snippet = context.Snippets.Where(x => x.Category == category && x.Title == title).Select(x => x.Snippet).FirstOrDefault();
 
             return snippet.Replace("\n", "\r\n");
         }
