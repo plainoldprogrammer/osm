@@ -72,8 +72,16 @@ namespace WindowsFormsApp
             
         }
 
+        private void ConfigureListBoxCategories()
+        {
+            this.listBoxCategories.DrawMode = DrawMode.OwnerDrawFixed;
+            this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItem);
+        }
+
         private void InitializeListBoxCategories()
         {
+            ConfigureListBoxCategories();
+
             List<string> categories = databaseAccess.GetCategories();
 
             foreach (string category in categories)
@@ -81,8 +89,6 @@ namespace WindowsFormsApp
                 this.listBoxCategories.Items.Add(category);
             }
 
-            this.listBoxCategories.DrawMode = DrawMode.OwnerDrawFixed;
-            this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItem);
             this.listBoxCategories.SelectedIndex = this.listBoxCategories.Items.Count - 1;
             this.listBoxSnippets.HorizontalScrollbar = true;
             this.textBoxSnippetContent.Select(0, 0);
