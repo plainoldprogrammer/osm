@@ -80,6 +80,9 @@ namespace WindowsFormsApp
             {
                 this.listBoxCategories.Items.Add(category);
             }
+
+            this.listBoxCategories.SelectedIndex = this.listBoxCategories.Items.Count - 1;
+            this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
         }
 
         private void listBoxCategories_SelectedValueChanged(object sender, EventArgs e)
