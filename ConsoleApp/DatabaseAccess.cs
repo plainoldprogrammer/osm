@@ -8,7 +8,7 @@ namespace ConsoleApp
 {
     public class DatabaseAccess
     {
-        public  List<string> GetCategories()
+        public List<string> GetCategories()
         {
             var context = new snippetsContext();
             List<string> categories = context.Categories.Select(x => x.Category).ToList();
