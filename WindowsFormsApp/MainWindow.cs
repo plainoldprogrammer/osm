@@ -81,6 +81,8 @@ namespace WindowsFormsApp
                 this.listBoxCategories.Items.Add(category);
             }
 
+            this.listBoxCategories.DrawMode = DrawMode.OwnerDrawFixed;
+            this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItem);
             this.listBoxCategories.SelectedIndex = this.listBoxCategories.Items.Count - 1;
             this.listBoxSnippets.HorizontalScrollbar = true;
             this.textBoxSnippetContent.Select(0, 0);
@@ -136,6 +138,20 @@ namespace WindowsFormsApp
             String message = $"Osm\nOther Snippet Manager\nVersion: {version}\nRelease Date: {releaseDate}\nDeveloper: PlainOldProgrammer";
 
             MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void listBoxCategories_DrawItem(object sender, System.Windows.Forms.DrawItemEventArgs e)
+        {
+            e.DrawBackground();
+            e.Graphics.DrawIcon(new Icon("icons/folder.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
+
+            Rectangle textRectangle = e.Bounds;
+            textRectangle.X += 18;
+
+            e.Graphics.DrawString(listBoxCategories.Items[e.Index].ToString(),
+                e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+
+            e.DrawFocusRectangle();
         }
     }
 }
