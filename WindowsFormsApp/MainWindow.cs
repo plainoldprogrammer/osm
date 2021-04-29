@@ -38,6 +38,8 @@ namespace WindowsFormsApp
             this.Text = "Osm v0.1 (Alpha)";
             SetTabWidth(this.textBoxSnippetContent, 1);
             InitializeMenuStrip();
+            ConfigureListBoxSnippets();
+            ConfigureListBoxCategories();
             InitializeListBoxCategories();
         }
 
@@ -78,10 +80,14 @@ namespace WindowsFormsApp
             this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItem);
         }
 
+        private void ConfigureListBoxSnippets()
+        {
+            this.listBoxSnippets.DrawMode = DrawMode.OwnerDrawFixed;
+            this.listBoxSnippets.DrawItem += new DrawItemEventHandler(listBoxSnippets_DrawItem);
+        }
+
         private void InitializeListBoxCategories()
         {
-            ConfigureListBoxCategories();
-
             List<string> categories = databaseAccess.GetCategories();
 
             foreach (string category in categories)
@@ -155,6 +161,20 @@ namespace WindowsFormsApp
             textRectangle.X += 18;
 
             e.Graphics.DrawString(listBoxCategories.Items[e.Index].ToString(),
+                e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+
+            e.DrawFocusRectangle();
+        }
+
+        private void listBoxSnippets_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            e.DrawBackground();
+            e.Graphics.DrawIcon(new Icon("icons/file.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
+
+            Rectangle textRectangle = e.Bounds;
+            textRectangle.X += 18;
+
+            e.Graphics.DrawString(listBoxSnippets.Items[e.Index].ToString(),
                 e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
 
             e.DrawFocusRectangle();
