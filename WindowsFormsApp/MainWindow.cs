@@ -61,6 +61,8 @@ namespace WindowsFormsApp
             ToolStripButton itemAbout = new ToolStripButton("About");
             menuItemAbout.DropDownItems.Add(itemAbout);
             this.menuStrip.Items.Add(menuItemAbout);
+
+            itemExit.Click += itemExit_Clicked;
         }
 
         private void InitializeListBoxCategories()
@@ -107,6 +109,11 @@ namespace WindowsFormsApp
                 , 1
                 , new int[] { tabWidth * characterWidth }
                 );
+        }
+
+        private void itemExit_Clicked(Object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
