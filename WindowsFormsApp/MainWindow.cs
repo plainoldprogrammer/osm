@@ -82,6 +82,7 @@ namespace WindowsFormsApp
             }
 
             this.listBoxCategories.SelectedIndex = this.listBoxCategories.Items.Count - 1;
+            this.listBoxSnippets.HorizontalScrollbar = true;
             this.textBoxSnippetContent.Select(0, 0);
         }
 
