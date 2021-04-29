@@ -74,9 +74,9 @@ namespace WindowsFormsApp
 
         private void InitializeListBoxCategories()
         {
-            List<String> categories = databaseAccess.GetCategories();
+            List<string> categories = databaseAccess.GetCategories();
 
-            foreach (String category in categories)
+            foreach (string category in categories)
             {
                 this.listBoxCategories.Items.Add(category);
             }
@@ -90,11 +90,11 @@ namespace WindowsFormsApp
 
         private void listBoxCategories_SelectedValueChanged(object sender, EventArgs e)
         {
-            String category = listBoxCategories.SelectedItem.ToString();
-            List<String> titles = databaseAccess.GetSnippetTitlesFromACategory(category);
+            string category = listBoxCategories.SelectedItem.ToString();
+            List<string> titles = databaseAccess.GetSnippetTitlesFromACategory(category);
             listBoxSnippets.Items.Clear();
 
-            foreach (String title in titles)
+            foreach (string title in titles)
             {
                 listBoxSnippets.Items.Add(title);
             }
@@ -104,8 +104,8 @@ namespace WindowsFormsApp
 
         private void listBoxSnippets_SelectedValueChanged(object sender, EventArgs e)
         {
-            String category = listBoxCategories.SelectedItem.ToString();
-            String title = listBoxSnippets.SelectedItem.ToString();
+            string category = listBoxCategories.SelectedItem.ToString();
+            string title = listBoxSnippets.SelectedItem.ToString();
 
             textBoxSnippetTitle.Text = title;
             textBoxSnippetContent.Text = databaseAccess.GetSnippet(category, title);
@@ -133,9 +133,9 @@ namespace WindowsFormsApp
 
         private void itemAbout_Clicked(Object sender, EventArgs e)
         {
-            String version = "0.1 (Alpha)";
-            String releaseDate = "2021 April 28";
-            String message = $"Osm\nOther Snippet Manager\nVersion: {version}\nRelease Date: {releaseDate}\nDeveloper: PlainOldProgrammer";
+            string version = "0.1 (Alpha)";
+            string releaseDate = "2021 April 28";
+            string message = $"Osm\nOther Snippet Manager\nVersion: {version}\nRelease Date: {releaseDate}\nDeveloper: PlainOldProgrammer";
 
             MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
