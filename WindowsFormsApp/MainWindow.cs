@@ -35,7 +35,7 @@ namespace WindowsFormsApp
 
         private void InitializeGui()
         {
-            this.Text = "Osm v0.1";
+            this.Text = "Osm v0.1 (Alpha)";
             SetTabWidth(this.textBoxSnippetContent, 1);
             InitializeMenuStrip();
             InitializeListBoxCategories();
