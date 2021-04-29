@@ -58,8 +58,8 @@ namespace WindowsFormsApp
             this.menuStrip.Items.Add(menuItemEdit);
 
             menuItemTools = new ToolStripMenuItem("Tools");
-            ToolStripButton itemTools = new ToolStripButton("Tools");
-            menuItemTools.DropDownItems.Add(itemTools);
+            ToolStripButton itemOptions = new ToolStripButton("Options");
+            menuItemTools.DropDownItems.Add(itemOptions);
             this.menuStrip.Items.Add(menuItemTools);
 
             menuItemAbout = new ToolStripMenuItem("Help");
