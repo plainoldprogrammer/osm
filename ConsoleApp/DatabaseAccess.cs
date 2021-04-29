@@ -35,8 +35,8 @@ namespace ConsoleApp
         public void CreateSnippet(string category, string title, string code)
         {
             var context = new snippetsContext();
-            Snippets snippet = new Snippets();
 
+            Snippets snippet = new Snippets();
             snippet.Category = category;
             snippet.Title = title;
             snippet.Snippet = code;
