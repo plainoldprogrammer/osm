@@ -82,7 +82,6 @@ namespace WindowsFormsApp
             }
 
             this.listBoxCategories.SelectedIndex = this.listBoxCategories.Items.Count - 1;
-            this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
             this.textBoxSnippetContent.Select(0, 0);
         }
 
@@ -96,6 +95,8 @@ namespace WindowsFormsApp
             {
                 listBoxSnippets.Items.Add(title);
             }
+
+            this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
         }
 
         private void listBoxSnippets_SelectedValueChanged(object sender, EventArgs e)
