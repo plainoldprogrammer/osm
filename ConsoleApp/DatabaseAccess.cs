@@ -1,4 +1,10 @@
-﻿using System.Collections.Generic;
+﻿/*
+ * Name:    OSM
+ * Author:  Plainoldprogrammer
+ *
+ */
+
+using System.Collections.Generic;
 using System.Linq;
 using ConsoleApp.Models;
 
