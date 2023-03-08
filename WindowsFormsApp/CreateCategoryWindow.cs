@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp;
 
 namespace Osm
 {
 	public partial class CreateCategoryWindow : Form
 	{
-		public CreateCategoryWindow()
+		private MainWindow _mainWindow;
+		public CreateCategoryWindow(MainWindow mainWindow)
 		{
 			InitializeComponent();
+			_mainWindow = mainWindow;
+		}
+
+		private void buttonCancel_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			_mainWindow.Enabled = true;
 		}
 	}
 }

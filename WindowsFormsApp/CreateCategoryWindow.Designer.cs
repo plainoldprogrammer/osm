@@ -34,39 +34,40 @@
 			buttonCancel = new System.Windows.Forms.Button();
 			SuspendLayout();
 			// 
-			// label1
+			// labelNewCategory
 			// 
 			labelNewCategory.AutoSize = true;
 			labelNewCategory.Location = new System.Drawing.Point(25, 27);
-			labelNewCategory.Name = "label1";
+			labelNewCategory.Name = "labelNewCategory";
 			labelNewCategory.Size = new System.Drawing.Size(116, 20);
 			labelNewCategory.TabIndex = 0;
 			labelNewCategory.Text = "Category Name:";
 			// 
-			// textBox1
+			// textBoxCategoryName
 			// 
 			textBoxCategoryName.Location = new System.Drawing.Point(147, 24);
-			textBoxCategoryName.Name = "textBox1";
+			textBoxCategoryName.Name = "textBoxCategoryName";
 			textBoxCategoryName.Size = new System.Drawing.Size(181, 27);
 			textBoxCategoryName.TabIndex = 1;
 			// 
-			// button1
+			// buttonOk
 			// 
 			buttonOk.Location = new System.Drawing.Point(82, 100);
-			buttonOk.Name = "button1";
+			buttonOk.Name = "buttonOk";
 			buttonOk.Size = new System.Drawing.Size(94, 29);
 			buttonOk.TabIndex = 2;
 			buttonOk.Text = "Ok";
 			buttonOk.UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// buttonCancel
 			// 
 			buttonCancel.Location = new System.Drawing.Point(194, 100);
-			buttonCancel.Name = "button2";
+			buttonCancel.Name = "buttonCancel";
 			buttonCancel.Size = new System.Drawing.Size(94, 29);
 			buttonCancel.TabIndex = 3;
 			buttonCancel.Text = "Cancel";
 			buttonCancel.UseVisualStyleBackColor = true;
+			buttonCancel.Click += buttonCancel_Click;
 			// 
 			// CreateCategoryWindow
 			// 

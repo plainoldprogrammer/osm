@@ -20,6 +20,8 @@ namespace WindowsFormsApp
 		ToolStripMenuItem menuItemAbout;
 		private const int EM_SETTABSTOPS = 0x00CB;
 
+		private CreateCategoryWindow createCategoryWindow;
+
 		[DllImport("kernel32.dll", SetLastError = true)]
 		[return: MarshalAs(UnmanagedType.Bool)]
 		static extern bool AllocConsole();
@@ -30,6 +32,7 @@ namespace WindowsFormsApp
 			InitializeComponent();
 			InitializeDatabaseAcess();
 			InitializeGui();
+			createCategoryWindow = new CreateCategoryWindow(this);
 		}
 
 		private void InitializeDatabaseAcess()
@@ -197,7 +200,6 @@ namespace WindowsFormsApp
 
 		private void buttonNewCategory_Click(object sender, EventArgs e)
 		{
-			CreateCategoryWindow createCategoryWindow = new CreateCategoryWindow();
 			this.Enabled = false;
 			createCategoryWindow.Show();
 		}
