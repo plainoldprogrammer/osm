@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,10 +15,13 @@ namespace Osm
 	public partial class CreateCategoryWindow : Form
 	{
 		private MainWindow _mainWindow;
-		public CreateCategoryWindow(MainWindow mainWindow)
+		private DatabaseAccess _databaseAccess;
+
+		public CreateCategoryWindow(MainWindow mainWindow, DatabaseAccess databaseAccess)
 		{
 			InitializeComponent();
 			_mainWindow = mainWindow;
+			_databaseAccess = databaseAccess;
 		}
 
 		private void buttonCancel_Click(object sender, EventArgs e)
@@ -28,10 +32,10 @@ namespace Osm
 
 		private void buttonOk_Click(object sender, EventArgs e)
 		{
-			string category = textBoxCategoryName.Text;
-
-			this.Hide();
+			string category = textBoxCategoryName.Text;			
 			_mainWindow.Enabled = true;
+			_databaseAccess.CreateCategory(category);
+			this.Hide();
 		}
 	}
 }

@@ -20,6 +20,17 @@ namespace ConsoleApp
             return categories;
         }
 
+        public void CreateCategory(string categoryName)
+        {
+            var context = new snippetsContext();
+            Categories category = new Categories()
+            {
+                Category = categoryName
+            };
+            context.Add<Categories>(category);
+            context.SaveChanges();
+        }
+
         public List<string> GetSnippetTitlesFromACategory(string category)
         {
             var context = new snippetsContext();

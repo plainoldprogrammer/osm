@@ -32,7 +32,7 @@ namespace WindowsFormsApp
 			InitializeComponent();
 			InitializeDatabaseAcess();
 			InitializeGui();
-			createCategoryWindow = new CreateCategoryWindow(this);
+			createCategoryWindow = new CreateCategoryWindow(this, databaseAccess);
 		}
 
 		private void InitializeDatabaseAcess()
