@@ -1,0 +1,3 @@
+﻿Scaffold the database:
+> dotnet ef dbcontext scaffold "Datasource=C:\Plainoldprogrammer_dev\Osm\db\snippets.db" -o Models Microsoft.EntityFrameworkCore.Sqlite -c "SnippetsContext" -f
+
