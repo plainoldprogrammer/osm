@@ -197,8 +197,6 @@ namespace WindowsFormsApp
 
 		private void buttonNewCategory_Click(object sender, EventArgs e)
 		{
-			System.Diagnostics.Debug.WriteLine("Creating a new category");
-
 			CreateCategoryWindow createCategoryWindow = new CreateCategoryWindow();
 			createCategoryWindow.Show();
 		}
