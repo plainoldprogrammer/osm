@@ -14,26 +14,26 @@ namespace ConsoleApp
     {
         public List<string> GetCategories()
         {
-            var context = new snippetsContext();
-            List<string> categories = context.Categories.Select(x => x.Category).ToList();
+            var context = new SnippetsContext();
+            List<string> categories = context.Categories.Select(x => x.Category1).ToList();
 
             return categories;
         }
 
         public void CreateCategory(string categoryName)
         {
-            var context = new snippetsContext();
-            Categories category = new Categories()
+            var context = new SnippetsContext();
+            Category category = new Category()
             {
-                Category = categoryName
+                Category1 = categoryName
             };
-            context.Add<Categories>(category);
+            context.Add<Category>(category);
             context.SaveChanges();
         }
 
         public List<string> GetSnippetTitlesFromACategory(string category)
         {
-            var context = new snippetsContext();
+            var context = new SnippetsContext();
             List<string> titles = context.Snippets.Where(x => x.Category == category).Select(x => x.Title).ToList();
 
             return titles;
@@ -41,20 +41,20 @@ namespace ConsoleApp
 
         public string GetSnippet(string category, string title)
         {
-            var context = new snippetsContext();
-            string snippet = context.Snippets.Where(x => x.Category == category && x.Title == title).Select(x => x.Snippet).FirstOrDefault();
+            var context = new SnippetsContext();
+            string snippet = context.Snippets.Where(x => x.Category == category && x.Title == title).Select(x => x.Snippet1).FirstOrDefault();
 
             return snippet.Replace("\n", "\r\n");
         }
 
         public void CreateSnippet(string category, string title, string code)
         {
-            var context = new snippetsContext();
+            var context = new SnippetsContext();
 
-            Snippets snippet = new Snippets();
+            Snippet snippet = new Snippet();
             snippet.Category = category;
             snippet.Title = title;
-            snippet.Snippet = code;
+            snippet.Snippet1 = code;
 
             context.Add(snippet);
             context.SaveChanges();
@@ -62,13 +62,13 @@ namespace ConsoleApp
 
         public void RemoveSnippet(string category, string title, string code)
         {
-            var context = new snippetsContext();
+            var context = new SnippetsContext();
 
-            Snippets snippet = new Snippets();
+            Snippet snippet = new Snippet();
             snippet.Id = context.Snippets.Where(x => x.Category.Equals(category) && x.Title.Equals(title)).Select(x => x.Id).FirstOrDefault();
             snippet.Category = category;
             snippet.Title = title;
-            snippet.Snippet = code;
+            snippet.Snippet1 = code;
 
             context.Snippets.Remove(snippet);
             context.SaveChanges();
