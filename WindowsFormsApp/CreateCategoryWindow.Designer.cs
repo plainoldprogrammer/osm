@@ -28,55 +28,55 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			label1 = new System.Windows.Forms.Label();
-			textBox1 = new System.Windows.Forms.TextBox();
-			button1 = new System.Windows.Forms.Button();
-			button2 = new System.Windows.Forms.Button();
+			labelNewCategory = new System.Windows.Forms.Label();
+			textBoxCategoryName = new System.Windows.Forms.TextBox();
+			buttonOk = new System.Windows.Forms.Button();
+			buttonCancel = new System.Windows.Forms.Button();
 			SuspendLayout();
 			// 
 			// label1
 			// 
-			label1.AutoSize = true;
-			label1.Location = new System.Drawing.Point(25, 27);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(116, 20);
-			label1.TabIndex = 0;
-			label1.Text = "Category Name:";
+			labelNewCategory.AutoSize = true;
+			labelNewCategory.Location = new System.Drawing.Point(25, 27);
+			labelNewCategory.Name = "label1";
+			labelNewCategory.Size = new System.Drawing.Size(116, 20);
+			labelNewCategory.TabIndex = 0;
+			labelNewCategory.Text = "Category Name:";
 			// 
 			// textBox1
 			// 
-			textBox1.Location = new System.Drawing.Point(147, 24);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new System.Drawing.Size(181, 27);
-			textBox1.TabIndex = 1;
+			textBoxCategoryName.Location = new System.Drawing.Point(147, 24);
+			textBoxCategoryName.Name = "textBox1";
+			textBoxCategoryName.Size = new System.Drawing.Size(181, 27);
+			textBoxCategoryName.TabIndex = 1;
 			// 
 			// button1
 			// 
-			button1.Location = new System.Drawing.Point(82, 100);
-			button1.Name = "button1";
-			button1.Size = new System.Drawing.Size(94, 29);
-			button1.TabIndex = 2;
-			button1.Text = "Ok";
-			button1.UseVisualStyleBackColor = true;
+			buttonOk.Location = new System.Drawing.Point(82, 100);
+			buttonOk.Name = "button1";
+			buttonOk.Size = new System.Drawing.Size(94, 29);
+			buttonOk.TabIndex = 2;
+			buttonOk.Text = "Ok";
+			buttonOk.UseVisualStyleBackColor = true;
 			// 
 			// button2
 			// 
-			button2.Location = new System.Drawing.Point(194, 100);
-			button2.Name = "button2";
-			button2.Size = new System.Drawing.Size(94, 29);
-			button2.TabIndex = 3;
-			button2.Text = "Cancel";
-			button2.UseVisualStyleBackColor = true;
+			buttonCancel.Location = new System.Drawing.Point(194, 100);
+			buttonCancel.Name = "button2";
+			buttonCancel.Size = new System.Drawing.Size(94, 29);
+			buttonCancel.TabIndex = 3;
+			buttonCancel.Text = "Cancel";
+			buttonCancel.UseVisualStyleBackColor = true;
 			// 
 			// CreateCategoryWindow
 			// 
 			AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			ClientSize = new System.Drawing.Size(363, 161);
-			Controls.Add(button2);
-			Controls.Add(button1);
-			Controls.Add(textBox1);
-			Controls.Add(label1);
+			Controls.Add(buttonCancel);
+			Controls.Add(buttonOk);
+			Controls.Add(textBoxCategoryName);
+			Controls.Add(labelNewCategory);
 			Name = "CreateCategoryWindow";
 			Text = "New Category";
 			ResumeLayout(false);
@@ -85,9 +85,9 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Label labelNewCategory;
+		private System.Windows.Forms.TextBox textBoxCategoryName;
+		private System.Windows.Forms.Button buttonOk;
+		private System.Windows.Forms.Button buttonCancel;
 	}
 }
