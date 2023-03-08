@@ -78,7 +78,7 @@
 			Controls.Add(textBox1);
 			Controls.Add(label1);
 			Name = "CreateCategoryWindow";
-			Text = "CreateCategoryWindow";
+			Text = "New Category";
 			ResumeLayout(false);
 			PerformLayout();
 		}
