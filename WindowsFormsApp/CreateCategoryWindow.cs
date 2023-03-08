@@ -25,5 +25,13 @@ namespace Osm
 			this.Hide();
 			_mainWindow.Enabled = true;
 		}
+
+		private void buttonOk_Click(object sender, EventArgs e)
+		{
+			string category = textBoxCategoryName.Text;
+
+			this.Hide();
+			_mainWindow.Enabled = true;
+		}
 	}
 }
