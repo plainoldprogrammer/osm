@@ -35,6 +35,7 @@ namespace Osm
 			string category = textBoxCategoryName.Text;			
 			_mainWindow.Enabled = true;
 			_databaseAccess.CreateCategory(category);
+			_mainWindow.RefreshCategoriesListBox();
 			this.Hide();
 		}
 	}

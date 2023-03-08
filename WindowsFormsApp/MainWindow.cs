@@ -94,6 +94,16 @@ namespace WindowsFormsApp
 
 		private void InitializeListBoxCategories()
 		{
+			this.RefreshCategoriesListBox();
+		}
+
+		public void RefreshCategoriesListBox()
+		{
+			if (this.listBoxCategories.Items.Count > 0)
+			{
+				this.listBoxCategories.Items.Clear();
+			}
+
 			List<string> categories = databaseAccess.GetCategories();
 
 			foreach (string category in categories)
