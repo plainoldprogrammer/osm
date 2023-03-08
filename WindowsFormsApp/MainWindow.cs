@@ -4,6 +4,7 @@ using ConsoleApp;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Drawing;
+using Osm;
 
 namespace WindowsFormsApp
 {
@@ -196,7 +197,10 @@ namespace WindowsFormsApp
 
 		private void buttonNewCategory_Click(object sender, EventArgs e)
 		{
+			System.Diagnostics.Debug.WriteLine("Creating a new category");
 
+			CreateCategoryWindow createCategoryWindow = new CreateCategoryWindow();
+			createCategoryWindow.Show();
 		}
 	}
 }
