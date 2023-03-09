@@ -268,6 +268,7 @@ namespace WindowsFormsApp
 			};
 
 			this.listBoxSnippets.Items.Add(snippet);
+			this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
 
 			this.textBoxSnippetTitle.Text = titleOfNewSnippet;
 			databaseAccess.CreateSnippet(snippet);
