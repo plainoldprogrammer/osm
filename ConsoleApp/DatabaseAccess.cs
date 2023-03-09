@@ -27,7 +27,8 @@ namespace ConsoleApp
         {
             var context = new SnippetsContext();
             var snippetsFromCategory = context.Snippets.Select(x => x).Where(y => y.CategoryId == category.Id);
-            context.Snippets.RemoveRange(snippetsFromCategory); 
+            context.Snippets.RemoveRange(snippetsFromCategory);
+            context.Categories.Remove(category);
             context.SaveChanges();
         }
 

@@ -245,8 +245,10 @@ namespace WindowsFormsApp
 				if (this.listBoxCategories.Items.Count > 0)
 				{
 					this.listBoxCategories.SelectedIndex = index;
-					databaseAccess.RemoveCategory(selectedCategory);
+					
 				}
+
+				databaseAccess.RemoveCategory(selectedCategory);
 			}
 		}
 
