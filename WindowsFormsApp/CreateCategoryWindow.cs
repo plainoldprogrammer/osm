@@ -39,6 +39,7 @@ namespace Osm
 			_mainWindow.RefreshCategoriesListBox();
 			this.textBoxCategoryName.Text = "";
 			textBoxCategoryName.Select();
+			_mainWindow.EnableRemoveCategoryButton();
 			this.Hide();
 		}
 	}

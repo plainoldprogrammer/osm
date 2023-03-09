@@ -242,6 +242,7 @@ namespace WindowsFormsApp
 				else
 				{
 					listBoxSnippets.Items.Clear();
+					buttonRemoveCategory.Enabled = false;
 				}
 
 				databaseAccess.RemoveCategory(selectedCategory);
@@ -293,6 +294,11 @@ namespace WindowsFormsApp
 			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 			selectedSnippet.Snippet1 = content;
 			databaseAccess.UpdateSnippet(selectedSnippet);
+		}
+
+		public void EnableRemoveCategoryButton()
+		{
+			this.buttonRemoveCategory.Enabled = true;
 		}
 	}
 }
