@@ -237,8 +237,13 @@ namespace WindowsFormsApp
 				{
 					this.listBoxCategories.SelectedIndex = index;
 				}
-				
+
 			}
+		}
+
+		private void buttonNewSnippet_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

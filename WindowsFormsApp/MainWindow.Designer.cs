@@ -129,6 +129,7 @@
 			buttonNewSnippet.TabIndex = 10;
 			buttonNewSnippet.Text = "New Snippet";
 			buttonNewSnippet.UseVisualStyleBackColor = true;
+			buttonNewSnippet.Click += buttonNewSnippet_Click;
 			// 
 			// buttonRemoveSnippet
 			// 
