@@ -79,7 +79,7 @@ namespace WindowsFormsApp
 			this.menuStrip.Items.Add(menuItemAbout);
 
 			itemExit.Click += itemExit_Clicked;
-			itemAbout.Click += itemAbout_Clicked;
+			itemAbout.Click += ItemAbout_Clicked;
 		}
 
 		private void ConfigureListBoxCategories()
@@ -180,7 +180,7 @@ namespace WindowsFormsApp
 			this.Close();
 		}
 
-		private void itemAbout_Clicked(Object sender, EventArgs e)
+		private void ItemAbout_Clicked(Object sender, EventArgs e)
 		{
 			string message = $"Osm\nOther Snippet Manager\nVersion: {VERSION}\nRelease Date: {RELEASE_DATE}\nDeveloper: PlainOldProgrammer";
 			MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);
