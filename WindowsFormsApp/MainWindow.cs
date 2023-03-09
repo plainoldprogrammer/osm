@@ -130,19 +130,6 @@ namespace WindowsFormsApp
 		{
 			if (listBoxCategories.SelectedIndex >= 0)
 			{
-				/*
-				string category = listBoxCategories.SelectedItem.ToString();
-				List<string> titles = databaseAccess.GetSnippetTitlesFromACategory(category);
-				listBoxSnippets.Items.Clear();
-
-				foreach (string title in titles)
-				{
-					listBoxSnippets.Items.Add(title);
-				}
-
-				this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
-				*/
-
 				Category selectedCategory = listBoxCategories.SelectedItem as Category;
 				List<Snippet> snippets =  databaseAccess.GetAllSnippetsFromCategory(selectedCategory);
 
