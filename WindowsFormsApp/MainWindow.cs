@@ -239,7 +239,6 @@ namespace WindowsFormsApp
 					this.listBoxCategories.SelectedIndex = index;
 					databaseAccess.RemoveCategory(selectedCategory);
 				}
-
 			}
 		}
 
@@ -247,6 +246,18 @@ namespace WindowsFormsApp
 		{
 			this.textBoxSnippetTitle.Text = "";
 			this.textBoxSnippetContent.Text = "";
+			string titleOfNewSnippet = "New Snippet";
+
+			Category selectedCategory = this.listBoxCategories.SelectedItem as Category;
+			Snippet snippet = new Snippet()
+			{
+				Title = titleOfNewSnippet,
+				Category = selectedCategory.Category1,
+				Datetime = BitConverter.GetBytes(DateTime.Now.Ticks)
+			};
+
+			this.textBoxSnippetTitle.Text = titleOfNewSnippet;
+			databaseAccess.CreateSnippet(snippet);
 		}
 	}
 }

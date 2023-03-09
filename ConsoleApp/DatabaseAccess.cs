@@ -54,15 +54,9 @@ namespace ConsoleApp
             return snippet.Replace("\n", "\r\n");
         }
 
-        public void CreateSnippet(string category, string title, string code)
+        public void CreateSnippet(Snippet snippet)
         {
             var context = new SnippetsContext();
-
-            Snippet snippet = new Snippet();
-            snippet.Category = category;
-            snippet.Title = title;
-            snippet.Snippet1 = code;
-
             context.Add(snippet);
             context.SaveChanges();
         }
