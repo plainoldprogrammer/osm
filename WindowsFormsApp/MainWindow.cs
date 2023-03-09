@@ -256,7 +256,6 @@ namespace WindowsFormsApp
 
 		private void buttonNewSnippet_Click(object sender, EventArgs e)
 		{
-			this.textBoxSnippetTitle.Text = "";
 			this.textBoxSnippetContent.Text = "";
 			string titleOfNewSnippet = "New Snippet";
 
@@ -264,14 +263,15 @@ namespace WindowsFormsApp
 			Snippet snippet = new Snippet()
 			{
 				Title = titleOfNewSnippet,
-				Category = selectedCategory,
+				CategoryId = selectedCategory.Id,
 				Datetime = BitConverter.GetBytes(DateTime.Now.Ticks)
 			};
 
-			this.listBoxSnippets.Items.Add(snippet);
-			this.textBoxSnippetTitle.Text = titleOfNewSnippet;
 			databaseAccess.CreateSnippet(snippet);
+
+			this.listBoxSnippets.Items.Add(snippet);
 			this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
+			this.textBoxSnippetTitle.Text = titleOfNewSnippet;
 		}
 
 		private void textBoxSnippetContent_TextChanged(object sender, EventArgs e)
