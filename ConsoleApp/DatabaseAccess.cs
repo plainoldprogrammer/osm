@@ -82,5 +82,12 @@ namespace ConsoleApp
 
             return snippets;
         }
+
+        public void UpdateSnippet(Snippet snippet)
+        {
+            var context = new SnippetsContext();
+            context.Snippets.Update(snippet);
+            context.SaveChanges();
+        }
 	}
 }

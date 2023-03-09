@@ -275,7 +275,10 @@ namespace WindowsFormsApp
 
 		private void textBoxSnippetContent_TextChanged(object sender, EventArgs e)
 		{
-			string snippetContent = ((TextBox)sender).Text;
+			string content = ((TextBox)sender).Text;
+			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+			selectedSnippet.Snippet1 = content;
+			databaseAccess.UpdateSnippet(selectedSnippet);
 		}
 	}
 }
