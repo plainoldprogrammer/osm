@@ -74,5 +74,13 @@ namespace ConsoleApp
             context.Snippets.Remove(snippet);
             context.SaveChanges();
         }
-    }
+
+		public List<Snippet> GetAllSnippetsFromCategory(Category category)
+        {
+            var context = new SnippetsContext();
+            List<Snippet> snippets = context.Snippets.Select(x => x).Where(y => y.Category == category.Category1).ToList<Snippet>();
+
+            return snippets;
+        }
+	}
 }

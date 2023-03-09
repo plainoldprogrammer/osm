@@ -130,6 +130,7 @@ namespace WindowsFormsApp
 		{
 			if (listBoxCategories.SelectedIndex >= 0)
 			{
+				/*
 				string category = listBoxCategories.SelectedItem.ToString();
 				List<string> titles = databaseAccess.GetSnippetTitlesFromACategory(category);
 				listBoxSnippets.Items.Clear();
@@ -140,6 +141,15 @@ namespace WindowsFormsApp
 				}
 
 				this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
+				*/
+
+				Category selectedCategory = listBoxCategories.SelectedItem as Category;
+				List<Snippet> snippets =  databaseAccess.GetAllSnippetsFromCategory(selectedCategory);
+
+				foreach (Snippet snippet in snippets)
+				{
+					this.listBoxSnippets.Items.Add(snippet);
+				}
 			}
 		}
 
@@ -147,11 +157,9 @@ namespace WindowsFormsApp
 		{
 			if (listBoxSnippets.Items.Count > 0)
 			{
-				string category = listBoxCategories.SelectedItem.ToString();
-				string title = listBoxSnippets.SelectedItem.ToString();
-
-				textBoxSnippetTitle.Text = title;
-				textBoxSnippetContent.Text = databaseAccess.GetSnippet(category, title);
+				Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+				this.textBoxSnippetTitle.Text = selectedSnippet.Title;
+				this.textBoxSnippetContent.Text = selectedSnippet.Snippet1;
 			}
 		}
 
