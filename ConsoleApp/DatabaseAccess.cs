@@ -12,10 +12,10 @@ namespace ConsoleApp
 {
     public class DatabaseAccess
     {
-        public List<string> GetCategories()
+        public List<Category> GetCategories()
         {
             var context = new SnippetsContext();
-            List<string> categories = context.Categories.Select(x => x.Category1).ToList();
+            List<Category> categories = context.Categories.Select(x => x).ToList<Category>();
 
             return categories;
         }

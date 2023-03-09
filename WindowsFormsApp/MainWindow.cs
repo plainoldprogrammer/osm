@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Drawing;
 using Osm;
+using ConsoleApp.Models;
 
 namespace WindowsFormsApp
 {
@@ -94,6 +95,8 @@ namespace WindowsFormsApp
 
 		private void InitializeListBoxCategories()
 		{
+			this.listBoxCategories.DisplayMember = "Category1";
+			this.listBoxCategories.ValueMember = "Id";
 			this.RefreshCategoriesListBox();
 		}
 
@@ -104,9 +107,9 @@ namespace WindowsFormsApp
 				this.listBoxCategories.Items.Clear();
 			}
 
-			List<string> categories = databaseAccess.GetCategories();
+			List<Category> categories = databaseAccess.GetCategories();
 
-			foreach (string category in categories)
+			foreach (Category category in categories)
 			{
 				this.listBoxCategories.Items.Add(category);
 			}
