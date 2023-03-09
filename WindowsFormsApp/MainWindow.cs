@@ -262,7 +262,7 @@ namespace WindowsFormsApp
 
 		private void textBoxSnippetContent_TextChanged(object sender, EventArgs e)
 		{
-			string snippetContent = Cateory((TextBox)sender).Text;
+			string snippetContent = ((TextBox)sender).Text;
 		}
 	}
 }
