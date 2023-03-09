@@ -228,7 +228,7 @@ namespace WindowsFormsApp
 				var index = this.listBoxCategories.SelectedIndex;
 				Category selectedCategory = listBoxCategories.SelectedItem as Category;
 				this.listBoxCategories.Items.RemoveAt(index);
-				
+
 				if (index > 0)
 				{
 					index--;
@@ -258,6 +258,11 @@ namespace WindowsFormsApp
 
 			this.textBoxSnippetTitle.Text = titleOfNewSnippet;
 			databaseAccess.CreateSnippet(snippet);
+		}
+
+		private void textBoxSnippetContent_TextChanged(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

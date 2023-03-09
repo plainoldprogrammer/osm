@@ -49,6 +49,7 @@
 			textBoxSnippetContent.Name = "textBoxSnippetContent";
 			textBoxSnippetContent.Size = new System.Drawing.Size(587, 644);
 			textBoxSnippetContent.TabIndex = 2;
+			textBoxSnippetContent.TextChanged += textBoxSnippetContent_TextChanged;
 			// 
 			// label1
 			// 
