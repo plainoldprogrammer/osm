@@ -22,6 +22,7 @@ namespace Osm
 			InitializeComponent();
 			_mainWindow = mainWindow;
 			_databaseAccess = databaseAccess;
+			textBoxCategoryName.Select();
 		}
 
 		private void buttonCancel_Click(object sender, EventArgs e)
@@ -37,6 +38,7 @@ namespace Osm
 			_databaseAccess.CreateCategory(category);
 			_mainWindow.RefreshCategoriesListBox();
 			this.textBoxCategoryName.Text = "";
+			textBoxCategoryName.Select();
 			this.Hide();
 		}
 	}
