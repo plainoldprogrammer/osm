@@ -26,7 +26,8 @@ namespace ConsoleApp
         public void RemoveCategory(Category category)
         {
             var context = new SnippetsContext();
-            context.Remove<Category>(category);
+            var snippetsFromCategory = context.Snippets.Select(x => x).Where(y => y.CategoryId == category.Id);
+            context.RemoveRange(snippetsFromCategory); 
             context.SaveChanges();
         }
 

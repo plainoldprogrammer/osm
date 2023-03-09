@@ -151,8 +151,12 @@ namespace WindowsFormsApp
 			if (listBoxSnippets.Items.Count > 0)
 			{
 				Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
-				this.textBoxSnippetTitle.Text = selectedSnippet.Title;
-				this.textBoxSnippetContent.Text = selectedSnippet.Snippet1;
+
+				if (selectedSnippet is not null)
+				{
+					this.textBoxSnippetTitle.Text = selectedSnippet.Title;
+					this.textBoxSnippetContent.Text = selectedSnippet.Snippet1;
+				}
 			}
 		}
 
