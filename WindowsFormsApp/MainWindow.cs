@@ -213,5 +213,10 @@ namespace WindowsFormsApp
 			this.Enabled = false;
 			createCategoryWindow.Show();
 		}
+
+		private void buttonRemoveCategory_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

@@ -118,6 +118,7 @@
 			buttonRemoveCategory.TabIndex = 9;
 			buttonRemoveCategory.Text = "Remove Category";
 			buttonRemoveCategory.UseVisualStyleBackColor = true;
+			buttonRemoveCategory.Click += buttonRemoveCategory_Click;
 			// 
 			// buttonNewSnippet
 			// 
