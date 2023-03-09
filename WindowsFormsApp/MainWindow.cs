@@ -216,14 +216,6 @@ namespace WindowsFormsApp
 			int index = this.listBoxSnippets.SelectedIndex;
 			databaseAccess.RemoveSnippet(selectedSnippet);
 			this.listBoxSnippets.Items.RemoveAt(index);
-
-			// Update the listBoxSnippets
-			/*
-			int currentCategory = listBoxCategories.SelectedIndex - 1;
-			listBoxCategories.SelectedIndex = currentCategory;
-			currentCategory = listBoxCategories.SelectedIndex + 1;
-			listBoxCategories.SelectedIndex = currentCategory;
-			*/
 		}
 
 		private void buttonNewCategory_Click(object sender, EventArgs e)
