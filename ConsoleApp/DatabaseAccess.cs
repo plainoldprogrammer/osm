@@ -12,14 +12,6 @@ namespace ConsoleApp
 {
     public class DatabaseAccess
     {
-        public List<Category> GetCategories()
-        {
-            var context = new SnippetsContext();
-            List<Category> categories = context.Categories.Select(x => x).ToList<Category>();
-
-            return categories;
-        }
-
         public void CreateCategory(string categoryName)
         {
             var context = new SnippetsContext();
@@ -38,7 +30,15 @@ namespace ConsoleApp
             context.SaveChanges();
         }
 
-        public void CreateSnippet(Snippet snippet)
+		public List<Category> GetCategories()
+		{
+			var context = new SnippetsContext();
+			List<Category> categories = context.Categories.Select(x => x).ToList<Category>();
+
+			return categories;
+		}
+
+		public void CreateSnippet(Snippet snippet)
         {
             var context = new SnippetsContext();
             context.Add(snippet);
