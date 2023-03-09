@@ -49,6 +49,7 @@ namespace WindowsFormsApp
 			// ConfigureListBoxSnippets();
 			// ConfigureListBoxCategories();
 			InitializeListBoxCategories();
+			InitializeListBoxSnippets();
 		}
 
 		private void InitializeMenuStrip()
@@ -100,6 +101,12 @@ namespace WindowsFormsApp
 			this.RefreshCategoriesListBox();
 		}
 
+		private void InitializeListBoxSnippets()
+		{
+			this.listBoxSnippets.DisplayMember = "Title";
+			this.listBoxSnippets.ValueMember = "Id";
+		}
+
 		public void RefreshCategoriesListBox()
 		{
 			if (this.listBoxCategories.Items.Count > 0)
@@ -138,11 +145,14 @@ namespace WindowsFormsApp
 
 		private void listBoxSnippets_SelectedValueChanged(object sender, EventArgs e)
 		{
-			string category = listBoxCategories.SelectedItem.ToString();
-			string title = listBoxSnippets.SelectedItem.ToString();
+			if (listBoxSnippets.Items.Count > 0)
+			{
+				string category = listBoxCategories.SelectedItem.ToString();
+				string title = listBoxSnippets.SelectedItem.ToString();
 
-			textBoxSnippetTitle.Text = title;
-			textBoxSnippetContent.Text = databaseAccess.GetSnippet(category, title);
+				textBoxSnippetTitle.Text = title;
+				textBoxSnippetContent.Text = databaseAccess.GetSnippet(category, title);
+			}
 		}
 
 		[DllImport("User32.dll", CharSet = CharSet.Auto)]
@@ -255,6 +265,8 @@ namespace WindowsFormsApp
 				Category = selectedCategory.Category1,
 				Datetime = BitConverter.GetBytes(DateTime.Now.Ticks)
 			};
+
+			this.listBoxSnippets.Items.Add(snippet);
 
 			this.textBoxSnippetTitle.Text = titleOfNewSnippet;
 			databaseAccess.CreateSnippet(snippet);
