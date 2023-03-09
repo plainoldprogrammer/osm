@@ -132,7 +132,7 @@ namespace WindowsFormsApp
 			{
 				Category selectedCategory = listBoxCategories.SelectedItem as Category;
 				listBoxSnippets.Items.Clear();
-				List<Snippet> snippets =  databaseAccess.GetAllSnippetsFromCategory(selectedCategory);
+				List<Snippet> snippets = databaseAccess.GetAllSnippetsFromCategory(selectedCategory);
 
 				foreach (Snippet snippet in snippets)
 				{
@@ -275,9 +275,17 @@ namespace WindowsFormsApp
 
 		private void textBoxSnippetContent_TextChanged(object sender, EventArgs e)
 		{
-			string content = ((TextBox)sender).Text;
+			string content = ((TextBox) sender).Text;
 			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 			selectedSnippet.Snippet1 = content;
+			databaseAccess.UpdateSnippet(selectedSnippet);
+		}
+
+		private void textBoxSnippetTitle_TextChanged(object sender, EventArgs e)
+		{
+			string title = ((TextBox)sender).Text;
+			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+			selectedSnippet.Title = title;
 			databaseAccess.UpdateSnippet(selectedSnippet);
 		}
 	}

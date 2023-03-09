@@ -76,6 +76,7 @@
 			textBoxSnippetTitle.Name = "textBoxSnippetTitle";
 			textBoxSnippetTitle.Size = new System.Drawing.Size(587, 27);
 			textBoxSnippetTitle.TabIndex = 5;
+			textBoxSnippetTitle.TextChanged += textBoxSnippetTitle_TextChanged;
 			// 
 			// listBoxCategories
 			// 
