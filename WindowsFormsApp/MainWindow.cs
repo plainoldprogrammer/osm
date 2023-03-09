@@ -214,14 +214,6 @@ namespace WindowsFormsApp
 			e.DrawFocusRectangle();
 		}
 
-		private void buttonRemoveSnippet_Click(object sender, EventArgs e)
-		{
-			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
-			int index = this.listBoxSnippets.SelectedIndex;
-			databaseAccess.RemoveSnippet(selectedSnippet);
-			this.listBoxSnippets.Items.RemoveAt(index);
-		}
-
 		private void buttonNewCategory_Click(object sender, EventArgs e)
 		{
 			this.Enabled = false;
@@ -270,6 +262,14 @@ namespace WindowsFormsApp
 			this.listBoxSnippets.Items.Add(snippet);
 			this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
 			this.textBoxSnippetTitle.Text = titleOfNewSnippet;
+		}
+
+		private void buttonRemoveSnippet_Click(object sender, EventArgs e)
+		{
+			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+			int index = this.listBoxSnippets.SelectedIndex;
+			databaseAccess.RemoveSnippet(selectedSnippet);
+			this.listBoxSnippets.Items.RemoveAt(index);
 		}
 
 		private void textBoxSnippetTitle_TextChanged(object sender, EventArgs e)
