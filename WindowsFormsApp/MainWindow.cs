@@ -118,16 +118,19 @@ namespace WindowsFormsApp
 
 		private void listBoxCategories_SelectedValueChanged(object sender, EventArgs e)
 		{
-			string category = listBoxCategories.SelectedItem.ToString();
-			List<string> titles = databaseAccess.GetSnippetTitlesFromACategory(category);
-			listBoxSnippets.Items.Clear();
-
-			foreach (string title in titles)
+			if (listBoxCategories.SelectedIndex >= 0)
 			{
-				listBoxSnippets.Items.Add(title);
-			}
+				string category = listBoxCategories.SelectedItem.ToString();
+				List<string> titles = databaseAccess.GetSnippetTitlesFromACategory(category);
+				listBoxSnippets.Items.Clear();
 
-			this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
+				foreach (string title in titles)
+				{
+					listBoxSnippets.Items.Add(title);
+				}
+
+				this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
+			}
 		}
 
 		private void listBoxSnippets_SelectedValueChanged(object sender, EventArgs e)
@@ -216,7 +219,23 @@ namespace WindowsFormsApp
 
 		private void buttonRemoveCategory_Click(object sender, EventArgs e)
 		{
+			if (this.listBoxCategories.Items.Count >= 1)
+			{
 
+				var index = this.listBoxCategories.SelectedIndex;
+				this.listBoxCategories.Items.RemoveAt(index);
+
+				if (index > 0)
+				{
+					index--;
+				}
+
+				if (this.listBoxCategories.Items.Count > 0)
+				{
+					this.listBoxCategories.SelectedIndex = index;
+				}
+				
+			}
 		}
 	}
 }
