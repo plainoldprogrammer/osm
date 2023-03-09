@@ -51,9 +51,10 @@ namespace ConsoleApp.Models
             {
                 entity.ToTable("snippets");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.HasIndex(e => e.Id, "IX_snippets_id")
+                    .IsUnique();
+
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Category).HasColumnName("category");
 
