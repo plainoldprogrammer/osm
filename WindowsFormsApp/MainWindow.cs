@@ -243,7 +243,8 @@ namespace WindowsFormsApp
 
 		private void buttonNewSnippet_Click(object sender, EventArgs e)
 		{
-
+			this.textBoxSnippetTitle.Text = "";
+			this.textBoxSnippetContent.Text = "";
 		}
 	}
 }
