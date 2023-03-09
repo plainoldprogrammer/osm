@@ -31,6 +31,13 @@ namespace ConsoleApp
             context.SaveChanges();
         }
 
+        public void RemoveCategory(Category category)
+        {
+            var context = new SnippetsContext();
+            context.Remove<Category>(category);
+            context.SaveChanges();
+        }
+
         public List<string> GetSnippetTitlesFromACategory(string category)
         {
             var context = new SnippetsContext();
