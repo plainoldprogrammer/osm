@@ -222,7 +222,7 @@ namespace WindowsFormsApp
 
 		private void buttonRemoveCategory_Click(object sender, EventArgs e)
 		{
-			if (this.listBoxCategories.Items.Count >= 1)
+			if (this.listBoxCategories.Items.Count > 0)
 			{
 
 				var index = this.listBoxCategories.SelectedIndex;
@@ -270,10 +270,13 @@ namespace WindowsFormsApp
 
 		private void buttonRemoveSnippet_Click(object sender, EventArgs e)
 		{
-			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
-			int index = this.listBoxSnippets.SelectedIndex;
-			databaseAccess.RemoveSnippet(selectedSnippet);
-			this.listBoxSnippets.Items.RemoveAt(index);
+			if (listBoxSnippets.Items.Count > 0)
+			{
+				Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+				int index = this.listBoxSnippets.SelectedIndex;
+				databaseAccess.RemoveSnippet(selectedSnippet);
+				this.listBoxSnippets.Items.RemoveAt(index);
+			}
 		}
 
 		private void textBoxSnippetTitle_TextChanged(object sender, EventArgs e)
