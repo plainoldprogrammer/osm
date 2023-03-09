@@ -131,11 +131,17 @@ namespace WindowsFormsApp
 			if (listBoxCategories.SelectedIndex >= 0)
 			{
 				Category selectedCategory = listBoxCategories.SelectedItem as Category;
+				listBoxSnippets.Items.Clear();
 				List<Snippet> snippets =  databaseAccess.GetAllSnippetsFromCategory(selectedCategory);
 
 				foreach (Snippet snippet in snippets)
 				{
 					this.listBoxSnippets.Items.Add(snippet);
+				}
+
+				if (snippets.Count > 0)
+				{
+					this.listBoxSnippets.SelectedIndex = snippets.Count - 1;
 				}
 			}
 		}
