@@ -45,16 +45,9 @@ namespace ConsoleApp
             context.SaveChanges();
         }
 
-        public void RemoveSnippet(string category, string title, string code)
+        public void RemoveSnippet(Snippet snippet)
         {
             var context = new SnippetsContext();
-
-            Snippet snippet = new Snippet();
-            snippet.Id = context.Snippets.Where(x => x.Category.Equals(category) && x.Title.Equals(title)).Select(x => x.Id).FirstOrDefault();
-            snippet.Category = category;
-            snippet.Title = title;
-            snippet.Snippet1 = code;
-
             context.Snippets.Remove(snippet);
             context.SaveChanges();
         }
@@ -62,8 +55,7 @@ namespace ConsoleApp
 		public List<Snippet> GetAllSnippetsFromCategory(Category category)
         {
             var context = new SnippetsContext();
-            List<Snippet> snippets = context.Snippets.Select(x => x).Where(y => y.Category == category.Category1).ToList<Snippet>();
-
+            List<Snippet> snippets = context.Snippets.Select(x => x).Where(y => y.Category == category).ToList<Snippet>();
             return snippets;
         }
 

@@ -212,17 +212,18 @@ namespace WindowsFormsApp
 
 		private void buttonRemoveSnippet_Click(object sender, EventArgs e)
 		{
-			string category = listBoxCategories.SelectedItem.ToString();
-			string title = listBoxSnippets.SelectedItem.ToString();
-			string code = textBoxSnippetContent.ToString();
-
-			databaseAccess.RemoveSnippet(category, title, code);
+			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+			int index = this.listBoxSnippets.SelectedIndex;
+			databaseAccess.RemoveSnippet(selectedSnippet);
+			this.listBoxSnippets.Items.RemoveAt(index);
 
 			// Update the listBoxSnippets
+			/*
 			int currentCategory = listBoxCategories.SelectedIndex - 1;
 			listBoxCategories.SelectedIndex = currentCategory;
 			currentCategory = listBoxCategories.SelectedIndex + 1;
 			listBoxCategories.SelectedIndex = currentCategory;
+			*/
 		}
 
 		private void buttonNewCategory_Click(object sender, EventArgs e)
@@ -263,7 +264,7 @@ namespace WindowsFormsApp
 			Snippet snippet = new Snippet()
 			{
 				Title = titleOfNewSnippet,
-				Category = selectedCategory.Category1,
+				Category = selectedCategory,
 				Datetime = BitConverter.GetBytes(DateTime.Now.Ticks)
 			};
 

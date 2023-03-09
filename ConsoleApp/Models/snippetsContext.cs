@@ -56,7 +56,7 @@ namespace ConsoleApp.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Category).HasColumnName("category");
+                entity.Property(e => e.CategoryId).HasColumnName("category_id");
 
                 entity.Property(e => e.Datetime)
                     .HasColumnType("DATETIME")
@@ -66,6 +66,10 @@ namespace ConsoleApp.Models
                 entity.Property(e => e.Snippet1).HasColumnName("snippet");
 
                 entity.Property(e => e.Title).HasColumnName("title");
+
+                entity.HasOne(d => d.Category)
+                    .WithMany(p => p.Snippets)
+                    .HasForeignKey(d => d.CategoryId);
             });
 
             OnModelCreatingPartial(modelBuilder);
