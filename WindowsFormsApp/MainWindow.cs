@@ -272,19 +272,19 @@ namespace WindowsFormsApp
 			this.textBoxSnippetTitle.Text = titleOfNewSnippet;
 		}
 
-		private void textBoxSnippetContent_TextChanged(object sender, EventArgs e)
-		{
-			string content = ((TextBox) sender).Text;
-			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
-			selectedSnippet.Snippet1 = content;
-			databaseAccess.UpdateSnippet(selectedSnippet);
-		}
-
 		private void textBoxSnippetTitle_TextChanged(object sender, EventArgs e)
 		{
 			string title = ((TextBox)sender).Text;
 			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 			selectedSnippet.Title = title;
+			databaseAccess.UpdateSnippet(selectedSnippet);
+		}
+
+		private void textBoxSnippetContent_TextChanged(object sender, EventArgs e)
+		{
+			string content = ((TextBox)sender).Text;
+			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+			selectedSnippet.Snippet1 = content;
 			databaseAccess.UpdateSnippet(selectedSnippet);
 		}
 	}
