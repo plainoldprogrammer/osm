@@ -78,7 +78,7 @@ namespace WindowsFormsApp
 			menuItemAbout.DropDownItems.Add(itemAbout);
 			this.menuStrip.Items.Add(menuItemAbout);
 
-			itemExit.Click += itemExit_Clicked;
+			itemExit.Click += ItemExit_Clicked;
 			itemAbout.Click += ItemAbout_Clicked;
 		}
 
@@ -175,7 +175,7 @@ namespace WindowsFormsApp
 				);
 		}
 
-		private void itemExit_Clicked(Object sender, EventArgs e)
+		private void ItemExit_Clicked(Object sender, EventArgs e)
 		{
 			this.Close();
 		}
