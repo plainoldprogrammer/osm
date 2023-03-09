@@ -3,3 +3,6 @@
 
 Adding a migration:
 > dotnet ef migrations add InitialMigration
+
+Update the database based on migrations:
+> dotnet ef database update
