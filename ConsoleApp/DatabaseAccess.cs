@@ -38,14 +38,6 @@ namespace ConsoleApp
             context.SaveChanges();
         }
 
-        public string GetSnippet(string category, string title)
-        {
-            var context = new SnippetsContext();
-            string snippet = context.Snippets.Where(x => x.Category == category && x.Title == title).Select(x => x.Snippet1).FirstOrDefault();
-
-            return snippet.Replace("\n", "\r\n");
-        }
-
         public void CreateSnippet(Snippet snippet)
         {
             var context = new SnippetsContext();
