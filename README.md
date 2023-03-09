@@ -14,6 +14,17 @@
 
 ### Version History
 
+**Version 0.3 (Alpha)**
+* Most of the internal snippet behavior occurs using EF.
+* Icons for categories and snippets has been disable due to a rendering issue.
+* It's possible to create categories.
+* It's possible to remove categories.
+* It's possible to create snippets.
+* It's possible to remove snippets.
+* It's possible to edit the title and the content of the snippet.
+* Enabling saving and editing of categories and snippets in the DB.
+
+
 **Version 0.2 (Alpha)**
 * Upgraded to .NET 5
 * Each category has a folder icon to make more intuitive the GUI.
