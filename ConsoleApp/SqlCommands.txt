@@ -1,0 +1,10 @@
+﻿CREATE TABLE "snippets" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"category_id"	INTEGER,
+	"title"	TEXT,
+	"snippet"	TEXT,
+	"datetime"	DATETIME DEFAULT (CURRENT_TIMESTAMP),
+	CONSTRAINT "PK_snippets" PRIMARY KEY("id" AUTOINCREMENT),
+	FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+
