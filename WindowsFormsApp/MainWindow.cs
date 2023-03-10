@@ -150,6 +150,12 @@ namespace WindowsFormsApp
 					this.listBoxSnippets.SelectedIndex = snippets.Count - 1;
 				}
 			}
+			
+			if (listBoxCategories.Items.Count == 0)
+			{
+				this.textBoxSnippetTitle.Enabled = false;
+				this.textBoxSnippetContent.Enabled = false;
+			}
 		}
 
 		private void listBoxSnippets_SelectedValueChanged(object sender, EventArgs e)
@@ -277,6 +283,12 @@ namespace WindowsFormsApp
 			this.listBoxSnippets.Items.Add(snippet);
 			this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
 			this.textBoxSnippetTitle.Text = titleOfNewSnippet;
+
+			if (!this.textBoxSnippetTitle.Enabled && !this.textBoxSnippetContent.Enabled)
+			{
+				this.textBoxSnippetTitle.Enabled = true;
+				this.textBoxSnippetContent.Enabled = true;
+			}
 		}
 
 		private void buttonRemoveSnippet_Click(object sender, EventArgs e)
