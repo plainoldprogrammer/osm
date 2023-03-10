@@ -131,7 +131,7 @@ namespace WindowsFormsApp
 			if (listBoxCategories.SelectedIndex >= 0)
 			{
 				Category selectedCategory = listBoxCategories.SelectedItem as Category;
-				listBoxSnippets.Items.Clear();
+				this.listBoxSnippets.Items.Clear();
 				List<Snippet> snippets = this.databaseAccess.GetAllSnippetsFromCategory(selectedCategory);
 
 				foreach (Snippet snippet in snippets)
