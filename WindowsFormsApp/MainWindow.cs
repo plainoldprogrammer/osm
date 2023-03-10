@@ -299,6 +299,8 @@ namespace WindowsFormsApp
 				int index = this.listBoxSnippets.SelectedIndex;
 				this.databaseAccess.RemoveSnippet(selectedSnippet);
 				this.listBoxSnippets.Items.RemoveAt(index);
+				index--;
+				this.listBoxSnippets.SelectedIndex = index;
 			}
 		}
 
