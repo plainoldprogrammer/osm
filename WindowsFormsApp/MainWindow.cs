@@ -149,7 +149,6 @@ namespace WindowsFormsApp
 				{
 					this.listBoxSnippets.SelectedIndex = snippets.Count - 1;
 				}
-				
 			}
 			
 			if (listBoxCategories.Items.Count == 0 || listBoxSnippets.Items.Count == 0)
