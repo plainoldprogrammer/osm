@@ -156,6 +156,11 @@ namespace WindowsFormsApp
 				this.textBoxSnippetTitle.Enabled = false;
 				this.textBoxSnippetContent.Enabled = false;
 			}
+			else
+			{
+				this.textBoxSnippetTitle.Enabled = true;
+				this.textBoxSnippetContent.Enabled = true;
+			}
 		}
 
 		private void listBoxSnippets_SelectedValueChanged(object sender, EventArgs e)
