@@ -294,6 +294,11 @@ namespace WindowsFormsApp
 				this.textBoxSnippetTitle.Enabled = true;
 				this.textBoxSnippetContent.Enabled = true;
 			}
+
+			if (this.buttonRemoveSnippet.Enabled == false)
+			{
+				this.buttonRemoveSnippet.Enabled = true;
+			}
 		}
 
 		private void buttonRemoveSnippet_Click(object sender, EventArgs e)
@@ -311,6 +316,7 @@ namespace WindowsFormsApp
 				{
 					this.textBoxSnippetTitle.Enabled = false;
 					this.textBoxSnippetContent.Enabled = false;
+					this.buttonRemoveSnippet.Enabled = false;
 				}
 			}
 		}
