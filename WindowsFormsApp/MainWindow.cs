@@ -149,15 +149,18 @@ namespace WindowsFormsApp
 				{
 					this.listBoxSnippets.SelectedIndex = snippets.Count - 1;
 				}
+				
 			}
 			
-			if (listBoxCategories.Items.Count == 0)
+			if (listBoxCategories.Items.Count == 0 || listBoxSnippets.Items.Count == 0)
 			{
+				this.buttonRemoveSnippet.Enabled = false;
 				this.textBoxSnippetTitle.Enabled = false;
 				this.textBoxSnippetContent.Enabled = false;
 			}
 			else
 			{
+				this.buttonRemoveSnippet.Enabled = true;
 				this.textBoxSnippetTitle.Enabled = true;
 				this.textBoxSnippetContent.Enabled = true;
 			}
@@ -235,6 +238,7 @@ namespace WindowsFormsApp
 		{
 			this.Enabled = false;
 			this.createCategoryWindow.Show();
+			this.buttonNewSnippet.Enabled = true;
 			this.textBoxSnippetTitle.Enabled = true;
 			this.textBoxSnippetContent.Enabled = true;
 		}
