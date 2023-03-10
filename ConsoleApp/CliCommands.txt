@@ -1,4 +1,10 @@
-﻿Scaffold the database:
+﻿/*
+ * Name:    OSM
+ * Author:  Plainoldprogrammer
+ * Editor:  Visual Studio 2022 (Community Edition)
+ */
+
+Scaffold the database:
 > dotnet ef dbcontext scaffold "Datasource=C:\Plainoldprogrammer_dev\Osm\db\snippets.db" -o Models Microsoft.EntityFrameworkCore.Sqlite -c "SnippetsContext" -f
 
 Adding a migration:

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Name:    OSM
+ * Author:  Plainoldprogrammer
+ * Editor:  Visual Studio 2022 (Community Edition)
+ */
+
+using System;
 
 namespace ConsoleApp
 {

@@ -1,4 +1,10 @@
-﻿CREATE TABLE "snippets" (
+﻿/*
+ * Name:    OSM
+ * Author:  Plainoldprogrammer
+ * Editor:  Visual Studio 2022 (Community Edition)
+ */
+
+CREATE TABLE "snippets" (
 	"id"	INTEGER NOT NULL UNIQUE,
 	"category_id"	INTEGER,
 	"title"	TEXT,
@@ -7,4 +13,3 @@
 	CONSTRAINT "PK_snippets" PRIMARY KEY("id" AUTOINCREMENT),
 	FOREIGN KEY (category_id) REFERENCES categories(id)
 );
-
