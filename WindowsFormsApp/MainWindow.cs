@@ -150,7 +150,7 @@ namespace WindowsFormsApp
 					this.listBoxSnippets.SelectedIndex = snippets.Count - 1;
 				}
 			}
-			
+
 			if (listBoxCategories.Items.Count == 0 || listBoxSnippets.Items.Count == 0)
 			{
 				this.buttonRemoveSnippet.Enabled = false;
@@ -259,7 +259,7 @@ namespace WindowsFormsApp
 				if (this.listBoxCategories.Items.Count > 0)
 				{
 					this.listBoxCategories.SelectedIndex = index;
-					
+
 				}
 				else
 				{
@@ -338,7 +338,7 @@ namespace WindowsFormsApp
 
 		private void textBoxSnippetContent_TextChanged(object sender, EventArgs e)
 		{
-			string content = ((TextBox) sender).Text;
+			string content = ((TextBox)sender).Text;
 			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 			selectedSnippet.Snippet1 = content;
 			this.databaseAccess.UpdateSnippet(selectedSnippet);
