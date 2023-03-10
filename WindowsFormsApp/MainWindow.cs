@@ -298,7 +298,7 @@ namespace WindowsFormsApp
 
 		private void buttonRemoveSnippet_Click(object sender, EventArgs e)
 		{
-			if (listBoxSnippets.Items.Count > 0)
+			if (this.listBoxSnippets.Items.Count > 0)
 			{
 				Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 				int index = this.listBoxSnippets.SelectedIndex;
@@ -306,6 +306,12 @@ namespace WindowsFormsApp
 				this.listBoxSnippets.Items.RemoveAt(index);
 				index--;
 				this.listBoxSnippets.SelectedIndex = index;
+
+				if (this.listBoxSnippets.Items.Count == 0)
+				{
+					this.textBoxSnippetTitle.Enabled = false;
+					this.textBoxSnippetContent.Enabled = false;
+				}
 			}
 		}
 
