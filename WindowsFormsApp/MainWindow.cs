@@ -217,7 +217,9 @@ namespace WindowsFormsApp
 		private void buttonNewCategory_Click(object sender, EventArgs e)
 		{
 			this.Enabled = false;
-			createCategoryWindow.Show();
+			this.createCategoryWindow.Show();
+			this.textBoxSnippetTitle.Enabled = true;
+			this.textBoxSnippetContent.Enabled = true;
 		}
 
 		private void buttonRemoveCategory_Click(object sender, EventArgs e)
@@ -241,8 +243,10 @@ namespace WindowsFormsApp
 				}
 				else
 				{
-					listBoxSnippets.Items.Clear();
-					buttonRemoveCategory.Enabled = false;
+					this.listBoxSnippets.Items.Clear();
+					this.buttonRemoveCategory.Enabled = false;
+					this.textBoxSnippetTitle.Enabled = false;
+					this.textBoxSnippetContent.Enabled = false;
 				}
 
 				databaseAccess.RemoveCategory(selectedCategory);
