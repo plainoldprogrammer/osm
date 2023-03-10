@@ -10,27 +10,27 @@ using ConsoleApp.Models;
 
 namespace ConsoleApp
 {
-    public class DatabaseAccess
-    {
-        public void CreateCategory(string categoryName)
-        {
-            var context = new SnippetsContext();
-            Category category = new Category()
-            {
-                Category1 = categoryName
-            };
-            context.Add<Category>(category);
-            context.SaveChanges();
-        }
+	public class DatabaseAccess
+	{
+		public void CreateCategory(string categoryName)
+		{
+			var context = new SnippetsContext();
+			Category category = new Category()
+			{
+				Category1 = categoryName
+			};
+			context.Add<Category>(category);
+			context.SaveChanges();
+		}
 
-        public void RemoveCategory(Category category)
-        {
-            var context = new SnippetsContext();
-            var snippetsFromCategory = context.Snippets.Select(x => x).Where(y => y.CategoryId == category.Id);
-            context.Snippets.RemoveRange(snippetsFromCategory);
-            context.Categories.Remove(category);
-            context.SaveChanges();
-        }
+		public void RemoveCategory(Category category)
+		{
+			var context = new SnippetsContext();
+			var snippetsFromCategory = context.Snippets.Select(x => x).Where(y => y.CategoryId == category.Id);
+			context.Snippets.RemoveRange(snippetsFromCategory);
+			context.Categories.Remove(category);
+			context.SaveChanges();
+		}
 
 		public List<Category> GetCategories()
 		{
@@ -41,31 +41,31 @@ namespace ConsoleApp
 		}
 
 		public void CreateSnippet(Snippet snippet)
-        {
-            var context = new SnippetsContext();
-            context.Add<Snippet>(snippet);
-            context.SaveChanges();
-        }
+		{
+			var context = new SnippetsContext();
+			context.Add<Snippet>(snippet);
+			context.SaveChanges();
+		}
 
-        public void RemoveSnippet(Snippet snippet)
-        {
-            var context = new SnippetsContext();
-            context.Snippets.Remove(snippet);
-            context.SaveChanges();
-        }
+		public void RemoveSnippet(Snippet snippet)
+		{
+			var context = new SnippetsContext();
+			context.Snippets.Remove(snippet);
+			context.SaveChanges();
+		}
 
 		public List<Snippet> GetAllSnippetsFromCategory(Category category)
-        {
-            var context = new SnippetsContext();
-            List<Snippet> snippets = context.Snippets.Select(x => x).Where(y => y.Category == category).ToList<Snippet>();
-            return snippets;
-        }
+		{
+			var context = new SnippetsContext();
+			List<Snippet> snippets = context.Snippets.Select(x => x).Where(y => y.Category == category).ToList<Snippet>();
+			return snippets;
+		}
 
-        public void UpdateSnippet(Snippet snippet)
-        {
-            var context = new SnippetsContext();
-            context.Snippets.Update(snippet);
-            context.SaveChanges();
-        }
+		public void UpdateSnippet(Snippet snippet)
+		{
+			var context = new SnippetsContext();
+			context.Snippets.Update(snippet);
+			context.SaveChanges();
+		}
 	}
 }
