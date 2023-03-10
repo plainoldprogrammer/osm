@@ -33,7 +33,7 @@ namespace WindowsFormsApp
 			InitializeComponent();
 			InitializeDatabaseAcess();
 			InitializeGui();
-			createCategoryWindow = new CreateCategoryWindow(this, databaseAccess);
+			createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
 		}
 
 		private void InitializeDatabaseAcess()
@@ -114,7 +114,7 @@ namespace WindowsFormsApp
 				this.listBoxCategories.Items.Clear();
 			}
 
-			List<Category> categories = databaseAccess.GetCategories();
+			List<Category> categories = this.databaseAccess.GetCategories();
 
 			foreach (Category category in categories)
 			{
@@ -132,7 +132,7 @@ namespace WindowsFormsApp
 			{
 				Category selectedCategory = listBoxCategories.SelectedItem as Category;
 				listBoxSnippets.Items.Clear();
-				List<Snippet> snippets = databaseAccess.GetAllSnippetsFromCategory(selectedCategory);
+				List<Snippet> snippets = this.databaseAccess.GetAllSnippetsFromCategory(selectedCategory);
 
 				foreach (Snippet snippet in snippets)
 				{
@@ -249,7 +249,7 @@ namespace WindowsFormsApp
 					this.textBoxSnippetContent.Enabled = false;
 				}
 
-				databaseAccess.RemoveCategory(selectedCategory);
+				this.databaseAccess.RemoveCategory(selectedCategory);
 			}
 		}
 
@@ -266,7 +266,7 @@ namespace WindowsFormsApp
 				Datetime = BitConverter.GetBytes(DateTime.Now.Ticks)
 			};
 
-			databaseAccess.CreateSnippet(snippet);
+			this.databaseAccess.CreateSnippet(snippet);
 
 			this.listBoxSnippets.Items.Add(snippet);
 			this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
@@ -279,7 +279,7 @@ namespace WindowsFormsApp
 			{
 				Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 				int index = this.listBoxSnippets.SelectedIndex;
-				databaseAccess.RemoveSnippet(selectedSnippet);
+				this.databaseAccess.RemoveSnippet(selectedSnippet);
 				this.listBoxSnippets.Items.RemoveAt(index);
 			}
 		}
@@ -297,7 +297,7 @@ namespace WindowsFormsApp
 			string content = ((TextBox) sender).Text;
 			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 			selectedSnippet.Snippet1 = content;
-			databaseAccess.UpdateSnippet(selectedSnippet);
+			this.databaseAccess.UpdateSnippet(selectedSnippet);
 		}
 
 		public void EnableRemoveCategoryButton()
