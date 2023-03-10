@@ -261,7 +261,11 @@ namespace WindowsFormsApp
 				else
 				{
 					this.listBoxSnippets.Items.Clear();
+
 					this.buttonRemoveCategory.Enabled = false;
+					this.buttonNewSnippet.Enabled = false;
+					this.buttonRemoveSnippet.Enabled = false;
+
 					this.textBoxSnippetTitle.Enabled = false;
 					this.textBoxSnippetContent.Enabled = false;
 				}
