@@ -50,6 +50,12 @@ namespace WindowsFormsApp
 			// ConfigureListBoxCategories();
 			InitializeListBoxCategories();
 			InitializeListBoxSnippets();
+
+			if (this.listBoxCategories.Items.Count == 0)
+			{
+				this.textBoxSnippetTitle.Enabled = false;
+				this.textBoxSnippetContent.Enabled = false;
+			}
 		}
 
 		private void InitializeMenuStrip()
