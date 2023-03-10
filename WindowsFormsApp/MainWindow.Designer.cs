@@ -113,7 +113,7 @@
 			// 
 			// buttonRemoveCategory
 			// 
-			buttonRemoveCategory.Location = new System.Drawing.Point(154, 741);
+			buttonRemoveCategory.Location = new System.Drawing.Point(155, 743);
 			buttonRemoveCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			buttonRemoveCategory.Name = "buttonRemoveCategory";
 			buttonRemoveCategory.Size = new System.Drawing.Size(137, 31);
@@ -135,7 +135,7 @@
 			// 
 			// buttonRemoveSnippet
 			// 
-			buttonRemoveSnippet.Location = new System.Drawing.Point(445, 741);
+			buttonRemoveSnippet.Location = new System.Drawing.Point(443, 743);
 			buttonRemoveSnippet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			buttonRemoveSnippet.Name = "buttonRemoveSnippet";
 			buttonRemoveSnippet.Size = new System.Drawing.Size(137, 31);
