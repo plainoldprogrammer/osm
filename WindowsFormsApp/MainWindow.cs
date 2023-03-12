@@ -17,8 +17,8 @@ namespace WindowsFormsApp
 {
 	public partial class MainWindow : System.Windows.Forms.Form
 	{
-		private const string VERSION = "0.3 (Alpha)";
-		private const string RELEASE_DATE = "2023 March 09";
+		private const string VERSION = "0.4 (Alpha)";
+		private const string RELEASE_DATE = "2023 March 12";
 
 		private DatabaseAccess databaseAccess;
 		ToolStripMenuItem menuItemFile;
