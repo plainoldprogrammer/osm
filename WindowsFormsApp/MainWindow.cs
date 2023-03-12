@@ -59,6 +59,7 @@ namespace WindowsFormsApp
 
 			if (this.listBoxCategories.Items.Count == 0)
 			{
+				this.buttonRemoveCategory.Enabled = false;
 				this.textBoxSnippetTitle.Enabled = false;
 				this.textBoxSnippetContent.Enabled = false;
 			}
