@@ -52,7 +52,7 @@ namespace WindowsFormsApp
 			this.Text = $"Osm v{VERSION}";
 			SetTabWidth(this.textBoxSnippetContent, 1);
 			InitializeMenuStrip();
-			// ConfigureListBoxCategories();
+			ConfigureListBoxCategories();
 			// ConfigureListBoxSnippets();
 			InitializeListBoxCategories();
 			InitializeListBoxSnippets();
