@@ -215,16 +215,17 @@ namespace WindowsFormsApp
 
 		private void listBoxCategories_DrawItem(object sender, DrawItemEventArgs e)
 		{
-			e.DrawBackground();
-			e.Graphics.DrawIcon(new Icon("icons/folder.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
+			if (listBoxCategories.Items.Count > 0)
+			{
+				e.DrawBackground();
+				e.Graphics.DrawIcon(new Icon("icons/folder.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
 
-			Rectangle textRectangle = e.Bounds;
-			textRectangle.X += 18;
+				Rectangle textRectangle = e.Bounds;
+				textRectangle.X += 18;
 
-			e.Graphics.DrawString(listBoxCategories.Items[e.Index].ToString(),
-				e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
-
-			e.DrawFocusRectangle();
+				e.Graphics.DrawString(listBoxCategories.Items[e.Index].ToString(), e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+				e.DrawFocusRectangle();
+			}
 		}
 
 		private void listBoxSnippets_DrawItem(object sender, DrawItemEventArgs e)
