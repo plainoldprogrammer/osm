@@ -230,16 +230,19 @@ namespace WindowsFormsApp
 
 		private void listBoxSnippets_DrawItem(object sender, DrawItemEventArgs e)
 		{
-			e.DrawBackground();
-			e.Graphics.DrawIcon(new Icon("icons/file.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
+			if (listBoxSnippets.Items.Count >= 0)
+			{
+				e.DrawBackground();
+				e.Graphics.DrawIcon(new Icon("icons/file.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
 
-			Rectangle textRectangle = e.Bounds;
-			textRectangle.X += 18;
+				Rectangle textRectangle = e.Bounds;
+				textRectangle.X += 18;
 
-			e.Graphics.DrawString(listBoxSnippets.Items[e.Index].ToString(),
-				e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+				e.Graphics.DrawString(listBoxSnippets.Items[e.Index].ToString(),
+					e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
 
-			e.DrawFocusRectangle();
+				e.DrawFocusRectangle();
+			}
 		}
 
 		private void buttonNewCategory_Click(object sender, EventArgs e)
