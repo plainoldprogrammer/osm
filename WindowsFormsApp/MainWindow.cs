@@ -53,7 +53,7 @@ namespace WindowsFormsApp
 			SetTabWidth(this.textBoxSnippetContent, 1);
 			InitializeMenuStrip();
 			ConfigureListBoxCategories();
-			// ConfigureListBoxSnippets();
+			ConfigureListBoxSnippets();
 			InitializeListBoxCategories();
 			InitializeListBoxSnippets();
 
