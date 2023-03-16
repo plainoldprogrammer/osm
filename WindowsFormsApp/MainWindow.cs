@@ -230,7 +230,7 @@ namespace WindowsFormsApp
 
 		private void listBoxSnippets_DrawItem(object sender, DrawItemEventArgs e)
 		{
-			if (listBoxSnippets.Items.Count >= 0)
+			if (listBoxSnippets.Items.Count > 0)
 			{
 				e.DrawBackground();
 				e.Graphics.DrawIcon(new Icon("icons/file.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
