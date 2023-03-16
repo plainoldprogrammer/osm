@@ -309,6 +309,7 @@ namespace WindowsFormsApp
 			this.listBoxSnippets.Items.Add(snippet);
 			this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
 			this.textBoxSnippetTitle.Text = titleOfNewSnippet;
+			this.textBoxSnippetTitle.Focus();
 
 			if (!this.textBoxSnippetTitle.Enabled && !this.textBoxSnippetContent.Enabled)
 			{
