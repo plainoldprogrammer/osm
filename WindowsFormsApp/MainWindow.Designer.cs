@@ -48,7 +48,7 @@
 			textBoxSnippetContent.Multiline = true;
 			textBoxSnippetContent.Name = "textBoxSnippetContent";
 			textBoxSnippetContent.Size = new System.Drawing.Size(587, 644);
-			textBoxSnippetContent.TabIndex = 2;
+			textBoxSnippetContent.TabIndex = 10;
 			textBoxSnippetContent.TextChanged += textBoxSnippetContent_TextChanged;
 			// 
 			// label1
@@ -57,7 +57,7 @@
 			label1.Location = new System.Drawing.Point(9, 45);
 			label1.Name = "label1";
 			label1.Size = new System.Drawing.Size(80, 20);
-			label1.TabIndex = 3;
+			label1.TabIndex = 1;
 			label1.Text = "Categories";
 			// 
 			// label2
@@ -66,7 +66,7 @@
 			label2.Location = new System.Drawing.Point(298, 45);
 			label2.Name = "label2";
 			label2.Size = new System.Drawing.Size(66, 20);
-			label2.TabIndex = 4;
+			label2.TabIndex = 2;
 			label2.Text = "Snippets";
 			// 
 			// textBoxSnippetTitle
@@ -75,7 +75,7 @@
 			textBoxSnippetTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			textBoxSnippetTitle.Name = "textBoxSnippetTitle";
 			textBoxSnippetTitle.Size = new System.Drawing.Size(587, 27);
-			textBoxSnippetTitle.TabIndex = 5;
+			textBoxSnippetTitle.TabIndex = 9;
 			textBoxSnippetTitle.TextChanged += textBoxSnippetTitle_TextChanged;
 			// 
 			// listBoxCategories
@@ -86,7 +86,7 @@
 			listBoxCategories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			listBoxCategories.Name = "listBoxCategories";
 			listBoxCategories.Size = new System.Drawing.Size(282, 644);
-			listBoxCategories.TabIndex = 6;
+			listBoxCategories.TabIndex = 3;
 			listBoxCategories.SelectedValueChanged += listBoxCategories_SelectedValueChanged;
 			// 
 			// listBoxSnippets
@@ -97,7 +97,7 @@
 			listBoxSnippets.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			listBoxSnippets.Name = "listBoxSnippets";
 			listBoxSnippets.Size = new System.Drawing.Size(282, 644);
-			listBoxSnippets.TabIndex = 7;
+			listBoxSnippets.TabIndex = 4;
 			listBoxSnippets.SelectedValueChanged += listBoxSnippets_SelectedValueChanged;
 			// 
 			// buttonNewCategory
@@ -106,7 +106,7 @@
 			buttonNewCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			buttonNewCategory.Name = "buttonNewCategory";
 			buttonNewCategory.Size = new System.Drawing.Size(137, 31);
-			buttonNewCategory.TabIndex = 8;
+			buttonNewCategory.TabIndex = 5;
 			buttonNewCategory.Text = "New Category";
 			buttonNewCategory.UseVisualStyleBackColor = true;
 			buttonNewCategory.Click += buttonNewCategory_Click;
@@ -117,7 +117,7 @@
 			buttonRemoveCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			buttonRemoveCategory.Name = "buttonRemoveCategory";
 			buttonRemoveCategory.Size = new System.Drawing.Size(137, 31);
-			buttonRemoveCategory.TabIndex = 9;
+			buttonRemoveCategory.TabIndex = 6;
 			buttonRemoveCategory.Text = "Remove Category";
 			buttonRemoveCategory.UseVisualStyleBackColor = true;
 			buttonRemoveCategory.Click += buttonRemoveCategory_Click;
@@ -128,7 +128,7 @@
 			buttonNewSnippet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			buttonNewSnippet.Name = "buttonNewSnippet";
 			buttonNewSnippet.Size = new System.Drawing.Size(137, 31);
-			buttonNewSnippet.TabIndex = 10;
+			buttonNewSnippet.TabIndex = 7;
 			buttonNewSnippet.Text = "New Snippet";
 			buttonNewSnippet.UseVisualStyleBackColor = true;
 			buttonNewSnippet.Click += buttonNewSnippet_Click;
@@ -139,7 +139,7 @@
 			buttonRemoveSnippet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			buttonRemoveSnippet.Name = "buttonRemoveSnippet";
 			buttonRemoveSnippet.Size = new System.Drawing.Size(137, 31);
-			buttonRemoveSnippet.TabIndex = 11;
+			buttonRemoveSnippet.TabIndex = 8;
 			buttonRemoveSnippet.Text = "Remove Snippet";
 			buttonRemoveSnippet.UseVisualStyleBackColor = true;
 			buttonRemoveSnippet.Click += buttonRemoveSnippet_Click;
