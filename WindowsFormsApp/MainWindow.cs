@@ -283,6 +283,8 @@ namespace WindowsFormsApp
 
 					this.textBoxSnippetTitle.Enabled = false;
 					this.textBoxSnippetContent.Enabled = false;
+
+					this.textBoxSnippetContent.Text = "";
 				}
 
 				this.databaseAccess.RemoveCategory(selectedCategory);
@@ -352,8 +354,12 @@ namespace WindowsFormsApp
 		{
 			string content = ((TextBox)sender).Text;
 			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
-			selectedSnippet.Snippet1 = content;
-			this.databaseAccess.UpdateSnippet(selectedSnippet);
+
+			if (selectedSnippet is not null)
+			{
+				selectedSnippet.Snippet1 = content;
+				this.databaseAccess.UpdateSnippet(selectedSnippet);
+			}
 		}
 
 		public void EnableRemoveCategoryButton()
