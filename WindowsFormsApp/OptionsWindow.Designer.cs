@@ -163,7 +163,7 @@
             Controls.Add(textBoxDbFile);
             Controls.Add(labelDbFile);
             Name = "OptionsWindow";
-            Text = "OptionsWindow";
+            Text = "Options";
             ResumeLayout(false);
             PerformLayout();
         }
