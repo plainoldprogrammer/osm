@@ -288,6 +288,7 @@ namespace WindowsFormsApp
                     this.textBoxSnippetTitle.Enabled = false;
                     this.richTextBoxSnippetContent.Enabled = false;
 
+                    this.textBoxSnippetTitle.Text = "";
                     this.richTextBoxSnippetContent.Text = "";
                 }
 
@@ -349,10 +350,13 @@ namespace WindowsFormsApp
 
         private void textBoxSnippetTitle_TextChanged(object sender, EventArgs e)
         {
-            string title = ((TextBox)sender).Text;
-            Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
-            selectedSnippet.Title = title;
-            databaseAccess.UpdateSnippet(selectedSnippet);
+            if (listBoxSnippets.Items.Count > 0)
+            {
+                string title = ((TextBox)sender).Text;
+                Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+                selectedSnippet.Title = title;
+                databaseAccess.UpdateSnippet(selectedSnippet);
+            }
         }
 
         private void textBoxSnippetContent_TextChanged(object sender, EventArgs e)
