@@ -79,6 +79,7 @@
             // comboBoxTheme
             // 
             comboBoxTheme.FormattingEnabled = true;
+            comboBoxTheme.Items.AddRange(new object[] { "Light", "Dark" });
             comboBoxTheme.Location = new System.Drawing.Point(12, 89);
             comboBoxTheme.Name = "comboBoxTheme";
             comboBoxTheme.Size = new System.Drawing.Size(121, 23);
