@@ -89,6 +89,7 @@ namespace WindowsFormsApp
 			ToolStripButton itemOptions = new ToolStripButton("Options");
 			menuItemTools.DropDownItems.Add(itemOptions);
 			this.menuStrip.Items.Add(menuItemTools);
+            itemOptions.Click += ItemOptions_Click;
 
 			menuItemAbout = new ToolStripMenuItem("Help");
 			ToolStripButton itemAbout = new ToolStripButton("About");
@@ -99,7 +100,12 @@ namespace WindowsFormsApp
 			itemAbout.Click += ItemAbout_Clicked;
 		}
 
-		private void ConfigureListBoxCategories()
+        private void ItemOptions_Click(object sender, EventArgs e)
+        {
+			this.optionsWindow.Show();
+        }
+
+        private void ConfigureListBoxCategories()
 		{
 			this.listBoxCategories.DrawMode = DrawMode.OwnerDrawFixed;
 			this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItem);
