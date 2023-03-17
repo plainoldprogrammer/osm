@@ -100,11 +100,6 @@ namespace WindowsFormsApp
 			itemAbout.Click += ItemAbout_Clicked;
 		}
 
-        private void ItemOptions_Click(object sender, EventArgs e)
-        {
-			this.optionsWindow.Show();
-        }
-
         private void ConfigureListBoxCategories()
 		{
 			this.listBoxCategories.DrawMode = DrawMode.OwnerDrawFixed;
@@ -376,5 +371,10 @@ namespace WindowsFormsApp
 		{
 			this.buttonRemoveCategory.Enabled = true;
 		}
-	}
+
+        private void ItemOptions_Click(object sender, EventArgs e)
+        {
+            this.optionsWindow.Show();
+        }
+    }
 }
