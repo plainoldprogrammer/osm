@@ -62,7 +62,8 @@ namespace Osm
 
         private void buttonSelectDbFile_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
         }
     }
 }
