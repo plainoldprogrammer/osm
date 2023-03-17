@@ -42,7 +42,7 @@ namespace WindowsFormsApp
 			InitializeDatabaseAcess();
 			InitializeGui();
 			createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
-			optionsWindow = new OptionsWindow();
+			optionsWindow = new OptionsWindow(this);
 		}
 
 		private void InitializeDatabaseAcess()
@@ -374,6 +374,7 @@ namespace WindowsFormsApp
 
         private void ItemOptions_Click(object sender, EventArgs e)
         {
+			this.Enabled = false;
             this.optionsWindow.Show();
         }
     }
