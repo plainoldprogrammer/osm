@@ -29,6 +29,8 @@ namespace WindowsFormsApp
 
 		private CreateCategoryWindow createCategoryWindow;
 
+		private OptionsWindow optionsWindow;
+
 		[DllImport("kernel32.dll", SetLastError = true)]
 		[return: MarshalAs(UnmanagedType.Bool)]
 		static extern bool AllocConsole();
@@ -40,6 +42,7 @@ namespace WindowsFormsApp
 			InitializeDatabaseAcess();
 			InitializeGui();
 			createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
+			optionsWindow = new OptionsWindow();
 		}
 
 		private void InitializeDatabaseAcess()
