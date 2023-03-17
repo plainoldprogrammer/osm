@@ -66,6 +66,7 @@
             buttonSelectDbFile.TabIndex = 2;
             buttonSelectDbFile.Text = "...";
             buttonSelectDbFile.UseVisualStyleBackColor = true;
+            buttonSelectDbFile.Click += buttonSelectDbFile_Click;
             // 
             // labelTheme
             // 
