@@ -377,5 +377,10 @@ namespace WindowsFormsApp
 			this.Enabled = false;
             this.optionsWindow.Show();
         }
+
+		public void SetFontSize(int fontSize)
+		{
+			this.textBoxSnippetContent.Font = new Font(this.textBoxSnippetContent.Font.FontFamily, fontSize);
+		}
     }
 }

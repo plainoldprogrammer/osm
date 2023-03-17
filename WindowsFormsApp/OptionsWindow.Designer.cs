@@ -111,7 +111,9 @@
             // 
             // comboBoxFontSize
             // 
+            comboBoxFontSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             comboBoxFontSize.FormattingEnabled = true;
+            comboBoxFontSize.Items.AddRange(new object[] { "8", "9", "10", "11", "12", "14", "16", "18", "20", "22", "24", "26", "28", "36", "48", "72" });
             comboBoxFontSize.Location = new System.Drawing.Point(230, 146);
             comboBoxFontSize.Name = "comboBoxFontSize";
             comboBoxFontSize.Size = new System.Drawing.Size(71, 23);

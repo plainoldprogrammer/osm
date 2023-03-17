@@ -24,6 +24,11 @@ namespace Osm
         private void buttonOk_Click(object sender, EventArgs e)
         {
             _mainWindow.Enabled = true;
+
+            int fontSize = 0;
+            Int32.TryParse(comboBoxFontSize.SelectedItem.ToString(), out fontSize);
+            _mainWindow.SetFontSize(fontSize);
+
             this.Hide();
         }
 
