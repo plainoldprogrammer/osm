@@ -67,6 +67,11 @@ namespace Osm
         private void buttonSelectDbFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            string filePath = this.textBoxDbFile.Text; ;
+            string directory = filePath.Substring(0, filePath.LastIndexOf("\\"));
+            openFileDialog.InitialDirectory = directory;
+
             openFileDialog.ShowDialog();
         }
     }
