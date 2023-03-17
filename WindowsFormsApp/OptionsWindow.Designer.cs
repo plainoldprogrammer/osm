@@ -28,140 +28,140 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new System.Windows.Forms.Label();
-            textBox1 = new System.Windows.Forms.TextBox();
-            button1 = new System.Windows.Forms.Button();
-            label2 = new System.Windows.Forms.Label();
-            comboBox1 = new System.Windows.Forms.ComboBox();
-            label3 = new System.Windows.Forms.Label();
-            textBox2 = new System.Windows.Forms.TextBox();
-            label4 = new System.Windows.Forms.Label();
-            comboBox2 = new System.Windows.Forms.ComboBox();
-            checkBox1 = new System.Windows.Forms.CheckBox();
-            button2 = new System.Windows.Forms.Button();
-            button3 = new System.Windows.Forms.Button();
+            labelDbFile = new System.Windows.Forms.Label();
+            textBoxDbFile = new System.Windows.Forms.TextBox();
+            buttonSelectDbFile = new System.Windows.Forms.Button();
+            labelTheme = new System.Windows.Forms.Label();
+            comboBoxTheme = new System.Windows.Forms.ComboBox();
+            labelFont = new System.Windows.Forms.Label();
+            textBoxFont = new System.Windows.Forms.TextBox();
+            labelFontSize = new System.Windows.Forms.Label();
+            comboBoxFontSize = new System.Windows.Forms.ComboBox();
+            checkBoxWordWrap = new System.Windows.Forms.CheckBox();
+            buttonOk = new System.Windows.Forms.Button();
+            buttonCancel = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
-            // label1
+            // labelDbFile
             // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(12, 23);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(46, 15);
-            label1.TabIndex = 0;
-            label1.Text = "DB File:";
+            labelDbFile.AutoSize = true;
+            labelDbFile.Location = new System.Drawing.Point(12, 23);
+            labelDbFile.Name = "labelDbFile";
+            labelDbFile.Size = new System.Drawing.Size(46, 15);
+            labelDbFile.TabIndex = 0;
+            labelDbFile.Text = "DB File:";
             // 
-            // textBox1
+            // textBoxDbFile
             // 
-            textBox1.Location = new System.Drawing.Point(64, 20);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(296, 23);
-            textBox1.TabIndex = 1;
+            textBoxDbFile.Location = new System.Drawing.Point(64, 20);
+            textBoxDbFile.Name = "textBoxDbFile";
+            textBoxDbFile.Size = new System.Drawing.Size(296, 23);
+            textBoxDbFile.TabIndex = 1;
             // 
-            // button1
+            // buttonSelectDbFile
             // 
-            button1.Location = new System.Drawing.Point(366, 20);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(52, 23);
-            button1.TabIndex = 2;
-            button1.Text = "...";
-            button1.UseVisualStyleBackColor = true;
+            buttonSelectDbFile.Location = new System.Drawing.Point(366, 20);
+            buttonSelectDbFile.Name = "buttonSelectDbFile";
+            buttonSelectDbFile.Size = new System.Drawing.Size(52, 23);
+            buttonSelectDbFile.TabIndex = 2;
+            buttonSelectDbFile.Text = "...";
+            buttonSelectDbFile.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // labelTheme
             // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(12, 71);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(46, 15);
-            label2.TabIndex = 3;
-            label2.Text = "Theme:";
+            labelTheme.AutoSize = true;
+            labelTheme.Location = new System.Drawing.Point(12, 71);
+            labelTheme.Name = "labelTheme";
+            labelTheme.Size = new System.Drawing.Size(46, 15);
+            labelTheme.TabIndex = 3;
+            labelTheme.Text = "Theme:";
             // 
-            // comboBox1
+            // comboBoxTheme
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new System.Drawing.Point(12, 89);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new System.Drawing.Size(121, 23);
-            comboBox1.TabIndex = 4;
+            comboBoxTheme.FormattingEnabled = true;
+            comboBoxTheme.Location = new System.Drawing.Point(12, 89);
+            comboBoxTheme.Name = "comboBoxTheme";
+            comboBoxTheme.Size = new System.Drawing.Size(121, 23);
+            comboBoxTheme.TabIndex = 4;
             // 
-            // label3
+            // labelFont
             // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(12, 128);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(34, 15);
-            label3.TabIndex = 5;
-            label3.Text = "Font:";
+            labelFont.AutoSize = true;
+            labelFont.Location = new System.Drawing.Point(12, 128);
+            labelFont.Name = "labelFont";
+            labelFont.Size = new System.Drawing.Size(34, 15);
+            labelFont.TabIndex = 5;
+            labelFont.Text = "Font:";
             // 
-            // textBox2
+            // textBoxFont
             // 
-            textBox2.Location = new System.Drawing.Point(12, 146);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(188, 23);
-            textBox2.TabIndex = 6;
+            textBoxFont.Location = new System.Drawing.Point(12, 146);
+            textBoxFont.Name = "textBoxFont";
+            textBoxFont.Size = new System.Drawing.Size(188, 23);
+            textBoxFont.TabIndex = 6;
             // 
-            // label4
+            // labelFontSize
             // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(230, 128);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(30, 15);
-            label4.TabIndex = 7;
-            label4.Text = "Size:";
+            labelFontSize.AutoSize = true;
+            labelFontSize.Location = new System.Drawing.Point(230, 128);
+            labelFontSize.Name = "labelFontSize";
+            labelFontSize.Size = new System.Drawing.Size(30, 15);
+            labelFontSize.TabIndex = 7;
+            labelFontSize.Text = "Size:";
             // 
-            // comboBox2
+            // comboBoxFontSize
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new System.Drawing.Point(230, 146);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new System.Drawing.Size(71, 23);
-            comboBox2.TabIndex = 8;
+            comboBoxFontSize.FormattingEnabled = true;
+            comboBoxFontSize.Location = new System.Drawing.Point(230, 146);
+            comboBoxFontSize.Name = "comboBoxFontSize";
+            comboBoxFontSize.Size = new System.Drawing.Size(71, 23);
+            comboBoxFontSize.TabIndex = 8;
             // 
-            // checkBox1
+            // checkBoxWordWrap
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new System.Drawing.Point(322, 148);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new System.Drawing.Size(86, 19);
-            checkBox1.TabIndex = 9;
-            checkBox1.Text = "Word Wrap";
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBoxWordWrap.AutoSize = true;
+            checkBoxWordWrap.Location = new System.Drawing.Point(322, 148);
+            checkBoxWordWrap.Name = "checkBoxWordWrap";
+            checkBoxWordWrap.Size = new System.Drawing.Size(86, 19);
+            checkBoxWordWrap.TabIndex = 9;
+            checkBoxWordWrap.Text = "Word Wrap";
+            checkBoxWordWrap.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonOk
             // 
-            button2.Location = new System.Drawing.Point(256, 281);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(75, 23);
-            button2.TabIndex = 10;
-            button2.Text = "Ok";
-            button2.UseVisualStyleBackColor = true;
+            buttonOk.Location = new System.Drawing.Point(256, 281);
+            buttonOk.Name = "buttonOk";
+            buttonOk.Size = new System.Drawing.Size(75, 23);
+            buttonOk.TabIndex = 10;
+            buttonOk.Text = "Ok";
+            buttonOk.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonCancel
             // 
-            button3.Location = new System.Drawing.Point(342, 281);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(75, 23);
-            button3.TabIndex = 11;
-            button3.Text = "Cancel";
-            button3.UseVisualStyleBackColor = true;
+            buttonCancel.Location = new System.Drawing.Point(342, 281);
+            buttonCancel.Name = "buttonCancel";
+            buttonCancel.Size = new System.Drawing.Size(75, 23);
+            buttonCancel.TabIndex = 11;
+            buttonCancel.Text = "Cancel";
+            buttonCancel.UseVisualStyleBackColor = true;
             // 
             // OptionsWindow
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(430, 329);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(checkBox1);
-            Controls.Add(comboBox2);
-            Controls.Add(label4);
-            Controls.Add(textBox2);
-            Controls.Add(label3);
-            Controls.Add(comboBox1);
-            Controls.Add(label2);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            Controls.Add(buttonCancel);
+            Controls.Add(buttonOk);
+            Controls.Add(checkBoxWordWrap);
+            Controls.Add(comboBoxFontSize);
+            Controls.Add(labelFontSize);
+            Controls.Add(textBoxFont);
+            Controls.Add(labelFont);
+            Controls.Add(comboBoxTheme);
+            Controls.Add(labelTheme);
+            Controls.Add(buttonSelectDbFile);
+            Controls.Add(textBoxDbFile);
+            Controls.Add(labelDbFile);
             Name = "OptionsWindow";
             Text = "OptionsWindow";
             ResumeLayout(false);
@@ -170,17 +170,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label labelDbFile;
+        private System.Windows.Forms.TextBox textBoxDbFile;
+        private System.Windows.Forms.Button buttonSelectDbFile;
+        private System.Windows.Forms.Label labelTheme;
+        private System.Windows.Forms.ComboBox comboBoxTheme;
+        private System.Windows.Forms.Label labelFont;
+        private System.Windows.Forms.TextBox textBoxFont;
+        private System.Windows.Forms.Label labelFontSize;
+        private System.Windows.Forms.ComboBox comboBoxFontSize;
+        private System.Windows.Forms.CheckBox checkBoxWordWrap;
+        private System.Windows.Forms.Button buttonOk;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }
