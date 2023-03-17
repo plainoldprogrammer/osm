@@ -26,5 +26,11 @@ namespace Osm
             _mainWindow.Enabled = true;
             this.Hide();
         }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            _mainWindow.Enabled = true;
+            this.Hide();
+        }
     }
 }
