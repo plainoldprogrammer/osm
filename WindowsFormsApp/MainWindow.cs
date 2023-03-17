@@ -378,6 +378,11 @@ namespace WindowsFormsApp
             this.optionsWindow.Show();
         }
 
+		public void SetFont(string font)
+		{
+			this.textBoxSnippetContent.Font = new Font(font, 12);
+		}
+
 		public void SetFontSize(int fontSize)
 		{
 			this.textBoxSnippetContent.Font = new Font(this.textBoxSnippetContent.Font.FontFamily, fontSize);

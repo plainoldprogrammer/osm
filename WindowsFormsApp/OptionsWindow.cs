@@ -27,6 +27,9 @@ namespace Osm
         {
             _mainWindow.Enabled = true;
 
+            String selectedFont = comboBoxFont.SelectedItem.ToString();
+            _mainWindow.SetFont(selectedFont);
+
             int fontSize = 9;
             if (comboBoxFontSize.SelectedItem is not null)
             {
