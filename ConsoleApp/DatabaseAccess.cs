@@ -7,6 +7,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using ConsoleApp.Models;
+using Microsoft.EntityFrameworkCore;
+using SQLitePCL;
 
 namespace ConsoleApp
 {
@@ -66,6 +68,13 @@ namespace ConsoleApp
 			var context = new SnippetsContext();
 			context.Snippets.Update(snippet);
 			context.SaveChanges();
+		}
+
+		public string GetDatabasePath()
+		{
+			var context = new SnippetsContext();
+			string db = context.Database.GetDbConnection().DataSource;
+			return db;
 		}
 	}
 }

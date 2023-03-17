@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,14 @@ namespace Osm
     public partial class OptionsWindow : Form
     {
         private MainWindow _mainWindow;
+        private DatabaseAccess _databaseAccess;
 
-        public OptionsWindow(MainWindow mainWindow)
+        public OptionsWindow(MainWindow mainWindow, DatabaseAccess databaseAccess)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
+            _databaseAccess = databaseAccess;
+            this.textBoxDbFile.Text = _databaseAccess.GetDatabasePath();
             GetAllSystemInstalledFonts();
         }
 
