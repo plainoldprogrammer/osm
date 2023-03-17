@@ -31,12 +31,6 @@ namespace Osm
 			textBoxCategoryName.Select();
 		}
 
-		private void buttonCancel_Click(object sender, EventArgs e)
-		{
-			this.Hide();
-			_mainWindow.Enabled = true;
-		}
-
 		private void buttonOk_Click(object sender, EventArgs e)
 		{
 			string category = textBoxCategoryName.Text;			
@@ -48,5 +42,11 @@ namespace Osm
 			_mainWindow.EnableRemoveCategoryButton();
 			this.Hide();
 		}
-	}
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            _mainWindow.Enabled = true;
+        }
+    }
 }
