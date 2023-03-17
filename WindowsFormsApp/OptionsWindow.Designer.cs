@@ -34,12 +34,12 @@
             labelTheme = new System.Windows.Forms.Label();
             comboBoxTheme = new System.Windows.Forms.ComboBox();
             labelFont = new System.Windows.Forms.Label();
-            textBoxFont = new System.Windows.Forms.TextBox();
             labelFontSize = new System.Windows.Forms.Label();
             comboBoxFontSize = new System.Windows.Forms.ComboBox();
             checkBoxWordWrap = new System.Windows.Forms.CheckBox();
             buttonOk = new System.Windows.Forms.Button();
             buttonCancel = new System.Windows.Forms.Button();
+            comboBoxFont = new System.Windows.Forms.ComboBox();
             SuspendLayout();
             // 
             // labelDbFile
@@ -93,13 +93,6 @@
             labelFont.TabIndex = 5;
             labelFont.Text = "Font:";
             // 
-            // textBoxFont
-            // 
-            textBoxFont.Location = new System.Drawing.Point(12, 146);
-            textBoxFont.Name = "textBoxFont";
-            textBoxFont.Size = new System.Drawing.Size(188, 23);
-            textBoxFont.TabIndex = 6;
-            // 
             // labelFontSize
             // 
             labelFontSize.AutoSize = true;
@@ -149,17 +142,25 @@
             buttonCancel.UseVisualStyleBackColor = true;
             buttonCancel.Click += buttonCancel_Click;
             // 
+            // comboBoxFont
+            // 
+            comboBoxFont.FormattingEnabled = true;
+            comboBoxFont.Location = new System.Drawing.Point(12, 146);
+            comboBoxFont.Name = "comboBoxFont";
+            comboBoxFont.Size = new System.Drawing.Size(203, 23);
+            comboBoxFont.TabIndex = 12;
+            // 
             // OptionsWindow
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(430, 329);
+            Controls.Add(comboBoxFont);
             Controls.Add(buttonCancel);
             Controls.Add(buttonOk);
             Controls.Add(checkBoxWordWrap);
             Controls.Add(comboBoxFontSize);
             Controls.Add(labelFontSize);
-            Controls.Add(textBoxFont);
             Controls.Add(labelFont);
             Controls.Add(comboBoxTheme);
             Controls.Add(labelTheme);
@@ -180,11 +181,11 @@
         private System.Windows.Forms.Label labelTheme;
         private System.Windows.Forms.ComboBox comboBoxTheme;
         private System.Windows.Forms.Label labelFont;
-        private System.Windows.Forms.TextBox textBoxFont;
         private System.Windows.Forms.Label labelFontSize;
         private System.Windows.Forms.ComboBox comboBoxFontSize;
         private System.Windows.Forms.CheckBox checkBoxWordWrap;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.ComboBox comboBoxFont;
     }
 }
