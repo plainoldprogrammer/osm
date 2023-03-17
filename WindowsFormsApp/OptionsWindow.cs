@@ -27,8 +27,11 @@ namespace Osm
         {
             _mainWindow.Enabled = true;
 
-            int fontSize = 0;
-            Int32.TryParse(comboBoxFontSize.SelectedItem.ToString(), out fontSize);
+            int fontSize = 9;
+            if (comboBoxFontSize.SelectedItem is not null)
+            {
+                Int32.TryParse(comboBoxFontSize.SelectedItem.ToString(), out fontSize);
+            }
             _mainWindow.SetFontSize(fontSize);
 
             this.Hide();
