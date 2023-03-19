@@ -31,16 +31,16 @@ namespace Osm
 		{
 			_mainWindow.Enabled = true;
 
-			if (comboBoxFont.SelectedItem is not null)
+			if (this.comboBoxFont.SelectedItem is not null)
 			{
-				String selectedFont = comboBoxFont.SelectedItem.ToString();
+				String selectedFont = this.comboBoxFont.SelectedItem.ToString();
 				_mainWindow.SetFont(selectedFont);
 			}
 
-			if (comboBoxFontSize.SelectedItem is not null)
+			if (this.comboBoxFontSize.SelectedItem is not null)
 			{
 				int fontSize = 9;
-				Int32.TryParse(comboBoxFontSize.SelectedItem.ToString(), out fontSize);
+				Int32.TryParse(this.comboBoxFontSize.SelectedItem.ToString(), out fontSize);
 				_mainWindow.SetFontSize(fontSize);
 			}
 
