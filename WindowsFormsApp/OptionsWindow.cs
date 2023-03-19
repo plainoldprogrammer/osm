@@ -13,66 +13,71 @@ using WindowsFormsApp;
 
 namespace Osm
 {
-    public partial class OptionsWindow : Form
-    {
-        private MainWindow _mainWindow;
-        private DatabaseAccess _databaseAccess;
+	public partial class OptionsWindow : Form
+	{
+		private MainWindow _mainWindow;
+		private DatabaseAccess _databaseAccess;
 
-        public OptionsWindow(MainWindow mainWindow, DatabaseAccess databaseAccess)
-        {
-            InitializeComponent();
-            _mainWindow = mainWindow;
-            _databaseAccess = databaseAccess;
-            this.textBoxDbFile.Text = _databaseAccess.GetDatabasePath();
-            GetAllSystemInstalledFonts();
-        }
+		public OptionsWindow(MainWindow mainWindow, DatabaseAccess databaseAccess)
+		{
+			InitializeComponent();
+			_mainWindow = mainWindow;
+			_databaseAccess = databaseAccess;
+			this.textBoxDbFile.Text = _databaseAccess.GetDatabasePath();
+			GetAllSystemInstalledFonts();
+		}
 
-        private void buttonOk_Click(object sender, EventArgs e)
-        {
-            _mainWindow.Enabled = true;
+		private void buttonOk_Click(object sender, EventArgs e)
+		{
+			_mainWindow.Enabled = true;
 
-            if (comboBoxFont.SelectedItem is not null)
-            {
-                String selectedFont = comboBoxFont.SelectedItem.ToString();
-                _mainWindow.SetFont(selectedFont);
-            }
+			if (comboBoxFont.SelectedItem is not null)
+			{
+				String selectedFont = comboBoxFont.SelectedItem.ToString();
+				_mainWindow.SetFont(selectedFont);
+			}
 
-            if (comboBoxFontSize.SelectedItem is not null)
-            {
-                int fontSize = 9;
-                Int32.TryParse(comboBoxFontSize.SelectedItem.ToString(), out fontSize);
-                _mainWindow.SetFontSize(fontSize);
-            }
+			if (comboBoxFontSize.SelectedItem is not null)
+			{
+				int fontSize = 9;
+				Int32.TryParse(comboBoxFontSize.SelectedItem.ToString(), out fontSize);
+				_mainWindow.SetFontSize(fontSize);
+			}
 
-            this.Hide();
-        }
+			this.Hide();
+		}
 
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            _mainWindow.Enabled = true;
-            this.Hide();
-        }
+		private void buttonCancel_Click(object sender, EventArgs e)
+		{
+			_mainWindow.Enabled = true;
+			this.Hide();
+		}
 
-        private void GetAllSystemInstalledFonts()
-        {
-            using (InstalledFontCollection fontCollection = new InstalledFontCollection())
-            {
-                foreach (FontFamily fontFamily in fontCollection.Families)
-                {
-                    this.comboBoxFont.Items.Add(fontFamily.Name);
-                }
-            }
-        }
+		private void GetAllSystemInstalledFonts()
+		{
+			using (InstalledFontCollection fontCollection = new InstalledFontCollection())
+			{
+				foreach (FontFamily fontFamily in fontCollection.Families)
+				{
+					this.comboBoxFont.Items.Add(fontFamily.Name);
+				}
+			}
+		}
 
-        private void buttonSelectDbFile_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+		private void buttonSelectDbFile_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            string filePath = this.textBoxDbFile.Text; ;
-            string directory = filePath.Substring(0, filePath.LastIndexOf("\\"));
-            openFileDialog.InitialDirectory = directory;
+			string filePath = this.textBoxDbFile.Text; ;
+			string directory = filePath.Substring(0, filePath.LastIndexOf("\\"));
+			openFileDialog.InitialDirectory = directory;
 
-            openFileDialog.ShowDialog();
-        }
-    }
+			openFileDialog.ShowDialog();
+		}
+
+		private void checkBoxWordWrap_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
