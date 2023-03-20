@@ -13,7 +13,6 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             DatabaseAccess databaseAccess = new DatabaseAccess();
-            Console.WriteLine(databaseAccess.GetCategories());
         }
     }
 }
