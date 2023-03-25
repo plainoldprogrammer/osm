@@ -14,66 +14,64 @@ namespace ConsoleApp
 {
 	public class DatabaseAccess
 	{
+		private SnippetsContext snippetsContext { get; set; }
+
+		public DatabaseAccess()
+		{
+			snippetsContext = new SnippetsContext();
+		}
+
 		public void CreateCategory(string categoryName)
 		{
-			var context = new SnippetsContext();
 			Category category = new Category()
 			{
 				Category1 = categoryName
 			};
-			context.Add<Category>(category);
-			context.SaveChanges();
+			snippetsContext.Add<Category>(category);
+			snippetsContext.SaveChanges();
 		}
 
 		public void RemoveCategory(Category category)
 		{
-			var context = new SnippetsContext();
-			var snippetsFromCategory = context.Snippets.Select(x => x).Where(y => y.CategoryId == category.Id);
-			context.Snippets.RemoveRange(snippetsFromCategory);
-			context.Categories.Remove(category);
-			context.SaveChanges();
+			var snippetsFromCategory = snippetsContext.Snippets.Select(x => x).Where(y => y.CategoryId == category.Id);
+			snippetsContext.Snippets.RemoveRange(snippetsFromCategory);
+			snippetsContext.Categories.Remove(category);
+			snippetsContext.SaveChanges();
 		}
 
 		public List<Category> GetCategories()
 		{
-			var context = new SnippetsContext();
-			List<Category> categories = context.Categories.Select(x => x).ToList<Category>();
-
+			List<Category> categories = snippetsContext.Categories.Select(x => x).ToList<Category>();
 			return categories;
 		}
 
 		public void CreateSnippet(Snippet snippet)
 		{
-			var context = new SnippetsContext();
-			context.Add<Snippet>(snippet);
-			context.SaveChanges();
+			snippetsContext.Add<Snippet>(snippet);
+			snippetsContext.SaveChanges();
 		}
 
 		public void RemoveSnippet(Snippet snippet)
 		{
-			var context = new SnippetsContext();
-			context.Snippets.Remove(snippet);
-			context.SaveChanges();
+			snippetsContext.Snippets.Remove(snippet);
+			snippetsContext.SaveChanges();
 		}
 
 		public List<Snippet> GetAllSnippetsFromCategory(Category category)
 		{
-			var context = new SnippetsContext();
-			List<Snippet> snippets = context.Snippets.Select(x => x).Where(y => y.Category == category).ToList<Snippet>();
+			List<Snippet> snippets = snippetsContext.Snippets.Select(x => x).Where(y => y.Category == category).ToList<Snippet>();
 			return snippets;
 		}
 
 		public void UpdateSnippet(Snippet snippet)
 		{
-			var context = new SnippetsContext();
-			context.Snippets.Update(snippet);
-			context.SaveChanges();
+			snippetsContext.Snippets.Update(snippet);
+			snippetsContext.SaveChanges();
 		}
 
 		public string GetDatabasePath()
 		{
-			var context = new SnippetsContext();
-			string db = context.Database.GetDbConnection().DataSource;
+			string db = snippetsContext.Database.GetDbConnection().DataSource;
 			return db;
 		}
 	}
