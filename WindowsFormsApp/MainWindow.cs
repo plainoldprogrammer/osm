@@ -326,6 +326,8 @@ namespace WindowsFormsApp
             {
                 this.buttonRemoveSnippet.Enabled = true;
             }
+
+            this.textBoxSnippetTitle.Focus();
         }
 
         private void buttonRemoveSnippet_Click(object sender, EventArgs e)
