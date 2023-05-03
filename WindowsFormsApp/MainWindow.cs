@@ -346,6 +346,8 @@ namespace WindowsFormsApp
                     this.textBoxSnippetTitle.Enabled = false;
                     this.richTextBoxSnippetContent.Enabled = false;
                     this.buttonRemoveSnippet.Enabled = false;
+
+                    this.textBoxSnippetTitle.Text = "";
                 }
             }
         }
