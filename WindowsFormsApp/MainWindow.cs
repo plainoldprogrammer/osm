@@ -312,7 +312,13 @@ namespace WindowsFormsApp
 
             this.databaseAccess.CreateSnippet(snippet);
 
-            this.listBoxSnippets.Items.Add(snippet);
+			if (this.listBoxSnippets.Items.Count == 0)
+			{
+				this.listBoxSnippets.Enabled = true;
+			}
+
+			this.listBoxSnippets.Items.Add(snippet);
+
             this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
             this.textBoxSnippetTitle.Text = titleOfNewSnippet;
             this.textBoxSnippetTitle.Focus();
