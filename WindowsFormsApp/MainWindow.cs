@@ -55,8 +55,8 @@ namespace WindowsFormsApp
             this.Text = $"Osm v{VERSION}";
             // SetTabWidth(this.richTextBoxSnippetContent, 1);
             InitializeMenuStrip();
-            ConfigureListBoxCategories();
-            ConfigureListBoxSnippets();
+            // ConfigureListBoxCategories();
+            // ConfigureListBoxSnippets();
             InitializeListBoxCategories();
             InitializeListBoxSnippets();
 
@@ -343,10 +343,12 @@ namespace WindowsFormsApp
 
                 if (this.listBoxSnippets.Items.Count == 0)
                 {
+                    Console.WriteLine("0 snippets");
                     this.textBoxSnippetTitle.Enabled = false;
                     this.richTextBoxSnippetContent.Enabled = false;
                     this.buttonRemoveSnippet.Enabled = false;
 
+                    this.listBoxSnippets.Enabled = false;
                     this.textBoxSnippetTitle.Text = "";
                     this.richTextBoxSnippetContent.Text = "";
                 }
