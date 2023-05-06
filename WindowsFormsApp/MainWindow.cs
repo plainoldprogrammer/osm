@@ -285,6 +285,7 @@ namespace WindowsFormsApp
                     this.buttonNewSnippet.Enabled = false;
                     this.buttonRemoveSnippet.Enabled = false;
 
+                    this.listBoxSnippets.Enabled = false;
                     this.textBoxSnippetTitle.Enabled = false;
                     this.richTextBoxSnippetContent.Enabled = false;
 
@@ -343,12 +344,11 @@ namespace WindowsFormsApp
 
                 if (this.listBoxSnippets.Items.Count == 0)
                 {
-                    Console.WriteLine("0 snippets");
+                    this.listBoxSnippets.Enabled = false;
                     this.textBoxSnippetTitle.Enabled = false;
                     this.richTextBoxSnippetContent.Enabled = false;
                     this.buttonRemoveSnippet.Enabled = false;
 
-                    this.listBoxSnippets.Enabled = false;
                     this.textBoxSnippetTitle.Text = "";
                     this.richTextBoxSnippetContent.Text = "";
                 }
