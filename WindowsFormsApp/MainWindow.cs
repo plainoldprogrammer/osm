@@ -352,7 +352,10 @@ namespace WindowsFormsApp
 					index = 0;
 				}
 
-				this.listBoxSnippets.SelectedIndex = index;
+				if (this.listBoxSnippets.Items.Count > 0)
+				{
+					this.listBoxSnippets.SelectedIndex = index;
+				}
 
 				if (this.listBoxSnippets.Items.Count == 0)
 				{
