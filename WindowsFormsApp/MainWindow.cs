@@ -15,302 +15,302 @@ using ConsoleApp.Models;
 
 namespace WindowsFormsApp
 {
-    public partial class MainWindow : System.Windows.Forms.Form
-    {
-        private const string VERSION = "0.4 (Alpha)";
-        private const string RELEASE_DATE = "2023 March 12";
+	public partial class MainWindow : System.Windows.Forms.Form
+	{
+		private const string VERSION = "0.4 (Alpha)";
+		private const string RELEASE_DATE = "2023 March 12";
 
-        private DatabaseAccess databaseAccess;
-        ToolStripMenuItem menuItemFile;
-        ToolStripMenuItem menuItemEdit;
-        ToolStripMenuItem menuItemTools;
-        ToolStripMenuItem menuItemAbout;
-        private const int EM_SETTABSTOPS = 0x00CB;
+		private DatabaseAccess databaseAccess;
+		ToolStripMenuItem menuItemFile;
+		ToolStripMenuItem menuItemEdit;
+		ToolStripMenuItem menuItemTools;
+		ToolStripMenuItem menuItemAbout;
+		private const int EM_SETTABSTOPS = 0x00CB;
 
-        private CreateCategoryWindow createCategoryWindow;
+		private CreateCategoryWindow createCategoryWindow;
 
-        private OptionsWindow optionsWindow;
+		private OptionsWindow optionsWindow;
 
-        [DllImport("kernel32.dll", SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool AllocConsole();
+		[DllImport("kernel32.dll", SetLastError = true)]
+		[return: MarshalAs(UnmanagedType.Bool)]
+		static extern bool AllocConsole();
 
-        public MainWindow()
-        {
-            AllocConsole();
-            InitializeComponent();
-            InitializeDatabaseAcess();
-            InitializeGui();
-            createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
-            optionsWindow = new OptionsWindow(this, this.databaseAccess);
-        }
+		public MainWindow()
+		{
+			AllocConsole();
+			InitializeComponent();
+			InitializeDatabaseAcess();
+			InitializeGui();
+			createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
+			optionsWindow = new OptionsWindow(this, this.databaseAccess);
+		}
 
-        private void InitializeDatabaseAcess()
-        {
-            databaseAccess = new DatabaseAccess();
-        }
+		private void InitializeDatabaseAcess()
+		{
+			databaseAccess = new DatabaseAccess();
+		}
 
-        private void InitializeGui()
-        {
-            this.Text = $"Osm v{VERSION}";
-            // SetTabWidth(this.richTextBoxSnippetContent, 1);
-            InitializeMenuStrip();
-            // ConfigureListBoxCategories();
-            // ConfigureListBoxSnippets();
-            InitializeListBoxCategories();
-            InitializeListBoxSnippets();
+		private void InitializeGui()
+		{
+			this.Text = $"Osm v{VERSION}";
+			// SetTabWidth(this.richTextBoxSnippetContent, 1);
+			InitializeMenuStrip();
+			ConfigureListBoxCategories();
+			ConfigureListBoxSnippets();
+			InitializeListBoxCategories();
+			InitializeListBoxSnippets();
 
-            if (this.listBoxCategories.Items.Count == 0)
-            {
-                this.buttonRemoveCategory.Enabled = false;
-                this.buttonNewSnippet.Enabled = false;
-                this.textBoxSnippetTitle.Enabled = false;
-                this.richTextBoxSnippetContent.Enabled = false;
-            }            
-        }
+			if (this.listBoxCategories.Items.Count == 0)
+			{
+				this.buttonRemoveCategory.Enabled = false;
+				this.buttonNewSnippet.Enabled = false;
+				this.textBoxSnippetTitle.Enabled = false;
+				this.richTextBoxSnippetContent.Enabled = false;
+			}
+		}
 
-        private void InitializeMenuStrip()
-        {
-            menuItemFile = new ToolStripMenuItem("File");
-            ToolStripButton itemExit = new ToolStripButton("Exit");
-            menuItemFile.DropDownItems.Add(itemExit);
-            this.menuStrip.Items.Add(menuItemFile);
+		private void InitializeMenuStrip()
+		{
+			menuItemFile = new ToolStripMenuItem("File");
+			ToolStripButton itemExit = new ToolStripButton("Exit");
+			menuItemFile.DropDownItems.Add(itemExit);
+			this.menuStrip.Items.Add(menuItemFile);
 
-            menuItemEdit = new ToolStripMenuItem("File");
-            ToolStripButton itemCut = new ToolStripButton("Cut");
-            ToolStripButton itemCopy = new ToolStripButton("Copy");
-            ToolStripButton itemPaste = new ToolStripButton("Paste");
-            menuItemEdit.DropDownItems.Add(itemCut);
-            menuItemEdit.DropDownItems.Add(itemCopy);
-            menuItemEdit.DropDownItems.Add(itemPaste);
-            this.menuStrip.Items.Add(menuItemEdit);
+			menuItemEdit = new ToolStripMenuItem("File");
+			ToolStripButton itemCut = new ToolStripButton("Cut");
+			ToolStripButton itemCopy = new ToolStripButton("Copy");
+			ToolStripButton itemPaste = new ToolStripButton("Paste");
+			menuItemEdit.DropDownItems.Add(itemCut);
+			menuItemEdit.DropDownItems.Add(itemCopy);
+			menuItemEdit.DropDownItems.Add(itemPaste);
+			this.menuStrip.Items.Add(menuItemEdit);
 
-            menuItemTools = new ToolStripMenuItem("Tools");
-            ToolStripButton itemOptions = new ToolStripButton("Options");
-            menuItemTools.DropDownItems.Add(itemOptions);
-            this.menuStrip.Items.Add(menuItemTools);
-            itemOptions.Click += ItemOptions_Click;
+			menuItemTools = new ToolStripMenuItem("Tools");
+			ToolStripButton itemOptions = new ToolStripButton("Options");
+			menuItemTools.DropDownItems.Add(itemOptions);
+			this.menuStrip.Items.Add(menuItemTools);
+			itemOptions.Click += ItemOptions_Click;
 
-            menuItemAbout = new ToolStripMenuItem("Help");
-            ToolStripButton itemAbout = new ToolStripButton("About");
-            menuItemAbout.DropDownItems.Add(itemAbout);
-            this.menuStrip.Items.Add(menuItemAbout);
+			menuItemAbout = new ToolStripMenuItem("Help");
+			ToolStripButton itemAbout = new ToolStripButton("About");
+			menuItemAbout.DropDownItems.Add(itemAbout);
+			this.menuStrip.Items.Add(menuItemAbout);
 
-            itemExit.Click += ItemExit_Clicked;
-            itemAbout.Click += ItemAbout_Clicked;
-        }
+			itemExit.Click += ItemExit_Clicked;
+			itemAbout.Click += ItemAbout_Clicked;
+		}
 
-        private void ConfigureListBoxCategories()
-        {
-            this.listBoxCategories.DrawMode = DrawMode.OwnerDrawFixed;
-            this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItem);
-        }
+		private void ConfigureListBoxCategories()
+		{
+			this.listBoxCategories.DrawMode = DrawMode.OwnerDrawFixed;
+			this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItem);
+		}
 
-        private void ConfigureListBoxSnippets()
-        {
-            this.listBoxSnippets.DrawMode = DrawMode.OwnerDrawFixed;
-            this.listBoxSnippets.DrawItem += new DrawItemEventHandler(listBoxSnippets_DrawItem);
-        }
+		private void ConfigureListBoxSnippets()
+		{
+			this.listBoxSnippets.DrawMode = DrawMode.OwnerDrawFixed;
+			this.listBoxSnippets.DrawItem += new DrawItemEventHandler(listBoxSnippets_DrawItem);
+		}
 
-        private void InitializeListBoxCategories()
-        {
-            this.listBoxCategories.DisplayMember = "Category1";
-            this.listBoxCategories.ValueMember = "Id";
-            this.RefreshCategoriesListBox();
-        }
+		private void InitializeListBoxCategories()
+		{
+			this.listBoxCategories.DisplayMember = "Category1";
+			this.listBoxCategories.ValueMember = "Id";
+			this.RefreshCategoriesListBox();
+		}
 
-        private void InitializeListBoxSnippets()
-        {
-            this.listBoxSnippets.DisplayMember = "Title";
-            this.listBoxSnippets.ValueMember = "Id";
-        }
+		private void InitializeListBoxSnippets()
+		{
+			this.listBoxSnippets.DisplayMember = "Title";
+			this.listBoxSnippets.ValueMember = "Id";
+		}
 
-        public void RefreshCategoriesListBox()
-        {
-            if (this.listBoxCategories.Items.Count > 0)
-            {
-                this.listBoxCategories.Items.Clear();
-            }
+		public void RefreshCategoriesListBox()
+		{
+			if (this.listBoxCategories.Items.Count > 0)
+			{
+				this.listBoxCategories.Items.Clear();
+			}
 
-            List<Category> categories = this.databaseAccess.GetCategories();
+			List<Category> categories = this.databaseAccess.GetCategories();
 
-            foreach (Category category in categories)
-            {
-                this.listBoxCategories.Items.Add(category);
-            }
+			foreach (Category category in categories)
+			{
+				this.listBoxCategories.Items.Add(category);
+			}
 
-            this.listBoxCategories.SelectedIndex = this.listBoxCategories.Items.Count - 1;
-            this.listBoxSnippets.HorizontalScrollbar = true;
-            this.richTextBoxSnippetContent.Select(0, 0);
-        }
+			this.listBoxCategories.SelectedIndex = this.listBoxCategories.Items.Count - 1;
+			this.listBoxSnippets.HorizontalScrollbar = true;
+			this.richTextBoxSnippetContent.Select(0, 0);
+		}
 
-        private void listBoxCategories_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (listBoxCategories.SelectedIndex >= 0)
-            {
-                Category selectedCategory = listBoxCategories.SelectedItem as Category;
-                this.listBoxSnippets.Items.Clear();
-                List<Snippet> snippets = this.databaseAccess.GetAllSnippetsFromCategory(selectedCategory);
+		private void listBoxCategories_SelectedValueChanged(object sender, EventArgs e)
+		{
+			if (listBoxCategories.SelectedIndex >= 0)
+			{
+				Category selectedCategory = listBoxCategories.SelectedItem as Category;
+				this.listBoxSnippets.Items.Clear();
+				List<Snippet> snippets = this.databaseAccess.GetAllSnippetsFromCategory(selectedCategory);
 
-                foreach (Snippet snippet in snippets)
-                {
-                    this.listBoxSnippets.Items.Add(snippet);
-                }
+				foreach (Snippet snippet in snippets)
+				{
+					this.listBoxSnippets.Items.Add(snippet);
+				}
 
-                if (snippets.Count > 0)
-                {
-                    this.listBoxSnippets.SelectedIndex = snippets.Count - 1;
-                }
-            }
+				if (snippets.Count > 0)
+				{
+					this.listBoxSnippets.SelectedIndex = snippets.Count - 1;
+				}
+			}
 
-            if (listBoxCategories.Items.Count == 0 || listBoxSnippets.Items.Count == 0)
-            {
-                this.buttonRemoveSnippet.Enabled = false;
-                this.textBoxSnippetTitle.Enabled = false;
-                this.richTextBoxSnippetContent.Enabled = false;
-            }
-            else
-            {
-                this.buttonRemoveSnippet.Enabled = true;
-                this.textBoxSnippetTitle.Enabled = true;
-                this.richTextBoxSnippetContent.Enabled = true;
-            }
-        }
+			if (listBoxCategories.Items.Count == 0 || listBoxSnippets.Items.Count == 0)
+			{
+				this.buttonRemoveSnippet.Enabled = false;
+				this.textBoxSnippetTitle.Enabled = false;
+				this.richTextBoxSnippetContent.Enabled = false;
+			}
+			else
+			{
+				this.buttonRemoveSnippet.Enabled = true;
+				this.textBoxSnippetTitle.Enabled = true;
+				this.richTextBoxSnippetContent.Enabled = true;
+			}
+		}
 
-        private void listBoxSnippets_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (listBoxSnippets.Items.Count > 0)
-            {
-                Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+		private void listBoxSnippets_SelectedValueChanged(object sender, EventArgs e)
+		{
+			if (listBoxSnippets.Items.Count > 0)
+			{
+				Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 
-                if (selectedSnippet is not null)
-                {
-                    this.textBoxSnippetTitle.Text = selectedSnippet.Title;
-                    this.richTextBoxSnippetContent.Text = selectedSnippet.Snippet1;
-                }
-            }
-        }
+				if (selectedSnippet is not null)
+				{
+					this.textBoxSnippetTitle.Text = selectedSnippet.Title;
+					this.richTextBoxSnippetContent.Text = selectedSnippet.Snippet1;
+				}
+			}
+		}
 
-        [DllImport("User32.dll", CharSet = CharSet.Auto)]
-        public static extern IntPtr SendMessage(IntPtr h, int msg, int wParam, int[] lParam);
+		[DllImport("User32.dll", CharSet = CharSet.Auto)]
+		public static extern IntPtr SendMessage(IntPtr h, int msg, int wParam, int[] lParam);
 
-        public static void SetTabWidth(TextBox textbox, int tabWidth)
-        {
-            Graphics graphics = textbox.CreateGraphics();
-            var characterWidth = (int)graphics.MeasureString("M", textbox.Font).Width;
-            SendMessage
-                (textbox.Handle
-                , EM_SETTABSTOPS
-                , 1
-                , new int[] { tabWidth * characterWidth }
-                );
-        }
+		public static void SetTabWidth(TextBox textbox, int tabWidth)
+		{
+			Graphics graphics = textbox.CreateGraphics();
+			var characterWidth = (int)graphics.MeasureString("M", textbox.Font).Width;
+			SendMessage
+				(textbox.Handle
+				, EM_SETTABSTOPS
+				, 1
+				, new int[] { tabWidth * characterWidth }
+				);
+		}
 
-        private void ItemExit_Clicked(Object sender, EventArgs e)
-        {
-            this.Close();
-        }
+		private void ItemExit_Clicked(Object sender, EventArgs e)
+		{
+			this.Close();
+		}
 
-        private void ItemAbout_Clicked(Object sender, EventArgs e)
-        {
-            string message = $"Osm\nOther Snippet Manager\nVersion: {VERSION}\nRelease Date: {RELEASE_DATE}\nDeveloper: PlainOldProgrammer";
-            MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+		private void ItemAbout_Clicked(Object sender, EventArgs e)
+		{
+			string message = $"Osm\nOther Snippet Manager\nVersion: {VERSION}\nRelease Date: {RELEASE_DATE}\nDeveloper: PlainOldProgrammer";
+			MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
 
-        private void listBoxCategories_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            if (listBoxCategories.Items.Count > 0)
-            {
-                e.DrawBackground();
-                e.Graphics.DrawIcon(new Icon("icons/folder.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
+		private void listBoxCategories_DrawItem(object sender, DrawItemEventArgs e)
+		{
+			if (listBoxCategories.Items.Count > 0)
+			{
+				e.DrawBackground();
+				e.Graphics.DrawIcon(new Icon("icons/folder.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
 
-                Rectangle textRectangle = e.Bounds;
-                textRectangle.X += 18;
+				Rectangle textRectangle = e.Bounds;
+				textRectangle.X += 18;
 
-                e.Graphics.DrawString((listBoxCategories.Items[e.Index] as Category).Category1, e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
-                e.DrawFocusRectangle();
-            }
-        }
+				e.Graphics.DrawString((listBoxCategories.Items[e.Index] as Category).Category1, e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+				e.DrawFocusRectangle();
+			}
+		}
 
-        private void listBoxSnippets_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            if (listBoxSnippets.Items.Count > 0)
-            {
-                e.DrawBackground();
-                e.Graphics.DrawIcon(new Icon("icons/file.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
+		private void listBoxSnippets_DrawItem(object sender, DrawItemEventArgs e)
+		{
+			if (listBoxSnippets.Items.Count > 0)
+			{
+				e.DrawBackground();
+				e.Graphics.DrawIcon(new Icon("icons/file.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
 
-                Rectangle textRectangle = e.Bounds;
-                textRectangle.X += 18;
+				Rectangle textRectangle = e.Bounds;
+				textRectangle.X += 18;
 
-                e.Graphics.DrawString((listBoxSnippets.Items[e.Index] as Snippet).Title,
-                    e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+				e.Graphics.DrawString((listBoxSnippets.Items[e.Index] as Snippet).Title,
+					e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
 
-                e.DrawFocusRectangle();
-            }
-        }
+				e.DrawFocusRectangle();
+			}
+		}
 
-        private void buttonNewCategory_Click(object sender, EventArgs e)
-        {
-            this.Enabled = false;
-            this.createCategoryWindow.Show();
-            this.buttonNewSnippet.Enabled = true;
-            this.textBoxSnippetTitle.Enabled = true;
-            this.richTextBoxSnippetContent.Enabled = true;
-        }
+		private void buttonNewCategory_Click(object sender, EventArgs e)
+		{
+			this.Enabled = false;
+			this.createCategoryWindow.Show();
+			this.buttonNewSnippet.Enabled = true;
+			this.textBoxSnippetTitle.Enabled = true;
+			this.richTextBoxSnippetContent.Enabled = true;
+		}
 
-        private void buttonRemoveCategory_Click(object sender, EventArgs e)
-        {
-            if (this.listBoxCategories.Items.Count > 0)
-            {
+		private void buttonRemoveCategory_Click(object sender, EventArgs e)
+		{
+			if (this.listBoxCategories.Items.Count > 0)
+			{
 
-                var index = this.listBoxCategories.SelectedIndex;
-                Category selectedCategory = listBoxCategories.SelectedItem as Category;
-                this.listBoxCategories.Items.RemoveAt(index);
+				var index = this.listBoxCategories.SelectedIndex;
+				Category selectedCategory = listBoxCategories.SelectedItem as Category;
+				this.listBoxCategories.Items.RemoveAt(index);
 
-                if (index > 0)
-                {
-                    index--;
-                }
+				if (index > 0)
+				{
+					index--;
+				}
 
-                if (this.listBoxCategories.Items.Count > 0)
-                {
-                    this.listBoxCategories.SelectedIndex = index;
+				if (this.listBoxCategories.Items.Count > 0)
+				{
+					this.listBoxCategories.SelectedIndex = index;
 
-                }
-                else
-                {
-                    this.listBoxSnippets.Items.Clear();
+				}
+				else
+				{
+					this.listBoxSnippets.Items.Clear();
 
-                    this.buttonRemoveCategory.Enabled = false;
-                    this.buttonNewSnippet.Enabled = false;
-                    this.buttonRemoveSnippet.Enabled = false;
+					this.buttonRemoveCategory.Enabled = false;
+					this.buttonNewSnippet.Enabled = false;
+					this.buttonRemoveSnippet.Enabled = false;
 
-                    this.listBoxSnippets.Enabled = false;
-                    this.textBoxSnippetTitle.Enabled = false;
-                    this.richTextBoxSnippetContent.Enabled = false;
+					this.listBoxSnippets.Enabled = false;
+					this.textBoxSnippetTitle.Enabled = false;
+					this.richTextBoxSnippetContent.Enabled = false;
 
-                    this.textBoxSnippetTitle.Text = "";
-                    this.richTextBoxSnippetContent.Text = "";
-                }
+					this.textBoxSnippetTitle.Text = "";
+					this.richTextBoxSnippetContent.Text = "";
+				}
 
-                this.databaseAccess.RemoveCategory(selectedCategory);
-            }
-        }
+				this.databaseAccess.RemoveCategory(selectedCategory);
+			}
+		}
 
-        private void buttonNewSnippet_Click(object sender, EventArgs e)
-        {
-            this.richTextBoxSnippetContent.Text = "";
-            string titleOfNewSnippet = "New Snippet";
+		private void buttonNewSnippet_Click(object sender, EventArgs e)
+		{
+			this.richTextBoxSnippetContent.Text = "";
+			string titleOfNewSnippet = "New Snippet";
 
-            Category selectedCategory = this.listBoxCategories.SelectedItem as Category;
-            Snippet snippet = new Snippet()
-            {
-                Title = titleOfNewSnippet,
-                CategoryId = selectedCategory.Id,
-                Datetime = BitConverter.GetBytes(DateTime.Now.Ticks)
-            };
+			Category selectedCategory = this.listBoxCategories.SelectedItem as Category;
+			Snippet snippet = new Snippet()
+			{
+				Title = titleOfNewSnippet,
+				CategoryId = selectedCategory.Id,
+				Datetime = BitConverter.GetBytes(DateTime.Now.Ticks)
+			};
 
-            this.databaseAccess.CreateSnippet(snippet);
+			this.databaseAccess.CreateSnippet(snippet);
 
 			if (this.listBoxSnippets.Items.Count == 0)
 			{
@@ -319,102 +319,102 @@ namespace WindowsFormsApp
 
 			this.listBoxSnippets.Items.Add(snippet);
 
-            this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
-            this.textBoxSnippetTitle.Text = titleOfNewSnippet;
-            this.textBoxSnippetTitle.Focus();
+			this.listBoxSnippets.SelectedIndex = this.listBoxSnippets.Items.Count - 1;
+			this.textBoxSnippetTitle.Text = titleOfNewSnippet;
+			this.textBoxSnippetTitle.Focus();
 
-            if (!this.textBoxSnippetTitle.Enabled && !this.richTextBoxSnippetContent.Enabled)
-            {
-                this.textBoxSnippetTitle.Enabled = true;
-                this.richTextBoxSnippetContent.Enabled = true;
-            }
+			if (!this.textBoxSnippetTitle.Enabled && !this.richTextBoxSnippetContent.Enabled)
+			{
+				this.textBoxSnippetTitle.Enabled = true;
+				this.richTextBoxSnippetContent.Enabled = true;
+			}
 
-            if (this.buttonRemoveSnippet.Enabled == false)
-            {
-                this.buttonRemoveSnippet.Enabled = true;
-            }
+			if (this.buttonRemoveSnippet.Enabled == false)
+			{
+				this.buttonRemoveSnippet.Enabled = true;
+			}
 
-            this.textBoxSnippetTitle.Focus();
-        }
+			this.textBoxSnippetTitle.Focus();
+		}
 
-        private void buttonRemoveSnippet_Click(object sender, EventArgs e)
-        {
-            if (this.listBoxSnippets.Items.Count > 0)
-            {
-                Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
-                int index = this.listBoxSnippets.SelectedIndex;
-                this.databaseAccess.RemoveSnippet(selectedSnippet);
-                this.listBoxSnippets.Items.RemoveAt(index);
-                index--;
-                this.listBoxSnippets.SelectedIndex = index;
+		private void buttonRemoveSnippet_Click(object sender, EventArgs e)
+		{
+			if (this.listBoxSnippets.Items.Count > 0)
+			{
+				Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+				int index = this.listBoxSnippets.SelectedIndex;
+				this.databaseAccess.RemoveSnippet(selectedSnippet);
+				this.listBoxSnippets.Items.RemoveAt(index);
+				index--;
+				this.listBoxSnippets.SelectedIndex = index;
 
-                if (this.listBoxSnippets.Items.Count == 0)
-                {
-                    this.listBoxSnippets.Enabled = false;
-                    this.textBoxSnippetTitle.Enabled = false;
-                    this.richTextBoxSnippetContent.Enabled = false;
-                    this.buttonRemoveSnippet.Enabled = false;
+				if (this.listBoxSnippets.Items.Count == 0)
+				{
+					this.listBoxSnippets.Enabled = false;
+					this.textBoxSnippetTitle.Enabled = false;
+					this.richTextBoxSnippetContent.Enabled = false;
+					this.buttonRemoveSnippet.Enabled = false;
 
-                    this.textBoxSnippetTitle.Text = "";
-                    this.richTextBoxSnippetContent.Text = "";
-                }
-            }
-        }
+					this.textBoxSnippetTitle.Text = "";
+					this.richTextBoxSnippetContent.Text = "";
+				}
+			}
+		}
 
-        private void textBoxSnippetTitle_TextChanged(object sender, EventArgs e)
-        {
-            if (listBoxSnippets.Items.Count > 0)
-            {
-                string title = ((TextBox)sender).Text;
-                Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
-                selectedSnippet.Title = title;
-                databaseAccess.UpdateSnippet(selectedSnippet);
-            }
-        }
+		private void textBoxSnippetTitle_TextChanged(object sender, EventArgs e)
+		{
+			if (listBoxSnippets.Items.Count > 0)
+			{
+				string title = ((TextBox)sender).Text;
+				Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+				selectedSnippet.Title = title;
+				databaseAccess.UpdateSnippet(selectedSnippet);
+			}
+		}
 
-        private void textBoxSnippetContent_TextChanged(object sender, EventArgs e)
-        {
-            string content = ((TextBox)sender).Text;
-            Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+		private void textBoxSnippetContent_TextChanged(object sender, EventArgs e)
+		{
+			string content = ((TextBox)sender).Text;
+			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 
-            if (selectedSnippet is not null)
-            {
-                selectedSnippet.Snippet1 = content;
-                this.databaseAccess.UpdateSnippet(selectedSnippet);
-            }
-        }
+			if (selectedSnippet is not null)
+			{
+				selectedSnippet.Snippet1 = content;
+				this.databaseAccess.UpdateSnippet(selectedSnippet);
+			}
+		}
 
-        public void EnableRemoveCategoryButton()
-        {
-            this.buttonRemoveCategory.Enabled = true;
-        }
+		public void EnableRemoveCategoryButton()
+		{
+			this.buttonRemoveCategory.Enabled = true;
+		}
 
-        private void ItemOptions_Click(object sender, EventArgs e)
-        {
-            this.Enabled = false;
-            this.optionsWindow.Show();
-        }
+		private void ItemOptions_Click(object sender, EventArgs e)
+		{
+			this.Enabled = false;
+			this.optionsWindow.Show();
+		}
 
-        public void SetFont(string font)
-        {
-            this.richTextBoxSnippetContent.Font = new Font(font, 12);
-        }
+		public void SetFont(string font)
+		{
+			this.richTextBoxSnippetContent.Font = new Font(font, 12);
+		}
 
-        public void SetFontSize(int fontSize)
-        {
-            this.richTextBoxSnippetContent.Font = new Font(this.richTextBoxSnippetContent.Font.FontFamily, fontSize);
-        }
+		public void SetFontSize(int fontSize)
+		{
+			this.richTextBoxSnippetContent.Font = new Font(this.richTextBoxSnippetContent.Font.FontFamily, fontSize);
+		}
 
-        private void richTextBoxSnippetContent_TextChanged(object sender, EventArgs e)
-        {
-            string content = ((RichTextBox)sender).Text;
-            Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
+		private void richTextBoxSnippetContent_TextChanged(object sender, EventArgs e)
+		{
+			string content = ((RichTextBox)sender).Text;
+			Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 
-            if (selectedSnippet is not null)
-            {
-                selectedSnippet.Snippet1 = content;
-                this.databaseAccess.UpdateSnippet(selectedSnippet);
-            }
-        }
-    }
+			if (selectedSnippet is not null)
+			{
+				selectedSnippet.Snippet1 = content;
+				this.databaseAccess.UpdateSnippet(selectedSnippet);
+			}
+		}
+	}
 }
