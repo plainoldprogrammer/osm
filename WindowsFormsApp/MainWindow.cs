@@ -346,6 +346,12 @@ namespace WindowsFormsApp
 				this.databaseAccess.RemoveSnippet(selectedSnippet);
 				this.listBoxSnippets.Items.RemoveAt(index);
 				index--;
+
+				if (index == -1)
+				{
+					index = 0;
+				}
+
 				this.listBoxSnippets.SelectedIndex = index;
 
 				if (this.listBoxSnippets.Items.Count == 0)
@@ -358,6 +364,8 @@ namespace WindowsFormsApp
 					this.textBoxSnippetTitle.Text = "";
 					this.richTextBoxSnippetContent.Text = "";
 				}
+
+				Console.WriteLine($"Selected item at the end of remove snippet operation is: {this.listBoxSnippets.SelectedIndex}");
 			}
 		}
 
