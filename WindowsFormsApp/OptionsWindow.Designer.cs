@@ -154,6 +154,7 @@
 			// 
 			// comboBoxFont
 			// 
+            comboBoxFont.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			comboBoxFont.FormattingEnabled = true;
 			comboBoxFont.Location = new System.Drawing.Point(14, 195);
 			comboBoxFont.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
