@@ -81,6 +81,7 @@
 			// 
 			// comboBoxTheme
 			// 
+            comboBoxTheme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			comboBoxTheme.FormattingEnabled = true;
 			comboBoxTheme.Items.AddRange(new object[] { "Light", "Dark" });
 			comboBoxTheme.Location = new System.Drawing.Point(14, 119);
