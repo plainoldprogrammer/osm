@@ -72,12 +72,6 @@ namespace WindowsFormsApp
 
 		private void InitializeMenuStrip()
 		{
-			menuItemTools = new ToolStripMenuItem("Tools");
-			ToolStripButton itemOptions = new ToolStripButton("Options");
-			menuItemTools.DropDownItems.Add(itemOptions);
-			this.menuStrip.Items.Add(menuItemTools);
-			itemOptions.Click += ItemOptions_Click;
-
 			menuItemAbout = new ToolStripMenuItem("Help");
 			ToolStripButton itemAbout = new ToolStripButton("About");
 			menuItemAbout.DropDownItems.Add(itemAbout);
@@ -386,7 +380,7 @@ namespace WindowsFormsApp
 			this.buttonRemoveCategory.Enabled = true;
 		}
 
-		private void ItemOptions_Click(object sender, EventArgs e)
+		private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			this.Enabled = false;
 			this.optionsWindow.Show();

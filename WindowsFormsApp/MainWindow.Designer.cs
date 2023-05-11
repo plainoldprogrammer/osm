@@ -40,11 +40,13 @@
 			menuStrip = new System.Windows.Forms.MenuStrip();
 			fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			richTextBoxSnippetContent = new System.Windows.Forms.RichTextBox();
 			editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			richTextBoxSnippetContent = new System.Windows.Forms.RichTextBox();
 			menuStrip.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -144,7 +146,7 @@
 			// menuStrip
 			// 
 			menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-			menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem });
+			menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, toolsToolStripMenuItem });
 			menuStrip.Location = new System.Drawing.Point(0, 0);
 			menuStrip.Name = "menuStrip";
 			menuStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
@@ -165,16 +167,6 @@
 			exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
 			exitToolStripMenuItem.Text = "Exit";
 			// 
-			// richTextBoxSnippetContent
-			// 
-			richTextBoxSnippetContent.Location = new System.Drawing.Point(587, 76);
-			richTextBoxSnippetContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			richTextBoxSnippetContent.Name = "richTextBoxSnippetContent";
-			richTextBoxSnippetContent.Size = new System.Drawing.Size(587, 644);
-			richTextBoxSnippetContent.TabIndex = 13;
-			richTextBoxSnippetContent.Text = "";
-			richTextBoxSnippetContent.TextChanged += richTextBoxSnippetContent_TextChanged;
-			// 
 			// editToolStripMenuItem
 			// 
 			editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { cutToolStripMenuItem, copyToolStripMenuItem, pasteToolStripMenuItem });
@@ -185,20 +177,44 @@
 			// cutToolStripMenuItem
 			// 
 			cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-			cutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			cutToolStripMenuItem.Size = new System.Drawing.Size(126, 26);
 			cutToolStripMenuItem.Text = "Cut";
 			// 
 			// copyToolStripMenuItem
 			// 
 			copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-			copyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			copyToolStripMenuItem.Size = new System.Drawing.Size(126, 26);
 			copyToolStripMenuItem.Text = "Copy";
 			// 
 			// pasteToolStripMenuItem
 			// 
 			pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-			pasteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			pasteToolStripMenuItem.Size = new System.Drawing.Size(126, 26);
 			pasteToolStripMenuItem.Text = "Paste";
+			// 
+			// toolsToolStripMenuItem
+			// 
+			toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { optionsToolStripMenuItem });
+			toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+			toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+			toolsToolStripMenuItem.Text = "Tools";
+			// 
+			// optionsToolStripMenuItem
+			// 
+			optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+			optionsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			optionsToolStripMenuItem.Text = "Options";
+			optionsToolStripMenuItem.Click += optionsToolStripMenuItem_Click;
+			// 
+			// richTextBoxSnippetContent
+			// 
+			richTextBoxSnippetContent.Location = new System.Drawing.Point(587, 76);
+			richTextBoxSnippetContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			richTextBoxSnippetContent.Name = "richTextBoxSnippetContent";
+			richTextBoxSnippetContent.Size = new System.Drawing.Size(587, 644);
+			richTextBoxSnippetContent.TabIndex = 13;
+			richTextBoxSnippetContent.Text = "";
+			richTextBoxSnippetContent.TextChanged += richTextBoxSnippetContent_TextChanged;
 			// 
 			// MainWindow
 			// 
@@ -244,5 +260,7 @@
 		private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
 	}
 }
