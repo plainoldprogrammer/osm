@@ -402,5 +402,10 @@ namespace WindowsFormsApp
         {
             return this.richTextBoxSnippetContent.Font.Size;
         }
+
+        public Font GetRichTextBoxSnippetContentFont()
+        {
+            return this.richTextBoxSnippetContent.Font;
+        }
     }
 }
