@@ -77,7 +77,7 @@ namespace WindowsFormsApp
 			menuItemFile.DropDownItems.Add(itemExit);
 			this.menuStrip.Items.Add(menuItemFile);
 
-			menuItemEdit = new ToolStripMenuItem("File");
+			menuItemEdit = new ToolStripMenuItem("Edit");
 			ToolStripButton itemCut = new ToolStripButton("Cut");
 			ToolStripButton itemCopy = new ToolStripButton("Copy");
 			ToolStripButton itemPaste = new ToolStripButton("Paste");
