@@ -234,7 +234,6 @@ namespace WindowsFormsApp
         {
             if (this.listBoxCategories.Items.Count > 0)
             {
-
                 var index = this.listBoxCategories.SelectedIndex;
                 Category selectedCategory = listBoxCategories.SelectedItem as Category;
                 this.listBoxCategories.Items.RemoveAt(index);
@@ -247,7 +246,6 @@ namespace WindowsFormsApp
                 if (this.listBoxCategories.Items.Count > 0)
                 {
                     this.listBoxCategories.SelectedIndex = index;
-
                 }
                 else
                 {
