@@ -31,7 +31,7 @@ namespace Osm
             this.comboBoxTheme.SelectedIndex = 0;
 
             float fontSize = _mainWindow.GetRichTextBoxSnippetContentFontSize();
-            int indexFontSize = this.comboBoxFontSize.Items.IndexOf(((int) fontSize).ToString());
+            int indexFontSize = this.comboBoxFontSize.Items.IndexOf(((int)fontSize).ToString());
             this.comboBoxFontSize.SelectedIndex = indexFontSize;
 
             Font font = _mainWindow.GetRichTextBoxSnippetContentFont();
