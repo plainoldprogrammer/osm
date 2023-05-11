@@ -25,6 +25,7 @@ namespace Osm
             _databaseAccess = databaseAccess;
             this.textBoxDbFile.Text = _databaseAccess.GetDatabasePath();
             GetAllSystemInstalledFonts();
+            this.AcceptButton = this.buttonOk;
             this.CancelButton = this.buttonCancel;
         }
 
