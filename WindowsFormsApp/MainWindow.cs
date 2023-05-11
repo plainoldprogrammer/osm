@@ -21,10 +21,6 @@ namespace WindowsFormsApp
 		private const string RELEASE_DATE = "2023 March 12";
 
 		private DatabaseAccess databaseAccess;
-		ToolStripMenuItem menuItemFile;
-		ToolStripMenuItem menuItemEdit;
-		ToolStripMenuItem menuItemTools;
-		ToolStripMenuItem menuItemAbout;
 		private const int EM_SETTABSTOPS = 0x00CB;
 
 		private CreateCategoryWindow createCategoryWindow;
