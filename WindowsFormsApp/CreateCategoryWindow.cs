@@ -29,6 +29,7 @@ namespace Osm
             _mainWindow = mainWindow;
             _databaseAccess = databaseAccess;
             textBoxCategoryName.Select();
+            this.AcceptButton = this.buttonOk;
             this.CancelButton = this.buttonCancel;
         }
 
