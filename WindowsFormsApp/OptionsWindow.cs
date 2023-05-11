@@ -27,6 +27,10 @@ namespace Osm
             GetAllSystemInstalledFonts();
             this.AcceptButton = this.buttonOk;
             this.CancelButton = this.buttonCancel;
+
+            float fontSize = _mainWindow.GetRichTextBoxSnippetContentFontSize();
+            var selected = this.comboBoxFontSize.Items.IndexOf(((int) fontSize).ToString());
+            this.comboBoxFontSize.SelectedIndex = (int) selected;
         }
 
         private void buttonOk_Click(object sender, EventArgs e)

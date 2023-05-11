@@ -397,5 +397,10 @@ namespace WindowsFormsApp
                 this.databaseAccess.UpdateSnippet(selectedSnippet);
             }
         }
+
+        public float GetRichTextBoxSnippetContentFontSize()
+        {
+            return this.richTextBoxSnippetContent.Font.Size;
+        }
     }
 }
