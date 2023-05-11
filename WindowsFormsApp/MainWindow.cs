@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Drawing;
 using Osm;
 using ConsoleApp.Models;
+using System.Diagnostics;
 
 namespace WindowsFormsApp
 {
@@ -33,7 +34,11 @@ namespace WindowsFormsApp
 
 		public MainWindow()
 		{
-			AllocConsole();
+			if (Debugger.IsAttached)
+			{
+				AllocConsole();
+			}
+
 			InitializeComponent();
 			InitializeDatabaseAcess();
 			InitializeGui();
