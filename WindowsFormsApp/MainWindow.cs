@@ -72,12 +72,6 @@ namespace WindowsFormsApp
 
 		private void InitializeMenuStrip()
 		{
-			menuItemAbout = new ToolStripMenuItem("Help");
-			ToolStripButton itemAbout = new ToolStripButton("About");
-			menuItemAbout.DropDownItems.Add(itemAbout);
-			this.menuStrip.Items.Add(menuItemAbout);
-
-			itemAbout.Click += ItemAbout_Clicked;
 		}
 
 		private void ConfigureListBoxCategories()
@@ -191,7 +185,7 @@ namespace WindowsFormsApp
 			this.Close();
 		}
 
-		private void ItemAbout_Clicked(Object sender, EventArgs e)
+		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			string message = $"Osm\nOther Snippet Manager\nVersion: {VERSION}\nRelease Date: {RELEASE_DATE}\nDeveloper: PlainOldProgrammer";
 			MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);

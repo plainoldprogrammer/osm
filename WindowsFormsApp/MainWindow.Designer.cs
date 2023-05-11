@@ -47,6 +47,8 @@
 			toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			richTextBoxSnippetContent = new System.Windows.Forms.RichTextBox();
+			helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			menuStrip.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -146,7 +148,7 @@
 			// menuStrip
 			// 
 			menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-			menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, toolsToolStripMenuItem });
+			menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, toolsToolStripMenuItem, helpToolStripMenuItem });
 			menuStrip.Location = new System.Drawing.Point(0, 0);
 			menuStrip.Name = "menuStrip";
 			menuStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
@@ -216,6 +218,20 @@
 			richTextBoxSnippetContent.Text = "";
 			richTextBoxSnippetContent.TextChanged += richTextBoxSnippetContent_TextChanged;
 			// 
+			// helpToolStripMenuItem
+			// 
+			helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { aboutToolStripMenuItem });
+			helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+			helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+			helpToolStripMenuItem.Text = "Help";
+			// 
+			// aboutToolStripMenuItem
+			// 
+			aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+			aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			aboutToolStripMenuItem.Text = "About";
+			aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
+			// 
 			// MainWindow
 			// 
 			AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -262,5 +278,7 @@
 		private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
 	}
 }
