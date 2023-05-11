@@ -9,10 +9,17 @@
 ### Capabilities
 
 * Read snippets from an existing db file.
+* Store categories and snnipets automatically in an internal db.
+* Customize the UI through the options dialog.
 
 ---
 
 ### Version History
+**Version 0.4 (Alpha)**
+* First version that is capable to be published and used (as beta, not yet in production).
+* Manually menu items has been replaces with items added using the VS designer.
+* Options dialog has been added to configure it.
+* Fixed a problem that causes to not render correctly the categories and snippets related icons.
 
 **Version 0.3 (Alpha)**
 * Most of the internal snippet behavior occurs using EF.
@@ -23,7 +30,6 @@
 * It's possible to remove snippets.
 * It's possible to edit the title and the content of the snippet.
 * Enabling saving and editing of categories and snippets in the DB.
-
 
 **Version 0.2 (Alpha)**
 * Upgraded to .NET 5
