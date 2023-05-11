@@ -55,7 +55,6 @@ namespace WindowsFormsApp
 		{
 			this.Text = $"Osm v{VERSION}";
 			// SetTabWidth(this.richTextBoxSnippetContent, 1);
-			InitializeMenuStrip();
 			ConfigureListBoxCategories();
 			ConfigureListBoxSnippets();
 			InitializeListBoxCategories();
@@ -68,10 +67,6 @@ namespace WindowsFormsApp
 				this.textBoxSnippetTitle.Enabled = false;
 				this.richTextBoxSnippetContent.Enabled = false;
 			}
-		}
-
-		private void InitializeMenuStrip()
-		{
 		}
 
 		private void ConfigureListBoxCategories()
