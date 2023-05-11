@@ -72,15 +72,6 @@ namespace WindowsFormsApp
 
 		private void InitializeMenuStrip()
 		{
-			menuItemEdit = new ToolStripMenuItem("Edit");
-			ToolStripButton itemCut = new ToolStripButton("Cut");
-			ToolStripButton itemCopy = new ToolStripButton("Copy");
-			ToolStripButton itemPaste = new ToolStripButton("Paste");
-			menuItemEdit.DropDownItems.Add(itemCut);
-			menuItemEdit.DropDownItems.Add(itemCopy);
-			menuItemEdit.DropDownItems.Add(itemPaste);
-			this.menuStrip.Items.Add(menuItemEdit);
-
 			menuItemTools = new ToolStripMenuItem("Tools");
 			ToolStripButton itemOptions = new ToolStripButton("Options");
 			menuItemTools.DropDownItems.Add(itemOptions);

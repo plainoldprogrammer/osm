@@ -38,9 +38,13 @@
 			buttonNewSnippet = new System.Windows.Forms.Button();
 			buttonRemoveSnippet = new System.Windows.Forms.Button();
 			menuStrip = new System.Windows.Forms.MenuStrip();
-			richTextBoxSnippetContent = new System.Windows.Forms.RichTextBox();
 			fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			richTextBoxSnippetContent = new System.Windows.Forms.RichTextBox();
+			editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			menuStrip.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -140,23 +144,13 @@
 			// menuStrip
 			// 
 			menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-			menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { fileToolStripMenuItem });
+			menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem });
 			menuStrip.Location = new System.Drawing.Point(0, 0);
 			menuStrip.Name = "menuStrip";
 			menuStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
 			menuStrip.Size = new System.Drawing.Size(1189, 30);
 			menuStrip.TabIndex = 12;
 			menuStrip.Text = "menuStrip";
-			// 
-			// richTextBoxSnippetContent
-			// 
-			richTextBoxSnippetContent.Location = new System.Drawing.Point(587, 76);
-			richTextBoxSnippetContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			richTextBoxSnippetContent.Name = "richTextBoxSnippetContent";
-			richTextBoxSnippetContent.Size = new System.Drawing.Size(587, 644);
-			richTextBoxSnippetContent.TabIndex = 13;
-			richTextBoxSnippetContent.Text = "";
-			richTextBoxSnippetContent.TextChanged += richTextBoxSnippetContent_TextChanged;
 			// 
 			// fileToolStripMenuItem
 			// 
@@ -168,8 +162,43 @@
 			// exitToolStripMenuItem
 			// 
 			exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
 			exitToolStripMenuItem.Text = "Exit";
+			// 
+			// richTextBoxSnippetContent
+			// 
+			richTextBoxSnippetContent.Location = new System.Drawing.Point(587, 76);
+			richTextBoxSnippetContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			richTextBoxSnippetContent.Name = "richTextBoxSnippetContent";
+			richTextBoxSnippetContent.Size = new System.Drawing.Size(587, 644);
+			richTextBoxSnippetContent.TabIndex = 13;
+			richTextBoxSnippetContent.Text = "";
+			richTextBoxSnippetContent.TextChanged += richTextBoxSnippetContent_TextChanged;
+			// 
+			// editToolStripMenuItem
+			// 
+			editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { cutToolStripMenuItem, copyToolStripMenuItem, pasteToolStripMenuItem });
+			editToolStripMenuItem.Name = "editToolStripMenuItem";
+			editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+			editToolStripMenuItem.Text = "Edit";
+			// 
+			// cutToolStripMenuItem
+			// 
+			cutToolStripMenuItem.Name = "cutToolStripMenuItem";
+			cutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			cutToolStripMenuItem.Text = "Cut";
+			// 
+			// copyToolStripMenuItem
+			// 
+			copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+			copyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			copyToolStripMenuItem.Text = "Copy";
+			// 
+			// pasteToolStripMenuItem
+			// 
+			pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
+			pasteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			pasteToolStripMenuItem.Text = "Paste";
 			// 
 			// MainWindow
 			// 
@@ -211,5 +240,9 @@
 		private System.Windows.Forms.RichTextBox richTextBoxSnippetContent;
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
 	}
 }
