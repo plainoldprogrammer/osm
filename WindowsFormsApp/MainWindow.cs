@@ -67,7 +67,9 @@ namespace WindowsFormsApp
 				this.textBoxSnippetTitle.Enabled = false;
 				this.richTextBoxSnippetContent.Enabled = false;
 			}
-		}
+
+            exitToolStripMenuItem.Click += ItemExit_Clicked;
+        }
 
 		private void ConfigureListBoxCategories()
 		{
