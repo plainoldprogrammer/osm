@@ -39,6 +39,9 @@
 			buttonRemoveSnippet = new System.Windows.Forms.Button();
 			menuStrip = new System.Windows.Forms.MenuStrip();
 			richTextBoxSnippetContent = new System.Windows.Forms.RichTextBox();
+			fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			menuStrip.SuspendLayout();
 			SuspendLayout();
 			// 
 			// label1
@@ -137,10 +140,11 @@
 			// menuStrip
 			// 
 			menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+			menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { fileToolStripMenuItem });
 			menuStrip.Location = new System.Drawing.Point(0, 0);
 			menuStrip.Name = "menuStrip";
 			menuStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-			menuStrip.Size = new System.Drawing.Size(1189, 24);
+			menuStrip.Size = new System.Drawing.Size(1189, 30);
 			menuStrip.TabIndex = 12;
 			menuStrip.Text = "menuStrip";
 			// 
@@ -153,6 +157,19 @@
 			richTextBoxSnippetContent.TabIndex = 13;
 			richTextBoxSnippetContent.Text = "";
 			richTextBoxSnippetContent.TextChanged += richTextBoxSnippetContent_TextChanged;
+			// 
+			// fileToolStripMenuItem
+			// 
+			fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { exitToolStripMenuItem });
+			fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+			fileToolStripMenuItem.Text = "File";
+			// 
+			// exitToolStripMenuItem
+			// 
+			exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			exitToolStripMenuItem.Text = "Exit";
 			// 
 			// MainWindow
 			// 
@@ -174,6 +191,8 @@
 			Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			Name = "MainWindow";
 			Text = "Form1";
+			menuStrip.ResumeLayout(false);
+			menuStrip.PerformLayout();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -190,5 +209,7 @@
 		private System.Windows.Forms.Button buttonRemoveSnippet;
 		private System.Windows.Forms.MenuStrip menuStrip;
 		private System.Windows.Forms.RichTextBox richTextBoxSnippetContent;
+		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
 	}
 }

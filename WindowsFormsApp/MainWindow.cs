@@ -72,11 +72,6 @@ namespace WindowsFormsApp
 
 		private void InitializeMenuStrip()
 		{
-			menuItemFile = new ToolStripMenuItem("File");
-			ToolStripButton itemExit = new ToolStripButton("Exit");
-			menuItemFile.DropDownItems.Add(itemExit);
-			this.menuStrip.Items.Add(menuItemFile);
-
 			menuItemEdit = new ToolStripMenuItem("Edit");
 			ToolStripButton itemCut = new ToolStripButton("Cut");
 			ToolStripButton itemCopy = new ToolStripButton("Copy");
@@ -97,7 +92,6 @@ namespace WindowsFormsApp
 			menuItemAbout.DropDownItems.Add(itemAbout);
 			this.menuStrip.Items.Add(menuItemAbout);
 
-			itemExit.Click += ItemExit_Clicked;
 			itemAbout.Click += ItemAbout_Clicked;
 		}
 
