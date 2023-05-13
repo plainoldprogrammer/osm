@@ -43,6 +43,13 @@ namespace Osm
         {
             _mainWindow.Enabled = true;
 
+            if (this.comboBoxTheme.SelectedItem == "Light")
+            {
+            }
+            else if (this.comboBoxTheme.SelectedItem == "Dark")
+            {
+            }
+
             if (this.comboBoxFont.SelectedItem is not null)
             {
                 String selectedFont = this.comboBoxFont.SelectedItem.ToString();
