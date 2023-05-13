@@ -48,6 +48,7 @@ namespace Osm
             }
             else if (this.comboBoxTheme.SelectedItem == "Dark")
             {
+                _mainWindow.SetListBoxCategoriesColor("dark");
             }
 
             if (this.comboBoxFont.SelectedItem is not null)

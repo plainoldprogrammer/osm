@@ -56,7 +56,7 @@ namespace WindowsFormsApp
         {
             this.Text = $"Osm v{VERSION}";
             // SetTabWidth(this.richTextBoxSnippetContent, 1);
-            ConfigureListBoxCategories();
+            ConfigureListBoxCategoriesLightTheme();
             ConfigureListBoxSnippets();
             InitializeListBoxCategories();
             InitializeListBoxSnippets();
@@ -72,10 +72,16 @@ namespace WindowsFormsApp
             exitToolStripMenuItem.Click += ItemExit_Clicked;
         }
 
-        private void ConfigureListBoxCategories()
+        private void ConfigureListBoxCategoriesLightTheme()
         {
             this.listBoxCategories.DrawMode = DrawMode.OwnerDrawFixed;
             this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItem);
+        }
+
+        public void ConfigureListBoxCategoriesDarkTheme()
+        {
+            this.listBoxCategories.DrawItem -= new DrawItemEventHandler(listBoxCategories_DrawItem);
+            this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItemDarkTheme);
         }
 
         private void ConfigureListBoxSnippets()
@@ -200,6 +206,21 @@ namespace WindowsFormsApp
                 textRectangle.X += 18;
 
                 e.Graphics.DrawString((listBoxCategories.Items[e.Index] as Category).Category1, e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+                e.DrawFocusRectangle();
+            }
+        }
+
+        private void listBoxCategories_DrawItemDarkTheme(object sender, DrawItemEventArgs e)
+        {
+            if (listBoxCategories.Items.Count > 0)
+            {
+                e.DrawBackground();
+                e.Graphics.DrawIcon(new Icon("icons/folder.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
+
+                Rectangle textRectangle = e.Bounds;
+                textRectangle.X += 18;
+
+                e.Graphics.DrawString((listBoxCategories.Items[e.Index] as Category).Category1, e.Font, Brushes.White, textRectangle, StringFormat.GenericDefault);
                 e.DrawFocusRectangle();
             }
         }
@@ -406,6 +427,15 @@ namespace WindowsFormsApp
         public Font GetRichTextBoxSnippetContentFont()
         {
             return this.richTextBoxSnippetContent.Font;
+        }
+
+        public void SetListBoxCategoriesColor(String theme)
+        {
+            if (theme.ToLower() == "dark")
+            {
+                this.listBoxCategories.BackColor = Color.FromArgb(48, 48, 48);
+                this.ConfigureListBoxCategoriesDarkTheme();
+            }
         }
     }
 }
