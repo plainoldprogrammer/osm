@@ -90,6 +90,12 @@ namespace WindowsFormsApp
             this.listBoxSnippets.DrawItem += new DrawItemEventHandler(listBoxSnippets_DrawItem);
         }
 
+        private void ConfigureListBoxSnippetsDarkTheme()
+        {
+            this.listBoxSnippets.DrawItem -= new DrawItemEventHandler(listBoxCategories_DrawItem);
+            this.listBoxSnippets.DrawItem += new DrawItemEventHandler(listBoxSnippets_DrawItemDarkTheme);
+        }
+
         private void InitializeListBoxCategories()
         {
             this.listBoxCategories.DisplayMember = "Category1";
@@ -237,6 +243,23 @@ namespace WindowsFormsApp
 
                 e.Graphics.DrawString((listBoxSnippets.Items[e.Index] as Snippet).Title,
                     e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+
+                e.DrawFocusRectangle();
+            }
+        }
+
+        private void listBoxSnippets_DrawItemDarkTheme(object sender, DrawItemEventArgs e)
+        {
+            if (listBoxSnippets.Items.Count > 0)
+            {
+                e.DrawBackground();
+                e.Graphics.DrawIcon(new Icon("icons/file.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
+
+                Rectangle textRectangle = e.Bounds;
+                textRectangle.X += 18;
+
+                e.Graphics.DrawString((listBoxSnippets.Items[e.Index] as Snippet).Title,
+                    e.Font, Brushes.White, textRectangle, StringFormat.GenericDefault);
 
                 e.DrawFocusRectangle();
             }
@@ -435,6 +458,15 @@ namespace WindowsFormsApp
             {
                 this.listBoxCategories.BackColor = Color.FromArgb(48, 48, 48);
                 this.ConfigureListBoxCategoriesDarkTheme();
+            }
+        }
+
+        public void SetListBoxSnippetsColor(String theme)
+        {
+            if (theme.ToLower() == "dark")
+            {
+                this.listBoxSnippets.BackColor = Color.FromArgb(48, 48, 48);
+                this.ConfigureListBoxSnippetsDarkTheme();
             }
         }
     }
