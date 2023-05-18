@@ -50,6 +50,7 @@ namespace Osm
             {
                 _mainWindow.SetListBoxCategoriesColor("dark");
                 _mainWindow.SetListBoxSnippetsColor("dark");
+                _mainWindow.SetRichTextBoxSnippetContentColor("dark");
             }
 
             if (this.comboBoxFont.SelectedItem is not null)
