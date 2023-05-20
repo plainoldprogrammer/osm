@@ -481,7 +481,6 @@ namespace WindowsFormsApp
 
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Select all");
         }
     }
 }
