@@ -482,5 +482,9 @@ namespace WindowsFormsApp
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
         }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
