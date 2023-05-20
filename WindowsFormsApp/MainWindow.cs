@@ -478,5 +478,10 @@ namespace WindowsFormsApp
                 this.richTextBoxSnippetContent.ForeColor = Color.White;
             }
         }
+
+        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Select all");
+        }
     }
 }

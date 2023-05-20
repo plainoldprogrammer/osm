@@ -231,16 +231,17 @@
 			aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             aboutToolStripMenuItem.Text = "About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
-            // 
+            //
             // selectAllToolStripMenuItem
             // 
             selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
             selectAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             selectAllToolStripMenuItem.Text = "Select All";
-            // 
+            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
+            //
             // MainWindow
             // 
-			AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			ClientSize = new System.Drawing.Size(1189, 789);
             Controls.Add(richTextBoxSnippetContent);
