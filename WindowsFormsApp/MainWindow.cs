@@ -486,5 +486,10 @@ namespace WindowsFormsApp
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
         }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
