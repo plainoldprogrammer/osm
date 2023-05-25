@@ -1,4 +1,10 @@
-﻿using ConsoleApp;
+﻿/*
+ * Name:    OSM
+ * Author:  Plainoldprogrammer
+ * Editor:  Visual Studio 2022 (Community Edition)
+ */
+
+using ConsoleApp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
