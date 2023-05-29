@@ -56,6 +56,7 @@ namespace Osm
             {
                 _mainWindow.SetListBoxCategoriesColor("dark");
                 _mainWindow.SetListBoxSnippetsColor("dark");
+                _mainWindow.SetTextBoxSnippetTitleColor("dark");
                 _mainWindow.SetRichTextBoxSnippetContentColor("dark");
             }
 

@@ -470,13 +470,22 @@ namespace WindowsFormsApp
 			}
 		}
 
+		public void SetTextBoxSnippetTitleColor(String theme)
+		{
+            if (theme.ToLower() == "dark")
+            {
+                this.textBoxSnippetTitle.BackColor = Color.FromArgb(48, 48, 48);
+                this.textBoxSnippetTitle.ForeColor = Color.White;
+            }
+        }
+
 		public void SetRichTextBoxSnippetContentColor(String theme)
 		{
 			if (theme.ToLower() == "dark")
 			{
 				this.richTextBoxSnippetContent.BackColor = Color.FromArgb(48, 48, 48);
 				this.richTextBoxSnippetContent.ForeColor = Color.White;
-			}
+            }
 		}
 
 		private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
