@@ -498,7 +498,12 @@ namespace WindowsFormsApp
 
         public void SetRichTextBoxSnippetContentColor(String theme)
         {
-            if (theme.ToLower() == "dark")
+            if (theme.ToLower() == "light")
+            {
+                this.richTextBoxSnippetContent.BackColor = Color.FromArgb(255, 255, 255);
+                this.richTextBoxSnippetContent.ForeColor = Color.Black;
+            }
+            else if (theme.ToLower() == "dark")
             {
                 this.richTextBoxSnippetContent.BackColor = Color.FromArgb(48, 48, 48);
                 this.richTextBoxSnippetContent.ForeColor = Color.White;
