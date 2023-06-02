@@ -28,16 +28,20 @@ namespace WindowsFormsApp
 
         private OptionsWindow optionsWindow;
 
+        /*
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool AllocConsole();
+        */
 
         public MainWindow()
         {
+            /*
             if (Debugger.IsAttached)
             {
                 AllocConsole();
             }
+            */
 
             InitializeComponent();
             InitializeDatabaseAcess();
@@ -56,8 +60,22 @@ namespace WindowsFormsApp
         {
             this.Text = $"Osm v{VERSION}";
             // SetTabWidth(this.richTextBoxSnippetContent, 1);
-            ConfigureListBoxCategoriesLightTheme();
-            ConfigureListBoxSnippetsLightTheme();
+
+            var applicationThemeOnConfig = Osm.Properties.Settings.Default["ApplicationTheme"];
+
+            if (applicationThemeOnConfig.ToString().ToLower().Equals("") || applicationThemeOnConfig.ToString().ToLower().Equals("light"))
+            {
+                this.ConfigureListBoxCategoriesLightTheme();
+                this.ConfigureListBoxSnippetsLightTheme();
+                this.SetLightTheme();
+            }
+            else if (applicationThemeOnConfig.ToString().ToLower().Equals("dark"))
+            {
+                this.ConfigureListBoxCategoriesDarkTheme();
+                this.ConfigureListBoxSnippetsDarkTheme();
+                this.SetDarkTheme();
+            }
+
             InitializeListBoxCategories();
             InitializeListBoxSnippets();
 
@@ -81,6 +99,7 @@ namespace WindowsFormsApp
 
         public void ConfigureListBoxCategoriesDarkTheme()
         {
+            this.listBoxCategories.DrawMode = DrawMode.OwnerDrawFixed;
             this.listBoxCategories.DrawItem -= new DrawItemEventHandler(listBoxCategories_DrawItem);
             this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItemDarkTheme);
         }
@@ -94,6 +113,7 @@ namespace WindowsFormsApp
 
         private void ConfigureListBoxSnippetsDarkTheme()
         {
+            this.listBoxSnippets.DrawMode = DrawMode.OwnerDrawFixed;
             this.listBoxSnippets.DrawItem -= new DrawItemEventHandler(listBoxCategories_DrawItem);
             this.listBoxSnippets.DrawItem += new DrawItemEventHandler(listBoxSnippets_DrawItemDarkTheme);
         }
@@ -454,7 +474,23 @@ namespace WindowsFormsApp
             return this.richTextBoxSnippetContent.Font;
         }
 
-        public void SetListBoxCategoriesColor(String theme)
+        public void SetLightTheme()
+        {
+            this.SetListBoxCategoriesColor("light");
+            this.SetListBoxSnippetsColor("light");
+            this.SetTextBoxSnippetTitleColor("light");
+            this.SetRichTextBoxSnippetContentColor("light");
+        }
+
+        public void SetDarkTheme()
+        {
+            this.SetListBoxCategoriesColor("dark");
+            this.SetListBoxSnippetsColor("dark");
+            this.SetTextBoxSnippetTitleColor("dark");
+            this.SetRichTextBoxSnippetContentColor("dark");
+        }
+
+        private void SetListBoxCategoriesColor(String theme)
         {
             if (theme.ToLower() == "light")
             {
@@ -468,7 +504,7 @@ namespace WindowsFormsApp
             }
         }
 
-        public void SetListBoxSnippetsColor(String theme)
+        private void SetListBoxSnippetsColor(String theme)
         {
             if (theme.ToLower() == "light")
             {
@@ -482,7 +518,7 @@ namespace WindowsFormsApp
             }
         }
 
-        public void SetTextBoxSnippetTitleColor(String theme)
+        private void SetTextBoxSnippetTitleColor(String theme)
         {
             if (theme.ToLower() == "light")
             {
@@ -496,7 +532,7 @@ namespace WindowsFormsApp
             }
         }
 
-        public void SetRichTextBoxSnippetContentColor(String theme)
+        private void SetRichTextBoxSnippetContentColor(String theme)
         {
             if (theme.ToLower() == "light")
             {

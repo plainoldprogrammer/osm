@@ -51,17 +51,17 @@ namespace Osm
 
             if (this.comboBoxTheme.SelectedItem == "Light")
             {
-                _mainWindow.SetListBoxCategoriesColor("light");
-                _mainWindow.SetListBoxSnippetsColor("light");
-                _mainWindow.SetTextBoxSnippetTitleColor("light");
-                _mainWindow.SetRichTextBoxSnippetContentColor("light");
+                _mainWindow.SetLightTheme();
+                
+                Properties.Settings.Default["ApplicationTheme"] = "Light";
+                Properties.Settings.Default.Save();
             }
             else if (this.comboBoxTheme.SelectedItem == "Dark")
             {
-                _mainWindow.SetListBoxCategoriesColor("dark");
-                _mainWindow.SetListBoxSnippetsColor("dark");
-                _mainWindow.SetTextBoxSnippetTitleColor("dark");
-                _mainWindow.SetRichTextBoxSnippetContentColor("dark");
+                _mainWindow.SetDarkTheme();
+
+                Properties.Settings.Default["ApplicationTheme"] = "Dark";
+                Properties.Settings.Default.Save();
             }
 
             if (this.comboBoxFont.SelectedItem is not null)
