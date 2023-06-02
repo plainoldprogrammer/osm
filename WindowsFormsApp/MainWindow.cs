@@ -527,6 +527,7 @@ namespace WindowsFormsApp
 
         private void cutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.richTextBoxSnippetContent.Cut();
         }
     }
 }
