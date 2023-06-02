@@ -484,7 +484,12 @@ namespace WindowsFormsApp
 
 		public void SetTextBoxSnippetTitleColor(String theme)
 		{
-            if (theme.ToLower() == "dark")
+			if (theme.ToLower() == "light")
+			{
+				this.textBoxSnippetTitle.BackColor = Color.FromArgb(255, 255, 255);
+				this.textBoxSnippetTitle.ForeColor = Color.Black;
+			}
+            else if (theme.ToLower() == "dark")
             {
                 this.textBoxSnippetTitle.BackColor = Color.FromArgb(48, 48, 48);
                 this.textBoxSnippetTitle.ForeColor = Color.White;
