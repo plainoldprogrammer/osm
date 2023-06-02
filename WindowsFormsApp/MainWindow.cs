@@ -512,6 +512,7 @@ namespace WindowsFormsApp
 
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.richTextBoxSnippetContent.SelectAll();
         }
 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
