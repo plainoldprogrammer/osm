@@ -57,7 +57,7 @@ namespace WindowsFormsApp
 			this.Text = $"Osm v{VERSION}";
 			// SetTabWidth(this.richTextBoxSnippetContent, 1);
 			ConfigureListBoxCategoriesLightTheme();
-			ConfigureListBoxSnippets();
+			ConfigureListBoxSnippetsLightTheme();
 			InitializeListBoxCategories();
 			InitializeListBoxSnippets();
 
@@ -75,7 +75,8 @@ namespace WindowsFormsApp
 		private void ConfigureListBoxCategoriesLightTheme()
 		{
 			this.listBoxCategories.DrawMode = DrawMode.OwnerDrawFixed;
-			this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItem);
+            this.listBoxCategories.DrawItem -= new DrawItemEventHandler(listBoxCategories_DrawItemDarkTheme);
+            this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItem);
 		}
 
 		public void ConfigureListBoxCategoriesDarkTheme()
@@ -84,10 +85,11 @@ namespace WindowsFormsApp
 			this.listBoxCategories.DrawItem += new DrawItemEventHandler(listBoxCategories_DrawItemDarkTheme);
 		}
 
-		private void ConfigureListBoxSnippets()
+		private void ConfigureListBoxSnippetsLightTheme()
 		{
 			this.listBoxSnippets.DrawMode = DrawMode.OwnerDrawFixed;
-			this.listBoxSnippets.DrawItem += new DrawItemEventHandler(listBoxSnippets_DrawItem);
+            this.listBoxSnippets.DrawItem -= new DrawItemEventHandler(listBoxSnippets_DrawItemDarkTheme);
+            this.listBoxSnippets.DrawItem += new DrawItemEventHandler(listBoxSnippets_DrawItem);
 		}
 
 		private void ConfigureListBoxSnippetsDarkTheme()
@@ -468,7 +470,12 @@ namespace WindowsFormsApp
 
 		public void SetListBoxSnippetsColor(String theme)
 		{
-			if (theme.ToLower() == "dark")
+			if (theme.ToLower() == "light")
+			{
+				this.listBoxSnippets.BackColor = Color.FromArgb(255, 255, 255);
+				this.ConfigureListBoxSnippetsLightTheme();
+			}
+			else if (theme.ToLower() == "dark")
 			{
 				this.listBoxSnippets.BackColor = Color.FromArgb(48, 48, 48);
 				this.ConfigureListBoxSnippetsDarkTheme();
