@@ -51,6 +51,7 @@ namespace Osm
 
             if (this.comboBoxTheme.SelectedItem == "Light")
             {
+                _mainWindow.SetListBoxCategoriesColor("light");
             }
             else if (this.comboBoxTheme.SelectedItem == "Dark")
             {

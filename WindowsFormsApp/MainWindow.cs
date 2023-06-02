@@ -454,7 +454,12 @@ namespace WindowsFormsApp
 
 		public void SetListBoxCategoriesColor(String theme)
 		{
-			if (theme.ToLower() == "dark")
+			if (theme.ToLower() == "light")
+			{
+				this.listBoxCategories.BackColor = Color.FromArgb(255, 255, 255);
+				this.ConfigureListBoxCategoriesLightTheme();
+			}
+			else if (theme.ToLower() == "dark")
 			{
 				this.listBoxCategories.BackColor = Color.FromArgb(48, 48, 48);
 				this.ConfigureListBoxCategoriesDarkTheme();
