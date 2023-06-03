@@ -34,7 +34,16 @@ namespace Osm
             this.AcceptButton = this.buttonOk;
             this.CancelButton = this.buttonCancel;
 
-            this.comboBoxTheme.SelectedIndex = 0;
+            var applicationThemeOnConfig = Properties.Settings.Default["ApplicationTheme"];
+
+            if (applicationThemeOnConfig.ToString().ToLower().Equals("") || applicationThemeOnConfig.ToString().ToLower().Equals("light"))
+            {
+                this.comboBoxTheme.SelectedIndex = 0;
+            }
+            else if (applicationThemeOnConfig.ToString().ToLower().Equals("dark"))
+            {
+                this.comboBoxTheme.SelectedIndex = 1;
+            }
 
             float fontSize = _mainWindow.GetRichTextBoxSnippetContentFontSize();
             int indexFontSize = this.comboBoxFontSize.Items.IndexOf(((int)fontSize).ToString());
