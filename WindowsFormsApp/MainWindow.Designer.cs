@@ -47,10 +47,10 @@
 			selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			richTextBoxSnippetContent = new System.Windows.Forms.RichTextBox();
 			helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			richTextBoxSnippetContent = new System.Windows.Forms.RichTextBox();
+			statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			menuStrip.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -181,27 +181,34 @@
 			// cutToolStripMenuItem
 			// 
 			cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-			cutToolStripMenuItem.Size = new System.Drawing.Size(126, 26);
+			cutToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
 			cutToolStripMenuItem.Text = "Cut";
 			cutToolStripMenuItem.Click += cutToolStripMenuItem_Click;
 			// 
 			// copyToolStripMenuItem
 			// 
 			copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-			copyToolStripMenuItem.Size = new System.Drawing.Size(126, 26);
+			copyToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
 			copyToolStripMenuItem.Text = "Copy";
 			copyToolStripMenuItem.Click += copyToolStripMenuItem_Click;
 			// 
 			// pasteToolStripMenuItem
 			// 
 			pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-			pasteToolStripMenuItem.Size = new System.Drawing.Size(126, 26);
+			pasteToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
 			pasteToolStripMenuItem.Text = "Paste";
 			pasteToolStripMenuItem.Click += pasteToolStripMenuItem_Click;
-			//  
+			// 
+			// selectAllToolStripMenuItem
+			// 
+			selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
+			selectAllToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+			selectAllToolStripMenuItem.Text = "Select All";
+			selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
+			// 
 			// toolsToolStripMenuItem
 			// 
-			toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { optionsToolStripMenuItem });
+			toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { optionsToolStripMenuItem, statisticsToolStripMenuItem });
 			toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
 			toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
 			toolsToolStripMenuItem.Text = "Tools";
@@ -212,16 +219,7 @@
 			optionsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			optionsToolStripMenuItem.Text = "Options";
 			optionsToolStripMenuItem.Click += optionsToolStripMenuItem_Click;
-			//
-			// richTextBoxSnippetContent
 			// 
-			richTextBoxSnippetContent.Location = new System.Drawing.Point(587, 76);
-			richTextBoxSnippetContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			richTextBoxSnippetContent.Name = "richTextBoxSnippetContent";
-			richTextBoxSnippetContent.Size = new System.Drawing.Size(587, 644);
-			richTextBoxSnippetContent.TabIndex = 13;
-			richTextBoxSnippetContent.Text = "";
-			richTextBoxSnippetContent.TextChanged += richTextBoxSnippetContent_TextChanged;
 			// helpToolStripMenuItem
 			// 
 			helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { aboutToolStripMenuItem });
@@ -232,17 +230,26 @@
 			// aboutToolStripMenuItem
 			// 
 			aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
 			aboutToolStripMenuItem.Text = "About";
 			aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
 			// 
-			// selectAllToolStripMenuItem
+			// richTextBoxSnippetContent
 			// 
-			selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            selectAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			selectAllToolStripMenuItem.Text = "Select All";
-			selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
-			//
+			richTextBoxSnippetContent.Location = new System.Drawing.Point(587, 76);
+			richTextBoxSnippetContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			richTextBoxSnippetContent.Name = "richTextBoxSnippetContent";
+			richTextBoxSnippetContent.Size = new System.Drawing.Size(587, 644);
+			richTextBoxSnippetContent.TabIndex = 13;
+			richTextBoxSnippetContent.Text = "";
+			richTextBoxSnippetContent.TextChanged += richTextBoxSnippetContent_TextChanged;
+			// 
+			// statisticsToolStripMenuItem
+			// 
+			statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
+			statisticsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			statisticsToolStripMenuItem.Text = "Statistics";
+			// 
 			// MainWindow
 			// 
 			AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -292,5 +299,6 @@
 		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem statisticsToolStripMenuItem;
 	}
 }
