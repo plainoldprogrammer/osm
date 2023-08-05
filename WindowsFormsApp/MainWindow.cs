@@ -12,7 +12,6 @@ using System.Runtime.InteropServices;
 using System.Drawing;
 using Osm;
 using ConsoleApp.Models;
-using System.Diagnostics;
 
 namespace WindowsFormsApp
 {
