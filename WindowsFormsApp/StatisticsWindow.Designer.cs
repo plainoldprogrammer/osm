@@ -1,6 +1,6 @@
 ﻿namespace Osm
 {
-	partial class StisticsWindow
+	partial class StatisticsWindow
 	{
 		/// <summary>
 		/// Required designer variable.

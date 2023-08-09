@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Osm
 {
-	public partial class StisticsWindow : Form
+	public partial class StatisticsWindow : Form
 	{
-		public StisticsWindow()
+		public StatisticsWindow()
 		{
 			InitializeComponent();
 		}

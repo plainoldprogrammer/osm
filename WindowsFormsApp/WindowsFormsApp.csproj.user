@@ -10,7 +10,7 @@
     <Compile Update="OptionsWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="StisticsWindow.cs">
+    <Compile Update="StatisticsWindow.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
