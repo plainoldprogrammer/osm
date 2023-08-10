@@ -27,8 +27,10 @@ namespace Osm
 		public OptionsWindow(MainWindow mainWindow, DatabaseAccess databaseAccess)
 		{
 			InitializeComponent();
+
 			_mainWindow = mainWindow;
 			_databaseAccess = databaseAccess;
+
 			this.textBoxDbFile.Text = _databaseAccess.GetDatabasePath();
 			GetAllSystemInstalledFonts();
 			this.AcceptButton = this.buttonOk;
