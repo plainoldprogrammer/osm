@@ -1,4 +1,10 @@
-﻿using System.Windows.Forms;
+﻿/*
+ * Name:    OSM
+ * Author:  Plainoldprogrammer
+ * Editor:  Visual Studio 2022 (Community Edition)
+ */
+
+using System.Windows.Forms;
 using ConsoleApp;
 using WindowsFormsApp;
 
