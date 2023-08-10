@@ -570,7 +570,7 @@ namespace WindowsFormsApp
 		private void statisticsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			this.Enabled = false;
-			this.statisticsWindow.Show();
+			this.statisticsWindow.ShowStatistics();
 		}
 	}
 }

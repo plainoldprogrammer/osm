@@ -21,8 +21,12 @@ namespace Osm
 
 			_mainWindow = mainWindow;
 			_databaseAccess = databaseAccess;
+		}
 
+		public void ShowStatistics()
+		{
 			this.RefreshStatistics();
+			this.Show();
 		}
 
 		private void StatisticsWindow_FormClosing(object sender, FormClosingEventArgs e)
