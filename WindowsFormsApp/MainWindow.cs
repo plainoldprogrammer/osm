@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Drawing;
 using Osm;
 using ConsoleApp.Models;
+using System.Drawing.Text;
 
 namespace WindowsFormsApp
 {
@@ -24,8 +25,8 @@ namespace WindowsFormsApp
 		private const int EM_SETTABSTOPS = 0x00CB;
 
 		private CreateCategoryWindow createCategoryWindow;
-
 		private OptionsWindow optionsWindow;
+		private StatisticsWindow statisticsWindow;
 
 		/*
         [DllImport("kernel32.dll", SetLastError = true)]
@@ -45,9 +46,13 @@ namespace WindowsFormsApp
 			InitializeComponent();
 			InitializeDatabaseAcess();
 			InitializeGui();
+
 			createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
+
 			optionsWindow = new OptionsWindow(this, this.databaseAccess);
 			optionsWindow.FormBorderStyle = FormBorderStyle.FixedDialog;
+
+			statisticsWindow = new StatisticsWindow();
 		}
 
 		private void InitializeDatabaseAcess()
@@ -567,7 +572,8 @@ namespace WindowsFormsApp
 
 		private void statisticsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-
+			this.Enabled = false;
+			this.statisticsWindow.Show();
 		}
 	}
 }
