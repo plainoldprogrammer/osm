@@ -74,5 +74,11 @@ namespace ConsoleApp
 			string db = snippetsContext.Database.GetDbConnection().DataSource;
 			return db;
 		}
+
+		public int GetNumberOfSnippets()
+		{
+			var result = snippetsContext.Snippets.Count();
+			return result;
+		}
 	}
 }

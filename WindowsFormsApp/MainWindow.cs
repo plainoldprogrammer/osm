@@ -52,7 +52,7 @@ namespace WindowsFormsApp
 			optionsWindow = new OptionsWindow(this, this.databaseAccess);
 			optionsWindow.FormBorderStyle = FormBorderStyle.FixedDialog;
 
-			statisticsWindow = new StatisticsWindow();
+			statisticsWindow = new StatisticsWindow(this.databaseAccess);
 		}
 
 		private void InitializeDatabaseAcess()
