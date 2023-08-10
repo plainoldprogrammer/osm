@@ -20,6 +20,8 @@ namespace WindowsFormsApp
 
 			_mainWindow = mainWindow;
 			_databaseAccess = databaseAccess;
+
+			this.CenterToScreen();
 		}
 
 		public void ShowStatistics()
