@@ -30,12 +30,14 @@
 		{
 			labelDescriptionNumberOfSnippets = new System.Windows.Forms.Label();
 			labelValueNumberOfSnippets = new System.Windows.Forms.Label();
+			labelDescriptionNumberOfCategories = new System.Windows.Forms.Label();
+			labelValueNumberOfCategories = new System.Windows.Forms.Label();
 			SuspendLayout();
 			// 
 			// labelDescriptionNumberOfSnippets
 			// 
 			labelDescriptionNumberOfSnippets.AutoSize = true;
-			labelDescriptionNumberOfSnippets.Location = new System.Drawing.Point(26, 17);
+			labelDescriptionNumberOfSnippets.Location = new System.Drawing.Point(12, 48);
 			labelDescriptionNumberOfSnippets.Name = "labelDescriptionNumberOfSnippets";
 			labelDescriptionNumberOfSnippets.Size = new System.Drawing.Size(143, 20);
 			labelDescriptionNumberOfSnippets.TabIndex = 0;
@@ -44,17 +46,37 @@
 			// labelValueNumberOfSnippets
 			// 
 			labelValueNumberOfSnippets.AutoSize = true;
-			labelValueNumberOfSnippets.Location = new System.Drawing.Point(175, 17);
+			labelValueNumberOfSnippets.Location = new System.Drawing.Point(166, 48);
 			labelValueNumberOfSnippets.Name = "labelValueNumberOfSnippets";
 			labelValueNumberOfSnippets.Size = new System.Drawing.Size(50, 20);
 			labelValueNumberOfSnippets.TabIndex = 1;
-			labelValueNumberOfSnippets.Text = "label1";
+			labelValueNumberOfSnippets.Text = "label2";
+			// 
+			// labelDescriptionNumberOfCategories
+			// 
+			labelDescriptionNumberOfCategories.AutoSize = true;
+			labelDescriptionNumberOfCategories.Location = new System.Drawing.Point(12, 14);
+			labelDescriptionNumberOfCategories.Name = "labelDescriptionNumberOfCategories";
+			labelDescriptionNumberOfCategories.Size = new System.Drawing.Size(148, 20);
+			labelDescriptionNumberOfCategories.TabIndex = 2;
+			labelDescriptionNumberOfCategories.Text = "Numer of categories:";
+			// 
+			// labelValueNumberOfCategories
+			// 
+			labelValueNumberOfCategories.AutoSize = true;
+			labelValueNumberOfCategories.Location = new System.Drawing.Point(166, 14);
+			labelValueNumberOfCategories.Name = "labelValueNumberOfCategories";
+			labelValueNumberOfCategories.Size = new System.Drawing.Size(50, 20);
+			labelValueNumberOfCategories.TabIndex = 3;
+			labelValueNumberOfCategories.Text = "label1";
 			// 
 			// StatisticsWindow
 			// 
 			AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			ClientSize = new System.Drawing.Size(364, 219);
+			ClientSize = new System.Drawing.Size(226, 110);
+			Controls.Add(labelValueNumberOfCategories);
+			Controls.Add(labelDescriptionNumberOfCategories);
 			Controls.Add(labelValueNumberOfSnippets);
 			Controls.Add(labelDescriptionNumberOfSnippets);
 			Name = "StatisticsWindow";
@@ -68,5 +90,7 @@
 
 		private System.Windows.Forms.Label labelDescriptionNumberOfSnippets;
 		private System.Windows.Forms.Label labelValueNumberOfSnippets;
+		private System.Windows.Forms.Label labelDescriptionNumberOfCategories;
+		private System.Windows.Forms.Label labelValueNumberOfCategories;
 	}
 }

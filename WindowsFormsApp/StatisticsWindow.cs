@@ -35,6 +35,8 @@ namespace Osm
 
 		public void RefreshStatistics()
 		{
+
+			this.labelValueNumberOfCategories.Text = _databaseAccess.GetNumberOfCategories().ToString();
 			this.labelValueNumberOfSnippets.Text = _databaseAccess.GetNumberOfSnippets().ToString();
 		}
 	}
