@@ -49,6 +49,7 @@ namespace WindowsFormsApp
 			this.comboBoxFont.SelectedIndex = indexFont;
 
 			this.FormBorderStyle = FormBorderStyle.FixedDialog;
+			this.CenterToScreen();
 		}
 
 		private void buttonOk_Click(object sender, EventArgs e)
