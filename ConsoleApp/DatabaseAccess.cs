@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using ConsoleApp.Models;
 using Microsoft.EntityFrameworkCore;
-using SQLitePCL;
 
 namespace ConsoleApp
 {
