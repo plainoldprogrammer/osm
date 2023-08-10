@@ -49,7 +49,7 @@ namespace WindowsFormsApp
 
 			createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
 			optionsWindow = new OptionsWindow(this, this.databaseAccess);
-			statisticsWindow = new StatisticsWindow(this.databaseAccess);
+			statisticsWindow = new StatisticsWindow(this, this.databaseAccess);
 		}
 
 		private void InitializeDatabaseAcess()
