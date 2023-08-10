@@ -222,15 +222,16 @@
 			// optionsToolStripMenuItem
 			// 
 			optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-			optionsToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+			optionsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			optionsToolStripMenuItem.Text = "Options";
 			optionsToolStripMenuItem.Click += optionsToolStripMenuItem_Click;
 			// 
 			// statisticsToolStripMenuItem
 			// 
 			statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
-			statisticsToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+			statisticsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			statisticsToolStripMenuItem.Text = "Statistics";
+			statisticsToolStripMenuItem.Click += statisticsToolStripMenuItem_Click;
 			// 
 			// helpToolStripMenuItem
 			// 

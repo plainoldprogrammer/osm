@@ -564,5 +564,10 @@ namespace WindowsFormsApp
 		{
 			this.richTextBoxSnippetContent.Cut();
 		}
+
+		private void statisticsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
