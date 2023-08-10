@@ -48,6 +48,8 @@ namespace WindowsFormsApp
 			createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
 			optionsWindow = new OptionsWindow(this, this.databaseAccess);
 			statisticsWindow = new StatisticsWindow(this, this.databaseAccess);
+
+			this.CenterToScreen();
 		}
 
 		private void InitializeDatabaseAcess()
