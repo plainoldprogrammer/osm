@@ -1,4 +1,4 @@
-﻿namespace Osm
+﻿namespace WindowsFormsApp
 {
 	partial class StatisticsWindow
 	{

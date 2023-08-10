@@ -10,9 +10,7 @@ using ConsoleApp;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Drawing;
-using Osm;
 using ConsoleApp.Models;
-using System.Drawing.Text;
 
 namespace WindowsFormsApp
 {
@@ -62,7 +60,7 @@ namespace WindowsFormsApp
 			this.Text = $"Osm v{VERSION}";
 			// SetTabWidth(this.richTextBoxSnippetContent, 1);
 
-			var applicationThemeOnConfig = Osm.Properties.Settings.Default["ApplicationTheme"];
+			var applicationThemeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationTheme"];
 
 			if (applicationThemeOnConfig.ToString().ToLower().Equals("") || applicationThemeOnConfig.ToString().ToLower().Equals("light"))
 			{

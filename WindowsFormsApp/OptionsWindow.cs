@@ -9,9 +9,8 @@ using System;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Windows.Forms;
-using WindowsFormsApp;
 
-namespace Osm
+namespace WindowsFormsApp
 {
 	public partial class OptionsWindow : Form
 	{

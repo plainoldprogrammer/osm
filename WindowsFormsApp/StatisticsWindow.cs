@@ -6,9 +6,8 @@
 
 using System.Windows.Forms;
 using ConsoleApp;
-using WindowsFormsApp;
 
-namespace Osm
+namespace WindowsFormsApp
 {
 	public partial class StatisticsWindow : Form
 	{

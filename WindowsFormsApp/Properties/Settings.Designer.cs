@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Osm.Properties {
+namespace WindowsFormsApp.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
