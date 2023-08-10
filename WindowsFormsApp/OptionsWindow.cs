@@ -52,7 +52,9 @@ namespace Osm
             Font font = _mainWindow.GetRichTextBoxSnippetContentFont();
             int indexFont = this.comboBoxFont.Items.IndexOf(font.FontFamily.Name);
             this.comboBoxFont.SelectedIndex = indexFont;
-        }
+
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+		}
 
         private void buttonOk_Click(object sender, EventArgs e)
         {

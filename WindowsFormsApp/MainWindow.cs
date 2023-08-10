@@ -48,10 +48,7 @@ namespace WindowsFormsApp
 			InitializeGui();
 
 			createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
-
 			optionsWindow = new OptionsWindow(this, this.databaseAccess);
-			optionsWindow.FormBorderStyle = FormBorderStyle.FixedDialog;
-
 			statisticsWindow = new StatisticsWindow(this.databaseAccess);
 		}
 
