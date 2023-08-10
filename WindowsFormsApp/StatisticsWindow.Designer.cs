@@ -74,7 +74,7 @@
 			// 
 			AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 			AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			ClientSize = new System.Drawing.Size(226, 110);
+			ClientSize = new System.Drawing.Size(281, 110);
 			Controls.Add(labelValueNumberOfCategories);
 			Controls.Add(labelDescriptionNumberOfCategories);
 			Controls.Add(labelValueNumberOfSnippets);
