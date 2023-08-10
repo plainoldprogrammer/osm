@@ -58,7 +58,7 @@
 			Controls.Add(labelValueNumberOfSnippets);
 			Controls.Add(labelDescriptionNumberOfSnippets);
 			Name = "StatisticsWindow";
-			Text = "StisticsWindow";
+			Text = "Statistics";
 			ResumeLayout(false);
 			PerformLayout();
 		}
