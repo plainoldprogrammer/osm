@@ -18,11 +18,14 @@ namespace WindowsFormsApp
         public CreateCategoryWindow(MainWindow mainWindow, DatabaseAccess databaseAccess)
         {
             InitializeComponent();
+
             _mainWindow = mainWindow;
             _databaseAccess = databaseAccess;
+
             textBoxCategoryName.Select();
             this.AcceptButton = this.buttonOk;
             this.CancelButton = this.buttonCancel;
+            this.CenterToScreen();
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
