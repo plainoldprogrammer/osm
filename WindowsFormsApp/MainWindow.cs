@@ -81,6 +81,9 @@ namespace WindowsFormsApp
 			var applicationFontSizeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationFontSize"].ToString();
 			this.optionsWindow.SetFontSize(Int32.Parse(applicationFontSizeOnConfig));
 
+			var applicationFontFamilyOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationFontFamily"].ToString();
+			this.optionsWindow.SetFontFamily(applicationFontFamilyOnConfig);
+
 			InitializeListBoxCategories();
 			InitializeListBoxSnippets();
 
@@ -444,9 +447,9 @@ namespace WindowsFormsApp
 			this.optionsWindow.Show();
 		}
 
-		public void SetFont(string font)
+		public void SetFont(string fontFamily, int fontSize)
 		{
-			this.richTextBoxSnippetContent.Font = new Font(font, 12);
+			this.richTextBoxSnippetContent.Font = new Font(fontFamily, fontSize);
 		}
 
 		public void SetFontSize(int fontSize)

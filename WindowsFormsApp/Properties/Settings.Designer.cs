@@ -46,5 +46,17 @@ namespace WindowsFormsApp.Properties {
                 this["ApplicationFontSize"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ApplicationFontFamily {
+            get {
+                return ((string)(this["ApplicationFontFamily"]));
+            }
+            set {
+                this["ApplicationFontFamily"] = value;
+            }
+        }
     }
 }

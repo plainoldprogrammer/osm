@@ -74,7 +74,9 @@ namespace WindowsFormsApp
 			if (this.comboBoxFont.SelectedItem is not null)
 			{
 				String selectedFont = this.comboBoxFont.SelectedItem.ToString();
-				_mainWindow.SetFont(selectedFont);
+				_mainWindow.SetFont(selectedFont, Int32.Parse(this.comboBoxFontSize.SelectedItem.ToString()));
+
+				Properties.Settings.Default["ApplicationFontFamily"] = selectedFont;
 			}
 
 			if (this.comboBoxFontSize.SelectedItem is not null)
@@ -136,6 +138,15 @@ namespace WindowsFormsApp
 			int indexFontSize = this.comboBoxFontSize.Items.IndexOf(((int)fontSize).ToString());
 			this.comboBoxFontSize.SelectedIndex = indexFontSize;
 			this._mainWindow.SetFontSize(fontSize);
+		}
+
+		public void SetFontFamily(string fontFamily)
+		{
+			int indexFont = this.comboBoxFont.Items.IndexOf(fontFamily);
+			this.comboBoxFont.SelectedIndex = indexFont;
+
+			int fontSize = Int32.Parse(this.comboBoxFontSize.SelectedItem.ToString());
+			this._mainWindow.SetFont(fontFamily, fontSize);
 		}
 	}
 }
