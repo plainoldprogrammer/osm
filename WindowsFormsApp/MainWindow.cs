@@ -16,8 +16,8 @@ namespace WindowsFormsApp
 {
 	public partial class MainWindow : System.Windows.Forms.Form
 	{
-		private const string VERSION = "0.4 (Alpha)";
-		private const string RELEASE_DATE = "2023 March 12";
+		private const string VERSION = "0.5 (Alpha)";
+		private const string RELEASE_DATE = "2023 August 11";
 
 		private DatabaseAccess databaseAccess;
 		private const int EM_SETTABSTOPS = 0x00CB;
