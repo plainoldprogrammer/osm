@@ -43,11 +43,12 @@ namespace WindowsFormsApp
 
 			InitializeComponent();
 			InitializeDatabaseAcess();
-			InitializeGui();
 
 			createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
 			optionsWindow = new OptionsWindow(this, this.databaseAccess);
 			statisticsWindow = new StatisticsWindow(this, this.databaseAccess);
+
+			InitializeGui();
 
 			this.CenterToScreen();
 		}
@@ -76,6 +77,9 @@ namespace WindowsFormsApp
 				this.ConfigureListBoxSnippetsDarkTheme();
 				this.SetDarkTheme();
 			}
+
+			var applicationFontSizeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationFontSize"].ToString();
+			this.optionsWindow.SetFontSize(Int32.Parse(applicationFontSizeOnConfig));
 
 			InitializeListBoxCategories();
 			InitializeListBoxSnippets();

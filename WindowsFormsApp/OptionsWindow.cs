@@ -82,6 +82,9 @@ namespace WindowsFormsApp
 				int fontSize = 9;
 				Int32.TryParse(this.comboBoxFontSize.SelectedItem.ToString(), out fontSize);
 				_mainWindow.SetFontSize(fontSize);
+
+				Properties.Settings.Default["ApplicationFontSize"] = fontSize.ToString();
+				Properties.Settings.Default.Save();
 			}
 
 			this.Hide();
@@ -126,6 +129,13 @@ namespace WindowsFormsApp
 			e.Cancel = true;
 
 			_mainWindow.Enabled = true;
+		}
+
+		public void SetFontSize(int fontSize)
+		{
+			int indexFontSize = this.comboBoxFontSize.Items.IndexOf(((int)fontSize).ToString());
+			this.comboBoxFontSize.SelectedIndex = indexFontSize;
+			this._mainWindow.SetFontSize(fontSize);
 		}
 	}
 }
