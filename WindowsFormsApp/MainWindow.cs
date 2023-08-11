@@ -292,9 +292,6 @@ namespace WindowsFormsApp
 		{
 			this.Enabled = false;
 			this.createCategoryWindow.Show();
-			this.buttonNewSnippet.Enabled = true;
-			this.textBoxSnippetTitle.Enabled = true;
-			this.richTextBoxSnippetContent.Enabled = true;
 		}
 
 		private void buttonRemoveCategory_Click(object sender, EventArgs e)
@@ -571,6 +568,11 @@ namespace WindowsFormsApp
 		{
 			this.Enabled = false;
 			this.statisticsWindow.ShowStatistics();
+		}
+		
+		public void EnableButtonNewSnippet()
+		{
+			this.buttonNewSnippet.Enabled = true;
 		}
 	}
 }

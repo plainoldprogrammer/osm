@@ -37,7 +37,8 @@ namespace WindowsFormsApp
             this.textBoxCategoryName.Text = "";
             textBoxCategoryName.Select();
             _mainWindow.EnableRemoveCategoryButton();
-            this.Hide();
+            _mainWindow.EnableButtonNewSnippet();
+			this.Hide();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
