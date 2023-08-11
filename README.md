@@ -15,6 +15,16 @@
 ---
 
 ### Version History
+**Version 0.5 (Alpha)**
+* It's possible to select the theme, font and size in the options window.
+* Enabled the cut, copy, paste and select all options
+* Values on the options window are stored in the application settings.
+* Introduced a new statistics windows to show a brief report of the snippets.
+* The application default size has been adjusted to be more productive.
+* The application is centered at launch time.
+* Fixed bugs when closing the options window.
+* Fixed bugs related to the state of the categories and snippet buttons.
+
 **Version 0.4 (Alpha)**
 * First version that is capable to be published and used (as beta, not yet in production).
 * Manually menu items has been replaces with items added using the VS designer.
