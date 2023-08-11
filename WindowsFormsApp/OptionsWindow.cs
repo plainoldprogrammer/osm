@@ -40,13 +40,13 @@ namespace WindowsFormsApp
 				this.comboBoxTheme.SelectedIndex = 1;
 			}
 
-			float fontSize = _mainWindow.GetRichTextBoxSnippetContentFontSize();
-			int indexFontSize = this.comboBoxFontSize.Items.IndexOf(((int)fontSize).ToString());
-			this.comboBoxFontSize.SelectedIndex = indexFontSize;
-
 			Font font = _mainWindow.GetRichTextBoxSnippetContentFont();
 			int indexFont = this.comboBoxFont.Items.IndexOf(font.FontFamily.Name);
 			this.comboBoxFont.SelectedIndex = indexFont;
+
+			float fontSize = _mainWindow.GetRichTextBoxSnippetContentFontSize();
+			int indexFontSize = this.comboBoxFontSize.Items.IndexOf(((int)fontSize).ToString());
+			this.comboBoxFontSize.SelectedIndex = indexFontSize;
 
 			this.FormBorderStyle = FormBorderStyle.FixedDialog;
 			this.CenterToScreen();
