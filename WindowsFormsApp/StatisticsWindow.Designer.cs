@@ -46,7 +46,7 @@
 			// labelValueNumberOfSnippets
 			// 
 			labelValueNumberOfSnippets.AutoSize = true;
-			labelValueNumberOfSnippets.Location = new System.Drawing.Point(166, 48);
+			labelValueNumberOfSnippets.Location = new System.Drawing.Point(175, 48);
 			labelValueNumberOfSnippets.Name = "labelValueNumberOfSnippets";
 			labelValueNumberOfSnippets.Size = new System.Drawing.Size(50, 20);
 			labelValueNumberOfSnippets.TabIndex = 1;
@@ -57,14 +57,14 @@
 			labelDescriptionNumberOfCategories.AutoSize = true;
 			labelDescriptionNumberOfCategories.Location = new System.Drawing.Point(12, 14);
 			labelDescriptionNumberOfCategories.Name = "labelDescriptionNumberOfCategories";
-			labelDescriptionNumberOfCategories.Size = new System.Drawing.Size(148, 20);
+			labelDescriptionNumberOfCategories.Size = new System.Drawing.Size(157, 20);
 			labelDescriptionNumberOfCategories.TabIndex = 2;
-			labelDescriptionNumberOfCategories.Text = "Numer of categories:";
+			labelDescriptionNumberOfCategories.Text = "Number of categories:";
 			// 
 			// labelValueNumberOfCategories
 			// 
 			labelValueNumberOfCategories.AutoSize = true;
-			labelValueNumberOfCategories.Location = new System.Drawing.Point(166, 14);
+			labelValueNumberOfCategories.Location = new System.Drawing.Point(175, 14);
 			labelValueNumberOfCategories.Name = "labelValueNumberOfCategories";
 			labelValueNumberOfCategories.Size = new System.Drawing.Size(50, 20);
 			labelValueNumberOfCategories.TabIndex = 3;
