@@ -576,6 +576,7 @@ namespace WindowsFormsApp
 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.richTextBoxSnippetContent.Focus();
             this.richTextBoxSnippetContent.Paste();
         }
 
