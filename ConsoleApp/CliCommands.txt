@@ -4,15 +4,14 @@
  * Editor:  Visual Studio 2022 (Community Edition)
  */
 
-NOTE: When using PM in Visual Studio make sure to select the correct project in "Default project" select box.
+--------------------------------------------------------------------------------------------------------------------------------
+Using dotnet in Terminal
+--------------------------------------------------------------------------------------------------------------------------------
 
 Scaffold DbContext using dotnet:
 > dotnet ef dbcontext scaffold "Datasource=C:\Plainoldprogrammer_dev\Osm\db\snippets.db" -o Models Microsoft.EntityFrameworkCore.Sqlite -c "SnippetsContext" -f
 
-Scaffold DbContext using PM:
-PM> Scaffold-DbContext "DataSource=C:\Plainoldprogrammer_dev\Osm\db\snippets.db" Microsoft.EntityFrameworkCore.Sqlite -Context SnippetsContext -OutputDir Models -Force
-
-Adding a migration:
+Add a migration:
 > dotnet ef migrations add InitialMigration
 
 Update the database based on migrations:
@@ -20,3 +19,18 @@ Update the database based on migrations:
 
 Create the database (have created the folder structure C:\Plainoldprogrammer_dev\Osm\db):
 > dotnet ef database update
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+Using PM in Visual Studio 2022
+--------------------------------------------------------------------------------------------------------------------------------
+
+NOTE: When using PM in Visual Studio make sure to select the correct project in "Default project" select box.
+
+Scaffold DbContext using PM:
+PM> Scaffold-DbContext "DataSource=C:\Plainoldprogrammer_dev\Osm\db\snippets.db" Microsoft.EntityFrameworkCore.Sqlite -Context SnippetsContext -OutputDir Models -Force
+
+Update the database based on migrations:
+PM> Update-Database
