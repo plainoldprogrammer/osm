@@ -4,6 +4,7 @@
  * Editor:  Visual Studio 2022 (Community Edition)
  */
 
+Snippets table:
 CREATE TABLE "snippets" (
 	"id"	INTEGER NOT NULL UNIQUE,
 	"category_id"	INTEGER,
