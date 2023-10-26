@@ -79,7 +79,13 @@ namespace WindowsFormsApp
 			}
 
 			var applicationFontSizeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationFontSize"].ToString();
-			this.optionsWindow.SetFontSize(Int32.Parse(applicationFontSizeOnConfig));
+
+            if (applicationFontSizeOnConfig == "")
+            {
+                applicationFontSizeOnConfig = "9";
+            }
+
+            this.optionsWindow.SetFontSize(Int32.Parse(applicationFontSizeOnConfig));
 
 			var applicationFontFamilyOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationFontFamily"].ToString();
 			this.optionsWindow.SetFontFamily(applicationFontFamilyOnConfig);
