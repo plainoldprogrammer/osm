@@ -182,6 +182,11 @@ namespace WindowsFormsApp
                 {
                     this.listBoxSnippets.SelectedIndex = snippets.Count - 1;
                 }
+                else
+                {
+                    this.textBoxSnippetTitle.Text = "";
+                    this.richTextBoxSnippetContent.Text = "";
+                }
             }
 
             if (listBoxCategories.Items.Count == 0 || listBoxSnippets.Items.Count == 0)
