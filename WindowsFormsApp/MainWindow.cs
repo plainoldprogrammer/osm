@@ -312,36 +312,41 @@ namespace WindowsFormsApp
 		{
 			if (this.listBoxCategories.Items.Count > 0)
 			{
-				var index = this.listBoxCategories.SelectedIndex;
-				Category selectedCategory = listBoxCategories.SelectedItem as Category;
-				this.listBoxCategories.Items.RemoveAt(index);
+				DialogResult userSelection = MessageBox.Show("Remove category and all related snippets?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
-				if (index > 0)
+				if (userSelection == DialogResult.OK)
 				{
-					index--;
-				}
+                    var index = this.listBoxCategories.SelectedIndex;
+                    Category selectedCategory = listBoxCategories.SelectedItem as Category;
+                    this.listBoxCategories.Items.RemoveAt(index);
 
-				if (this.listBoxCategories.Items.Count > 0)
-				{
-					this.listBoxCategories.SelectedIndex = index;
-				}
-				else
-				{
-					this.listBoxSnippets.Items.Clear();
+                    if (index > 0)
+                    {
+                        index--;
+                    }
 
-					this.buttonRemoveCategory.Enabled = false;
-					this.buttonNewSnippet.Enabled = false;
-					this.buttonRemoveSnippet.Enabled = false;
+                    if (this.listBoxCategories.Items.Count > 0)
+                    {
+                        this.listBoxCategories.SelectedIndex = index;
+                    }
+                    else
+                    {
+                        this.listBoxSnippets.Items.Clear();
 
-					this.listBoxSnippets.Enabled = false;
-					this.textBoxSnippetTitle.Enabled = false;
-					this.richTextBoxSnippetContent.Enabled = false;
+                        this.buttonRemoveCategory.Enabled = false;
+                        this.buttonNewSnippet.Enabled = false;
+                        this.buttonRemoveSnippet.Enabled = false;
 
-					this.textBoxSnippetTitle.Text = "";
-					this.richTextBoxSnippetContent.Text = "";
-				}
+                        this.listBoxSnippets.Enabled = false;
+                        this.textBoxSnippetTitle.Enabled = false;
+                        this.richTextBoxSnippetContent.Enabled = false;
 
-				this.databaseAccess.RemoveCategory(selectedCategory);
+                        this.textBoxSnippetTitle.Text = "";
+                        this.richTextBoxSnippetContent.Text = "";
+                    }
+
+                    this.databaseAccess.RemoveCategory(selectedCategory);
+                }
 			}
 		}
 
