@@ -62,7 +62,7 @@ namespace WindowsFormsApp
 		{
 			this.Text = $"Osm v{VERSION}";
 			this.richTextBoxSnippetContent.AcceptsTab = true;
-			// SetTabWidth(this.richTextBoxSnippetContent, 1);
+			SetTabWidth(this.richTextBoxSnippetContent, 1);
 
 			var applicationThemeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationTheme"];
 
@@ -215,7 +215,7 @@ namespace WindowsFormsApp
 		[DllImport("User32.dll", CharSet = CharSet.Auto)]
 		public static extern IntPtr SendMessage(IntPtr h, int msg, int wParam, int[] lParam);
 
-		public static void SetTabWidth(TextBox textbox, int tabWidth)
+		public static void SetTabWidth(RichTextBox textbox, int tabWidth)
 		{
 			Graphics graphics = textbox.CreateGraphics();
 			var characterWidth = (int)graphics.MeasureString("M", textbox.Font).Width;
