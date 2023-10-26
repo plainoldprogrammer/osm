@@ -61,6 +61,7 @@ namespace WindowsFormsApp
 		private void InitializeGui()
 		{
 			this.Text = $"Osm v{VERSION}";
+			this.richTextBoxSnippetContent.AcceptsTab = true;
 			// SetTabWidth(this.richTextBoxSnippetContent, 1);
 
 			var applicationThemeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationTheme"];
