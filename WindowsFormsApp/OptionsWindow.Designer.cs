@@ -1,4 +1,4 @@
-﻿namespace Osm
+﻿namespace WindowsFormsApp
 {
 	partial class OptionsWindow
 	{
@@ -81,7 +81,7 @@
 			// 
 			// comboBoxTheme
 			// 
-            comboBoxTheme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			comboBoxTheme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			comboBoxTheme.FormattingEnabled = true;
 			comboBoxTheme.Items.AddRange(new object[] { "Light", "Dark" });
 			comboBoxTheme.Location = new System.Drawing.Point(14, 119);
@@ -155,7 +155,7 @@
 			// 
 			// comboBoxFont
 			// 
-            comboBoxFont.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			comboBoxFont.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			comboBoxFont.FormattingEnabled = true;
 			comboBoxFont.Location = new System.Drawing.Point(14, 195);
 			comboBoxFont.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -183,6 +183,7 @@
 			Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			Name = "OptionsWindow";
 			Text = "Options";
+			FormClosing += OptionsWindow_FormClosing;
 			ResumeLayout(false);
 			PerformLayout();
 		}

@@ -6,17 +6,9 @@
 
 using ConsoleApp;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp;
 
-namespace Osm
+namespace WindowsFormsApp
 {
     public partial class CreateCategoryWindow : Form
     {
@@ -26,11 +18,14 @@ namespace Osm
         public CreateCategoryWindow(MainWindow mainWindow, DatabaseAccess databaseAccess)
         {
             InitializeComponent();
+
             _mainWindow = mainWindow;
             _databaseAccess = databaseAccess;
+
             textBoxCategoryName.Select();
             this.AcceptButton = this.buttonOk;
             this.CancelButton = this.buttonCancel;
+            this.CenterToScreen();
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
@@ -42,7 +37,8 @@ namespace Osm
             this.textBoxCategoryName.Text = "";
             textBoxCategoryName.Select();
             _mainWindow.EnableRemoveCategoryButton();
-            this.Hide();
+            _mainWindow.EnableButtonNewSnippet();
+			this.Hide();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
