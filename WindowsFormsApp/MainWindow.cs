@@ -582,6 +582,7 @@ namespace WindowsFormsApp
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.richTextBoxSnippetContent.Focus();
             this.richTextBoxSnippetContent.Copy();
         }
 
