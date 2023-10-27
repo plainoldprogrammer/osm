@@ -441,18 +441,6 @@ namespace WindowsFormsApp
             }
         }
 
-        private void textBoxSnippetContent_TextChanged(object sender, EventArgs e)
-        {
-            string content = ((TextBox)sender).Text;
-            Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
-
-            if (selectedSnippet is not null)
-            {
-                selectedSnippet.Snippet1 = content;
-                this.databaseAccess.UpdateSnippet(selectedSnippet);
-            }
-        }
-
         public void EnableRemoveCategoryButton()
         {
             this.buttonRemoveCategory.Enabled = true;
