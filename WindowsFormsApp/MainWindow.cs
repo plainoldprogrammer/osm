@@ -44,9 +44,9 @@ namespace WindowsFormsApp
             InitializeComponent();
             InitializeDatabaseAcess();
 
-            createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
-            optionsWindow = new OptionsWindow(this, this.databaseAccess);
-            statisticsWindow = new StatisticsWindow(this, this.databaseAccess);
+            this.createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
+            this.optionsWindow = new OptionsWindow(this, this.databaseAccess);
+            this.statisticsWindow = new StatisticsWindow(this, this.databaseAccess);
 
             InitializeGui();
 
