@@ -104,6 +104,7 @@
             // 
             listBoxSnippets.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             listBoxSnippets.FormattingEnabled = true;
+            listBoxSnippets.IntegralHeight = false;
             listBoxSnippets.ItemHeight = 25;
             listBoxSnippets.Location = new System.Drawing.Point(341, 87);
             listBoxSnippets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
