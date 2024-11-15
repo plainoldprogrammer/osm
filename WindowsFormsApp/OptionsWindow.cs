@@ -123,7 +123,6 @@ namespace WindowsFormsApp
 
         private void checkBoxWordWrap_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void OptionsWindow_FormClosing(object sender, FormClosingEventArgs e)
