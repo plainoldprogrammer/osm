@@ -22,7 +22,8 @@ namespace WindowsFormsApp
 			_databaseAccess = databaseAccess;
 
 			this.CenterToScreen();
-		}
+            this.MaximizeBox = false;
+        }
 
 		public void ShowStatistics()
 		{
