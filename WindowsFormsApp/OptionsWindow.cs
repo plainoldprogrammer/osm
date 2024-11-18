@@ -51,6 +51,7 @@ namespace WindowsFormsApp
             this.buttonOk.Select();
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.CenterToScreen();
+            this.MaximizeBox = false;
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
