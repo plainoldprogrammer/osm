@@ -590,5 +590,13 @@ namespace WindowsFormsApp
         {
             this.buttonNewSnippet.Enabled = true;
         }
+
+        private void DisableEditButtons()
+        {
+            this.cutToolStripMenuItem.Enabled = false;
+            this.copyToolStripMenuItem.Enabled = false;
+            this.pasteToolStripMenuItem.Enabled = false;
+            this.selectAllToolStripMenuItem.Enabled = false;
+        }
     }
 }
