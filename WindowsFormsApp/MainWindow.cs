@@ -103,6 +103,8 @@ namespace WindowsFormsApp
             }
 
             exitToolStripMenuItem.Click += ItemExit_Clicked;
+
+            this.DisableEditButtons();
         }
 
         private void ConfigureListBoxCategoriesLightTheme()
