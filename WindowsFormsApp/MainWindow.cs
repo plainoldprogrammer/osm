@@ -215,6 +215,7 @@ namespace WindowsFormsApp
                 {
                     this.textBoxSnippetTitle.Text = selectedSnippet.Title;
                     this.richTextBoxSnippetContent.Text = selectedSnippet.Snippet1;
+                    this.EnableEditButtons();
                 }
             }
         }
