@@ -600,5 +600,13 @@ namespace WindowsFormsApp
             this.pasteToolStripMenuItem.Enabled = false;
             this.selectAllToolStripMenuItem.Enabled = false;
         }
+
+        private void EnableEditButtons()
+        {
+            this.cutToolStripMenuItem.Enabled = true;
+            this.copyToolStripMenuItem.Enabled = true;
+            this.pasteToolStripMenuItem.Enabled = true;
+            this.selectAllToolStripMenuItem.Enabled = true;
+        }
     }
 }
