@@ -33,12 +33,18 @@ namespace WindowsFormsApp
         {
             string category = textBoxCategoryName.Text;
             _mainWindow.Enabled = true;
-            _databaseAccess.CreateCategory(category);
-            _mainWindow.RefreshCategoriesListBox();
-            this.textBoxCategoryName.Text = "";
-            textBoxCategoryName.Select();
-            _mainWindow.EnableRemoveCategoryButton();
-            _mainWindow.EnableButtonNewSnippet();
+
+            if (category != String.Empty)
+            {
+                
+                _databaseAccess.CreateCategory(category);
+                _mainWindow.RefreshCategoriesListBox();
+                this.textBoxCategoryName.Text = "";
+                textBoxCategoryName.Select();
+                _mainWindow.EnableRemoveCategoryButton();
+                _mainWindow.EnableButtonNewSnippet();
+            }
+
             this.Hide();
         }
 
