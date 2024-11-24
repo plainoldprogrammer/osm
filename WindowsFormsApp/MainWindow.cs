@@ -609,5 +609,10 @@ namespace WindowsFormsApp
             this.pasteToolStripMenuItem.Enabled = true;
             this.selectAllToolStripMenuItem.Enabled = true;
         }
+
+        public void EnableWordWrap(bool isWordWrapEnabled)
+        {
+            this.richTextBoxSnippetContent.WordWrap = isWordWrapEnabled;
+        }
     }
 }
