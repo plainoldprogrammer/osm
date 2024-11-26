@@ -91,6 +91,8 @@ namespace WindowsFormsApp
                 Properties.Settings.Default.Save();
             }
 
+            _mainWindow.EnableWordWrap(this.checkBoxWordWrap.Checked);
+
             this.Hide();
         }
 
@@ -120,14 +122,6 @@ namespace WindowsFormsApp
             openFileDialog.InitialDirectory = directory;
 
             openFileDialog.ShowDialog();
-        }
-
-        private void checkBoxWordWrap_CheckedChanged(object sender, EventArgs e)
-        {
-            if (this.checkBoxWordWrap.Enabled)
-            {
-                _mainWindow.EnableWordWrap(true);
-            }
         }
 
         private void OptionsWindow_FormClosing(object sender, FormClosingEventArgs e)

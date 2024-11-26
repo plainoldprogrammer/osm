@@ -129,7 +129,6 @@
 			checkBoxWordWrap.TabIndex = 9;
 			checkBoxWordWrap.Text = "Word Wrap";
 			checkBoxWordWrap.UseVisualStyleBackColor = true;
-			checkBoxWordWrap.CheckedChanged += checkBoxWordWrap_CheckedChanged;
 			// 
 			// buttonOk
 			// 
