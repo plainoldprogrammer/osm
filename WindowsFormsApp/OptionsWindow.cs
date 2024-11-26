@@ -124,6 +124,10 @@ namespace WindowsFormsApp
 
         private void checkBoxWordWrap_CheckedChanged(object sender, EventArgs e)
         {
+            if (this.checkBoxWordWrap.Enabled)
+            {
+                _mainWindow.EnableWordWrap(true);
+            }
         }
 
         private void OptionsWindow_FormClosing(object sender, FormClosingEventArgs e)
