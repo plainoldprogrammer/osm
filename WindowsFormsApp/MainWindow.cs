@@ -103,7 +103,7 @@ namespace WindowsFormsApp
             }
 
             exitToolStripMenuItem.Click += ItemExit_Clicked;
-
+            this.richTextBoxSnippetContent.WordWrap = false;
             this.DisableEditButtons();
         }
 
