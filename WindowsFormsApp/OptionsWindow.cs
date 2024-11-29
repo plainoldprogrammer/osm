@@ -145,7 +145,7 @@ namespace WindowsFormsApp
             this.comboBoxFont.SelectedIndex = indexFont;
 
             int fontSize = Int32.Parse(this.comboBoxFontSize.SelectedItem.ToString());
-            this._mainWindow.SetFont(fontFamily, fontSize);
+            _mainWindow.SetFont(fontFamily, fontSize);
         }
     }
 }
