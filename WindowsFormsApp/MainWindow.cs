@@ -428,8 +428,6 @@ namespace WindowsFormsApp
                     this.textBoxSnippetTitle.Text = "";
                     this.richTextBoxSnippetContent.Text = "";
                 }
-
-                Console.WriteLine($"Selected item after remove snippet operation is: {this.listBoxSnippets.SelectedIndex}");
             }
         }
 
