@@ -55,7 +55,7 @@ namespace WindowsFormsApp
 
         private void InitializeDatabaseAcess()
         {
-            databaseAccess = new DatabaseAccess();
+            this.databaseAccess = new DatabaseAccess();
         }
 
         private void InitializeGui()
