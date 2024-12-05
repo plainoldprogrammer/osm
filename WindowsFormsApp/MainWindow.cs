@@ -227,12 +227,7 @@ namespace WindowsFormsApp
         {
             Graphics graphics = textbox.CreateGraphics();
             var characterWidth = (int)graphics.MeasureString("M", textbox.Font).Width;
-            SendMessage
-                (textbox.Handle
-                , EM_SETTABSTOPS
-                , 1
-                , new int[] { tabWidth * characterWidth }
-                );
+            SendMessage(textbox.Handle, EM_SETTABSTOPS, 1, new int[] { tabWidth * characterWidth });
         }
 
         private void ItemExit_Clicked(Object sender, EventArgs e)
