@@ -16,8 +16,8 @@ namespace WindowsFormsApp
 {
     public partial class MainWindow : System.Windows.Forms.Form
     {
-        private const string VERSION = "0.5 (Alpha)";
-        private const string RELEASE_DATE = "2023 August 11";
+        private const String VERSION = "0.5 (Alpha)";
+        private const String RELEASE_DATE = "2023 August 11";
 
         private DatabaseAccess databaseAccess;
         private const int EM_SETTABSTOPS = 0x00CB;
@@ -237,7 +237,7 @@ namespace WindowsFormsApp
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string message = $"Osm\nOther Snippet Manager\nVersion: {VERSION}\nRelease Date: {RELEASE_DATE}\nDeveloper: PlainOldProgrammer";
+            String message = $"Osm\nOther Snippet Manager\nVersion: {VERSION}\nRelease Date: {RELEASE_DATE}\nDeveloper: PlainOldProgrammer";
             MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -356,7 +356,7 @@ namespace WindowsFormsApp
         private void buttonNewSnippet_Click(object sender, EventArgs e)
         {
             this.richTextBoxSnippetContent.Text = "";
-            string titleOfNewSnippet = "New Snippet";
+            String titleOfNewSnippet = "New Snippet";
 
             Category selectedCategory = this.listBoxCategories.SelectedItem as Category;
             Snippet snippet = new Snippet()
@@ -430,7 +430,7 @@ namespace WindowsFormsApp
         {
             if (listBoxSnippets.Items.Count > 0)
             {
-                string title = ((TextBox)sender).Text;
+                String title = ((TextBox)sender).Text;
                 Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
                 selectedSnippet.Title = title;
                 databaseAccess.UpdateSnippet(selectedSnippet);
@@ -448,7 +448,7 @@ namespace WindowsFormsApp
             this.optionsWindow.Show();
         }
 
-        public void SetFont(string fontFamily, int fontSize)
+        public void SetFont(String fontFamily, int fontSize)
         {
             this.richTextBoxSnippetContent.Font = new Font(fontFamily, fontSize);
         }
@@ -460,7 +460,7 @@ namespace WindowsFormsApp
 
         private void richTextBoxSnippetContent_TextChanged(object sender, EventArgs e)
         {
-            string content = ((RichTextBox)sender).Text;
+            String content = ((RichTextBox)sender).Text;
             Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 
             if (selectedSnippet is not null)
