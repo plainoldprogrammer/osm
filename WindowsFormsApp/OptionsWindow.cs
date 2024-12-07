@@ -117,8 +117,8 @@ namespace WindowsFormsApp
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            string filePath = this.textBoxDbFile.Text; ;
-            string directory = filePath.Substring(0, filePath.LastIndexOf("\\"));
+            String filePath = this.textBoxDbFile.Text; ;
+            String directory = filePath.Substring(0, filePath.LastIndexOf("\\"));
             openFileDialog.InitialDirectory = directory;
 
             openFileDialog.ShowDialog();
@@ -139,7 +139,7 @@ namespace WindowsFormsApp
             _mainWindow.SetFontSize(fontSize);
         }
 
-        public void SetFontFamily(string fontFamily)
+        public void SetFontFamily(String fontFamily)
         {
             int indexFont = this.comboBoxFont.Items.IndexOf(fontFamily);
             this.comboBoxFont.SelectedIndex = indexFont;
