@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ConsoleApp.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace ConsoleApp
 {
@@ -20,7 +21,7 @@ namespace ConsoleApp
             snippetsContext = new SnippetsContext();
         }
 
-        public void CreateCategory(string categoryName)
+        public void CreateCategory(String categoryName)
         {
             Category category = new Category()
             {
@@ -68,9 +69,9 @@ namespace ConsoleApp
             snippetsContext.SaveChanges();
         }
 
-        public string GetDatabasePath()
+        public String GetDatabasePath()
         {
-            string db = snippetsContext.Database.GetDbConnection().DataSource;
+            String db = snippetsContext.Database.GetDbConnection().DataSource;
             return db;
         }
 
