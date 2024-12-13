@@ -19,7 +19,7 @@ namespace WindowsFormsApp
         private const String VERSION = "0.5 (Alpha)";
         private const String RELEASE_DATE = "2023 August 11";
 
-        private DatabaseAccess databaseAccess;
+        private DatabaseAccess _databaseAccess;
         private const int EM_SETTABSTOPS = 0x00CB;
 
         private CreateCategoryWindow createCategoryWindow;
@@ -44,9 +44,9 @@ namespace WindowsFormsApp
             InitializeComponent();
             InitializeDatabaseAcess();
 
-            this.createCategoryWindow = new CreateCategoryWindow(this, this.databaseAccess);
-            this.optionsWindow = new OptionsWindow(this, this.databaseAccess);
-            this.statisticsWindow = new StatisticsWindow(this, this.databaseAccess);
+            this.createCategoryWindow = new CreateCategoryWindow(this, this._databaseAccess);
+            this.optionsWindow = new OptionsWindow(this, this._databaseAccess);
+            this.statisticsWindow = new StatisticsWindow(this, this._databaseAccess);
 
             InitializeGui();
 
@@ -55,7 +55,7 @@ namespace WindowsFormsApp
 
         private void InitializeDatabaseAcess()
         {
-            this.databaseAccess = new DatabaseAccess();
+            this._databaseAccess = new DatabaseAccess();
         }
 
         private void InitializeGui()
@@ -155,7 +155,7 @@ namespace WindowsFormsApp
                 this.listBoxCategories.Items.Clear();
             }
 
-            List<Category> categories = this.databaseAccess.GetCategories();
+            List<Category> categories = this._databaseAccess.GetCategories();
 
             foreach (Category category in categories)
             {
@@ -173,7 +173,7 @@ namespace WindowsFormsApp
             {
                 Category selectedCategory = listBoxCategories.SelectedItem as Category;
                 this.listBoxSnippets.Items.Clear();
-                List<Snippet> snippets = this.databaseAccess.GetAllSnippetsFromCategory(selectedCategory);
+                List<Snippet> snippets = this._databaseAccess.GetAllSnippetsFromCategory(selectedCategory);
 
                 foreach (Snippet snippet in snippets)
                 {
@@ -348,7 +348,7 @@ namespace WindowsFormsApp
                         this.richTextBoxSnippetContent.Text = "";
                     }
 
-                    this.databaseAccess.RemoveCategory(selectedCategory);
+                    this._databaseAccess.RemoveCategory(selectedCategory);
                 }
             }
         }
@@ -366,7 +366,7 @@ namespace WindowsFormsApp
                 Datetime = BitConverter.GetBytes(DateTime.Now.Ticks)
             };
 
-            this.databaseAccess.CreateSnippet(snippet);
+            this._databaseAccess.CreateSnippet(snippet);
 
             if (this.listBoxSnippets.Items.Count == 0)
             {
@@ -399,7 +399,7 @@ namespace WindowsFormsApp
             {
                 Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
                 int index = this.listBoxSnippets.SelectedIndex;
-                this.databaseAccess.RemoveSnippet(selectedSnippet);
+                this._databaseAccess.RemoveSnippet(selectedSnippet);
                 this.listBoxSnippets.Items.RemoveAt(index);
                 index--;
 
@@ -433,7 +433,7 @@ namespace WindowsFormsApp
                 String title = ((TextBox)sender).Text;
                 Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
                 selectedSnippet.Title = title;
-                databaseAccess.UpdateSnippet(selectedSnippet);
+                _databaseAccess.UpdateSnippet(selectedSnippet);
             }
         }
 
@@ -466,7 +466,7 @@ namespace WindowsFormsApp
             if (selectedSnippet is not null)
             {
                 selectedSnippet.Snippet1 = content;
-                this.databaseAccess.UpdateSnippet(selectedSnippet);
+                this._databaseAccess.UpdateSnippet(selectedSnippet);
             }
         }
 
