@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <AssemblyName>WindowsFormsApp</AssemblyName>
+    <AssemblyName>Osm</AssemblyName>
     <RootNamespace>WindowsFormsApp</RootNamespace>
     <Version>0.5.0</Version>
     <Authors>Plainoldprogrammer</Authors>
