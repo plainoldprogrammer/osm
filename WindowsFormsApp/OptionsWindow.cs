@@ -21,7 +21,7 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
 
-            _mainWindow = mainWindow;
+            this._mainWindow = mainWindow;
             _databaseAccess = databaseAccess;
 
             this.textBoxDbFile.Text = _databaseAccess.GetDatabasePath();
