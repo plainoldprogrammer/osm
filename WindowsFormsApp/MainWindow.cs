@@ -4,13 +4,13 @@
  * Editor:  Visual Studio 2022 (Community Edition)
  */
 
+using ConsoleApp;
+using ConsoleApp.Models;
 using System;
 using System.Windows.Forms;
-using ConsoleApp;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Drawing;
-using ConsoleApp.Models;
 
 namespace WindowsFormsApp
 {
