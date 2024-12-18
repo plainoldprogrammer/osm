@@ -22,7 +22,7 @@ namespace WindowsFormsApp
         private DatabaseAccess _databaseAccess;
         private const int EM_SETTABSTOPS = 0x00CB;
 
-        private CreateCategoryWindow createCategoryWindow;
+        private CreateCategoryWindow _createCategoryWindow;
         private OptionsWindow optionsWindow;
         private StatisticsWindow statisticsWindow;
 
@@ -44,7 +44,7 @@ namespace WindowsFormsApp
             InitializeComponent();
             InitializeDatabaseAcess();
 
-            this.createCategoryWindow = new CreateCategoryWindow(this, this._databaseAccess);
+            this._createCategoryWindow = new CreateCategoryWindow(this, this._databaseAccess);
             this.optionsWindow = new OptionsWindow(this, this._databaseAccess);
             this.statisticsWindow = new StatisticsWindow(this, this._databaseAccess);
 
@@ -308,7 +308,7 @@ namespace WindowsFormsApp
         private void buttonNewCategory_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            this.createCategoryWindow.Show();
+            this._createCategoryWindow.Show();
         }
 
         private void buttonRemoveCategory_Click(object sender, EventArgs e)
