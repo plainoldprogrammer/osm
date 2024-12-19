@@ -23,7 +23,7 @@ namespace WindowsFormsApp
         private const int EM_SETTABSTOPS = 0x00CB;
 
         private CreateCategoryWindow _createCategoryWindow;
-        private OptionsWindow optionsWindow;
+        private OptionsWindow _optionsWindow;
         private StatisticsWindow statisticsWindow;
 
         /*
@@ -45,7 +45,7 @@ namespace WindowsFormsApp
             InitializeDatabaseAcess();
 
             this._createCategoryWindow = new CreateCategoryWindow(this, this._databaseAccess);
-            this.optionsWindow = new OptionsWindow(this, this._databaseAccess);
+            this._optionsWindow = new OptionsWindow(this, this._databaseAccess);
             this.statisticsWindow = new StatisticsWindow(this, this._databaseAccess);
 
             InitializeGui();
@@ -86,10 +86,10 @@ namespace WindowsFormsApp
                 applicationFontSizeOnConfig = "9";
             }
 
-            this.optionsWindow.SetFontSize(Int32.Parse(applicationFontSizeOnConfig));
+            this._optionsWindow.SetFontSize(Int32.Parse(applicationFontSizeOnConfig));
 
             var applicationFontFamilyOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationFontFamily"].ToString();
-            this.optionsWindow.SetFontFamily(applicationFontFamilyOnConfig);
+            this._optionsWindow.SetFontFamily(applicationFontFamilyOnConfig);
 
             InitializeListBoxCategories();
             InitializeListBoxSnippets();
@@ -445,7 +445,7 @@ namespace WindowsFormsApp
         private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            this.optionsWindow.Show();
+            this._optionsWindow.Show();
         }
 
         public void SetFont(String fontFamily, int fontSize)
