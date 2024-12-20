@@ -24,7 +24,7 @@ namespace WindowsFormsApp
 
         private CreateCategoryWindow _createCategoryWindow;
         private OptionsWindow _optionsWindow;
-        private StatisticsWindow statisticsWindow;
+        private StatisticsWindow _statisticsWindow;
 
         /*
         [DllImport("kernel32.dll", SetLastError = true)]
@@ -46,7 +46,7 @@ namespace WindowsFormsApp
 
             this._createCategoryWindow = new CreateCategoryWindow(this, this._databaseAccess);
             this._optionsWindow = new OptionsWindow(this, this._databaseAccess);
-            this.statisticsWindow = new StatisticsWindow(this, this._databaseAccess);
+            this._statisticsWindow = new StatisticsWindow(this, this._databaseAccess);
 
             InitializeGui();
 
@@ -579,7 +579,7 @@ namespace WindowsFormsApp
         private void statisticsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            this.statisticsWindow.ShowStatistics();
+            this._statisticsWindow.ShowStatistics();
         }
 
         public void EnableButtonNewSnippet()
