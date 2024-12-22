@@ -16,7 +16,7 @@ namespace WindowsFormsApp
 {
     public partial class MainWindow : System.Windows.Forms.Form
     {
-        private const String VERSION = "0.5 (Alpha)";
+        private const String _VERSION = "0.5 (Alpha)";
         private const String RELEASE_DATE = "2023 August 11";
 
         private DatabaseAccess _databaseAccess;
@@ -60,7 +60,7 @@ namespace WindowsFormsApp
 
         private void InitializeGui()
         {
-            this.Text = $"Osm v{VERSION}";
+            this.Text = $"Osm v{_VERSION}";
             this.richTextBoxSnippetContent.AcceptsTab = true;
             SetTabWidth(this.richTextBoxSnippetContent, 1);
 
@@ -237,7 +237,7 @@ namespace WindowsFormsApp
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String message = $"Osm\nOther Snippet Manager\nVersion: {VERSION}\nRelease Date: {RELEASE_DATE}\nDeveloper: PlainOldProgrammer";
+            String message = $"Osm\nOther Snippet Manager\nVersion: {_VERSION}\nRelease Date: {RELEASE_DATE}\nDeveloper: PlainOldProgrammer";
             MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
