@@ -20,7 +20,7 @@ namespace WindowsFormsApp
         private const String RELEASE_DATE = "2023 August 11";
 
         private DatabaseAccess _databaseAccess;
-        private const int EM_SETTABSTOPS = 0x00CB;
+        private const int _EM_SETTABSTOPS = 0x00CB;
 
         private CreateCategoryWindow _createCategoryWindow;
         private OptionsWindow _optionsWindow;
@@ -227,7 +227,7 @@ namespace WindowsFormsApp
         {
             Graphics graphics = textbox.CreateGraphics();
             var characterWidth = (int)graphics.MeasureString("M", textbox.Font).Width;
-            SendMessage(textbox.Handle, EM_SETTABSTOPS, 1, new int[] { tabWidth * characterWidth });
+            SendMessage(textbox.Handle, _EM_SETTABSTOPS, 1, new int[] { tabWidth * characterWidth });
         }
 
         private void ItemExit_Clicked(Object sender, EventArgs e)
