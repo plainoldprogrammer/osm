@@ -19,8 +19,9 @@ namespace WindowsFormsApp
         private const String _VERSION = "0.5 (Alpha)";
         private const String _RELEASE_DATE = "2023 August 11";
 
-        private DatabaseAccess _databaseAccess;
         private const int _EM_SETTABSTOPS = 0x00CB;
+
+        private DatabaseAccess _databaseAccess;
 
         private CreateCategoryWindow _createCategoryWindow;
         private OptionsWindow _optionsWindow;
