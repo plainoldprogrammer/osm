@@ -22,7 +22,7 @@ namespace WindowsFormsApp
             InitializeComponent();
 
             this._mainWindow = mainWindow;
-            _databaseAccess = databaseAccess;
+            this._databaseAccess = databaseAccess;
 
             this.textBoxDbFile.Text = _databaseAccess.GetDatabasePath();
             GetAllSystemInstalledFonts();
