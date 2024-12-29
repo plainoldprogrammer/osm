@@ -50,7 +50,7 @@ namespace WindowsFormsApp
             this._optionsWindow = new OptionsWindow(this, this._databaseAccess);
             this._statisticsWindow = new StatisticsWindow(this, this._databaseAccess);
 
-            InitializeGui();
+            this.InitializeGui();
 
             this.CenterToScreen();
         }
