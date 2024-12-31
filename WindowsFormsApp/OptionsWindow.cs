@@ -25,7 +25,7 @@ namespace WindowsFormsApp
             this._databaseAccess = databaseAccess;
 
             this.textBoxDbFile.Text = _databaseAccess.GetDatabasePath();
-            GetAllSystemInstalledFonts();
+            this.GetAllSystemInstalledFonts();
             this.AcceptButton = this.buttonOk;
             this.CancelButton = this.buttonCancel;
 
