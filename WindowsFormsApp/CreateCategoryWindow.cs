@@ -22,7 +22,7 @@ namespace WindowsFormsApp
             _mainWindow = mainWindow;
             _databaseAccess = databaseAccess;
 
-            textBoxCategoryName.Select();
+            this.textBoxCategoryName.Select();
             this.AcceptButton = this.buttonOk;
             this.CancelButton = this.buttonCancel;
             this.CenterToScreen();
