@@ -18,7 +18,7 @@ namespace WindowsFormsApp
 		{
 			InitializeComponent();
 
-			_mainWindow = mainWindow;
+			this._mainWindow = mainWindow;
 			this._databaseAccess = databaseAccess;
 
 			this.CenterToScreen();
