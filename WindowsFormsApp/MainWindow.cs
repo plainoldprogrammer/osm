@@ -44,6 +44,7 @@ namespace WindowsFormsApp
             */
 
             InitializeComponent();
+
             this.InitializeDatabaseAcess();
 
             this._createCategoryWindow = new CreateCategoryWindow(this, this._databaseAccess);
