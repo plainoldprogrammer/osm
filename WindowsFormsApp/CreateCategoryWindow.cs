@@ -20,7 +20,7 @@ namespace WindowsFormsApp
             InitializeComponent();
 
             _mainWindow = mainWindow;
-            _databaseAccess = databaseAccess;
+            this._databaseAccess = databaseAccess;
 
             this.textBoxCategoryName.Select();
             this.AcceptButton = this.buttonOk;
