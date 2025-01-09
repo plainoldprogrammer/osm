@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Drawing;
 using ConsoleApp;
 using ConsoleApp.Models;
+using System.CodeDom;
 
 namespace WindowsFormsApp
 {
@@ -18,7 +19,11 @@ namespace WindowsFormsApp
     {
         private const String _RELEASE_TYPE = "Alpha";
         private const String _VERSION = $"0.5 ({_RELEASE_TYPE})";
-        private const String _RELEASE_DATE = "2023 August 11";
+
+        private const String _YEAR = "2023";
+        private const String _MONTH = "August";
+        private const String _DAY = "11";
+        private const String _RELEASE_DATE = $"{_YEAR} {_MONTH} {_DAY}";
 
         private const int _EM_SETTABSTOPS = 0x00CB;
 
