@@ -26,8 +26,6 @@ namespace WindowsFormsApp
         private const String _DAY = "11";
         private const String _RELEASE_DATE = $"{_YEAR} {_MONTH} {_DAY}";
 
-        private const int _EM_SETTABSTOPS = 0x00CB;
-
         private DatabaseAccess _databaseAccess;
 
         private CreateCategoryWindow _createCategoryWindow;
@@ -234,7 +232,8 @@ namespace WindowsFormsApp
 
         public static void SetTabWidth(RichTextBox textbox, int tabWidth)
         {
-            Graphics graphics = textbox.CreateGraphics();
+            const int _EM_SETTABSTOPS = 0x00CB;
+        Graphics graphics = textbox.CreateGraphics();
             var characterWidth = (int)graphics.MeasureString("M", textbox.Font).Width;
             SendMessage(textbox.Handle, _EM_SETTABSTOPS, 1, new int[] { tabWidth * characterWidth });
         }
