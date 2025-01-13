@@ -31,20 +31,15 @@ namespace WindowsFormsApp
         private OptionsWindow _optionsWindow;
         private StatisticsWindow _statisticsWindow;
 
-        /*
+        
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool AllocConsole();
-        */
+        
 
         public MainWindow()
         {
-            /*
-            if (Debugger.IsAttached)
-            {
-                AllocConsole();
-            }
-            */
+            this.EnableDebuggingConsole();
 
             InitializeComponent();
 
@@ -57,6 +52,14 @@ namespace WindowsFormsApp
             this.InitializeGui();
 
             this.CenterToScreen();
+        }
+
+        private void EnableDebuggingConsole()
+        {
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                AllocConsole();
+            }
         }
 
         private void InitializeDatabaseAcess()
