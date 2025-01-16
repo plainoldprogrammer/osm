@@ -31,11 +31,11 @@ namespace WindowsFormsApp
 
             var applicationThemeOnConfig = Properties.Settings.Default["ApplicationTheme"];
 
-            if (applicationThemeOnConfig.ToString().ToLower().Equals("") || applicationThemeOnConfig.ToString().ToLower().Equals("light"))
+            if (applicationThemeOnConfig.ToString().ToLower().Equals("") || applicationThemeOnConfig.ToString().Equals("Light"))
             {
                 this.comboBoxTheme.SelectedIndex = 0;
             }
-            else if (applicationThemeOnConfig.ToString().ToLower().Equals("dark"))
+            else if (applicationThemeOnConfig.ToString().Equals("Dark"))
             {
                 this.comboBoxTheme.SelectedIndex = 1;
             }
