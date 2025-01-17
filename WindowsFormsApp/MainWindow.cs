@@ -35,7 +35,6 @@ namespace WindowsFormsApp
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool AllocConsole();
-        
 
         public MainWindow()
         {
