@@ -17,7 +17,7 @@ namespace WindowsFormsApp
     public partial class MainWindow : System.Windows.Forms.Form
     {
         private const String _RELEASE_TYPE = "Alpha";
-        private const String _VERSION_NUMBER = "0.5"; 
+        private const String _VERSION_NUMBER = "0.5";
         private const String _VERSION = $"{_VERSION_NUMBER} ({_RELEASE_TYPE})";
 
         private const String _YEAR = "2023";
@@ -31,7 +31,7 @@ namespace WindowsFormsApp
         private OptionsWindow _optionsWindow;
         private StatisticsWindow _statisticsWindow;
 
-        
+
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool AllocConsole();
@@ -234,7 +234,7 @@ namespace WindowsFormsApp
         public static void SetTabWidth(RichTextBox textbox, int tabWidth)
         {
             const int _EM_SETTABSTOPS = 0x00CB;
-        Graphics graphics = textbox.CreateGraphics();
+            Graphics graphics = textbox.CreateGraphics();
             var characterWidth = (int)graphics.MeasureString("M", textbox.Font).Width;
             SendMessage(textbox.Handle, _EM_SETTABSTOPS, 1, new int[] { tabWidth * characterWidth });
         }
@@ -615,6 +615,11 @@ namespace WindowsFormsApp
         public void EnableWordWrap(bool isWordWrapEnabled)
         {
             this.richTextBoxSnippetContent.WordWrap = isWordWrapEnabled;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
