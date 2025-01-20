@@ -287,7 +287,7 @@
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(131, 40);
             button1.TabIndex = 14;
-            button1.Text = "button1";
+            button1.Text = "buttonCopySnippet";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
