@@ -51,7 +51,7 @@
             helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             richTextBoxSnippetContent = new System.Windows.Forms.RichTextBox();
-            button1 = new System.Windows.Forms.Button();
+            buttonCopySnippet = new System.Windows.Forms.Button();
             menuStrip.SuspendLayout();
             SuspendLayout();
             // 
@@ -59,10 +59,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(17, 62);
-            label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label1.Location = new System.Drawing.Point(11, 41);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(111, 30);
+            label1.Size = new System.Drawing.Size(80, 20);
             label1.TabIndex = 1;
             label1.Text = "Categories";
             // 
@@ -70,20 +69,19 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(409, 62);
-            label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label2.Location = new System.Drawing.Point(273, 41);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(92, 30);
+            label2.Size = new System.Drawing.Size(66, 20);
             label2.TabIndex = 2;
             label2.Text = "Snippets";
             // 
             // textBoxSnippetTitle
             // 
             textBoxSnippetTitle.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            textBoxSnippetTitle.Location = new System.Drawing.Point(808, 52);
-            textBoxSnippetTitle.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBoxSnippetTitle.Location = new System.Drawing.Point(539, 35);
+            textBoxSnippetTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             textBoxSnippetTitle.Name = "textBoxSnippetTitle";
-            textBoxSnippetTitle.Size = new System.Drawing.Size(755, 35);
+            textBoxSnippetTitle.Size = new System.Drawing.Size(505, 27);
             textBoxSnippetTitle.TabIndex = 9;
             textBoxSnippetTitle.TextChanged += textBoxSnippetTitle_TextChanged;
             // 
@@ -92,12 +90,12 @@
             listBoxCategories.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             listBoxCategories.FormattingEnabled = true;
             listBoxCategories.IntegralHeight = false;
-            listBoxCategories.ItemHeight = 30;
-            listBoxCategories.Location = new System.Drawing.Point(17, 104);
-            listBoxCategories.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            listBoxCategories.MinimumSize = new System.Drawing.Size(381, 664);
+            listBoxCategories.ItemHeight = 20;
+            listBoxCategories.Location = new System.Drawing.Point(11, 69);
+            listBoxCategories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            listBoxCategories.MinimumSize = new System.Drawing.Size(255, 444);
             listBoxCategories.Name = "listBoxCategories";
-            listBoxCategories.Size = new System.Drawing.Size(381, 664);
+            listBoxCategories.Size = new System.Drawing.Size(255, 444);
             listBoxCategories.TabIndex = 3;
             listBoxCategories.SelectedValueChanged += listBoxCategories_SelectedValueChanged;
             // 
@@ -106,12 +104,12 @@
             listBoxSnippets.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
             listBoxSnippets.FormattingEnabled = true;
             listBoxSnippets.IntegralHeight = false;
-            listBoxSnippets.ItemHeight = 30;
-            listBoxSnippets.Location = new System.Drawing.Point(409, 104);
-            listBoxSnippets.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            listBoxSnippets.MinimumSize = new System.Drawing.Size(381, 664);
+            listBoxSnippets.ItemHeight = 20;
+            listBoxSnippets.Location = new System.Drawing.Point(273, 69);
+            listBoxSnippets.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            listBoxSnippets.MinimumSize = new System.Drawing.Size(255, 444);
             listBoxSnippets.Name = "listBoxSnippets";
-            listBoxSnippets.Size = new System.Drawing.Size(381, 664);
+            listBoxSnippets.Size = new System.Drawing.Size(255, 444);
             listBoxSnippets.TabIndex = 4;
             listBoxSnippets.SelectedValueChanged += listBoxSnippets_SelectedValueChanged;
             // 
@@ -119,12 +117,12 @@
             // 
             buttonNewCategory.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             buttonNewCategory.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            buttonNewCategory.Location = new System.Drawing.Point(17, 788);
-            buttonNewCategory.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            buttonNewCategory.MaximumSize = new System.Drawing.Size(188, 46);
-            buttonNewCategory.MinimumSize = new System.Drawing.Size(188, 46);
+            buttonNewCategory.Location = new System.Drawing.Point(11, 525);
+            buttonNewCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            buttonNewCategory.MaximumSize = new System.Drawing.Size(125, 31);
+            buttonNewCategory.MinimumSize = new System.Drawing.Size(125, 31);
             buttonNewCategory.Name = "buttonNewCategory";
-            buttonNewCategory.Size = new System.Drawing.Size(188, 46);
+            buttonNewCategory.Size = new System.Drawing.Size(125, 31);
             buttonNewCategory.TabIndex = 5;
             buttonNewCategory.Text = "New Category";
             buttonNewCategory.UseVisualStyleBackColor = true;
@@ -134,12 +132,12 @@
             // 
             buttonRemoveCategory.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             buttonRemoveCategory.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            buttonRemoveCategory.Location = new System.Drawing.Point(211, 788);
-            buttonRemoveCategory.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            buttonRemoveCategory.MaximumSize = new System.Drawing.Size(188, 46);
-            buttonRemoveCategory.MinimumSize = new System.Drawing.Size(188, 46);
+            buttonRemoveCategory.Location = new System.Drawing.Point(141, 525);
+            buttonRemoveCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            buttonRemoveCategory.MaximumSize = new System.Drawing.Size(125, 31);
+            buttonRemoveCategory.MinimumSize = new System.Drawing.Size(125, 31);
             buttonRemoveCategory.Name = "buttonRemoveCategory";
-            buttonRemoveCategory.Size = new System.Drawing.Size(188, 46);
+            buttonRemoveCategory.Size = new System.Drawing.Size(125, 31);
             buttonRemoveCategory.TabIndex = 6;
             buttonRemoveCategory.Text = "Remove Category";
             buttonRemoveCategory.UseVisualStyleBackColor = true;
@@ -149,12 +147,12 @@
             // 
             buttonNewSnippet.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             buttonNewSnippet.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            buttonNewSnippet.Location = new System.Drawing.Point(409, 788);
-            buttonNewSnippet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            buttonNewSnippet.MaximumSize = new System.Drawing.Size(188, 46);
-            buttonNewSnippet.MinimumSize = new System.Drawing.Size(188, 46);
+            buttonNewSnippet.Location = new System.Drawing.Point(273, 525);
+            buttonNewSnippet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            buttonNewSnippet.MaximumSize = new System.Drawing.Size(125, 31);
+            buttonNewSnippet.MinimumSize = new System.Drawing.Size(125, 31);
             buttonNewSnippet.Name = "buttonNewSnippet";
-            buttonNewSnippet.Size = new System.Drawing.Size(188, 46);
+            buttonNewSnippet.Size = new System.Drawing.Size(125, 31);
             buttonNewSnippet.TabIndex = 7;
             buttonNewSnippet.Text = "New Snippet";
             buttonNewSnippet.UseVisualStyleBackColor = true;
@@ -164,12 +162,12 @@
             // 
             buttonRemoveSnippet.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             buttonRemoveSnippet.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            buttonRemoveSnippet.Location = new System.Drawing.Point(605, 788);
-            buttonRemoveSnippet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            buttonRemoveSnippet.MaximumSize = new System.Drawing.Size(188, 46);
-            buttonRemoveSnippet.MinimumSize = new System.Drawing.Size(188, 46);
+            buttonRemoveSnippet.Location = new System.Drawing.Point(403, 525);
+            buttonRemoveSnippet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            buttonRemoveSnippet.MaximumSize = new System.Drawing.Size(125, 31);
+            buttonRemoveSnippet.MinimumSize = new System.Drawing.Size(125, 31);
             buttonRemoveSnippet.Name = "buttonRemoveSnippet";
-            buttonRemoveSnippet.Size = new System.Drawing.Size(188, 46);
+            buttonRemoveSnippet.Size = new System.Drawing.Size(125, 31);
             buttonRemoveSnippet.TabIndex = 8;
             buttonRemoveSnippet.Text = "Remove Snippet";
             buttonRemoveSnippet.UseVisualStyleBackColor = true;
@@ -181,8 +179,8 @@
             menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, toolsToolStripMenuItem, helpToolStripMenuItem });
             menuStrip.Location = new System.Drawing.Point(0, 0);
             menuStrip.Name = "menuStrip";
-            menuStrip.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
-            menuStrip.Size = new System.Drawing.Size(1583, 42);
+            menuStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            menuStrip.Size = new System.Drawing.Size(1055, 30);
             menuStrip.TabIndex = 12;
             menuStrip.Text = "menuStrip";
             // 
@@ -190,47 +188,47 @@
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new System.Drawing.Size(62, 34);
+            fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new System.Drawing.Size(164, 40);
+            exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
             exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
             // 
             editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { cutToolStripMenuItem, copyToolStripMenuItem, pasteToolStripMenuItem, selectAllToolStripMenuItem });
             editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new System.Drawing.Size(66, 34);
+            editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             editToolStripMenuItem.Text = "Edit";
             // 
             // cutToolStripMenuItem
             // 
             cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            cutToolStripMenuItem.Size = new System.Drawing.Size(216, 40);
+            cutToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             cutToolStripMenuItem.Text = "Cut";
             cutToolStripMenuItem.Click += cutToolStripMenuItem_Click;
             // 
             // copyToolStripMenuItem
             // 
             copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            copyToolStripMenuItem.Size = new System.Drawing.Size(216, 40);
+            copyToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             copyToolStripMenuItem.Text = "Copy";
             copyToolStripMenuItem.Click += copyToolStripMenuItem_Click;
             // 
             // pasteToolStripMenuItem
             // 
             pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            pasteToolStripMenuItem.Size = new System.Drawing.Size(216, 40);
+            pasteToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             pasteToolStripMenuItem.Text = "Paste";
             pasteToolStripMenuItem.Click += pasteToolStripMenuItem_Click;
             // 
             // selectAllToolStripMenuItem
             // 
             selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            selectAllToolStripMenuItem.Size = new System.Drawing.Size(216, 40);
+            selectAllToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             selectAllToolStripMenuItem.Text = "Select All";
             selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
             // 
@@ -238,20 +236,20 @@
             // 
             toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { optionsToolStripMenuItem, statisticsToolStripMenuItem });
             toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            toolsToolStripMenuItem.Size = new System.Drawing.Size(78, 34);
+            toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             toolsToolStripMenuItem.Text = "Tools";
             // 
             // optionsToolStripMenuItem
             // 
             optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            optionsToolStripMenuItem.Size = new System.Drawing.Size(211, 40);
+            optionsToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             optionsToolStripMenuItem.Text = "Options";
             optionsToolStripMenuItem.Click += optionsToolStripMenuItem_Click;
             // 
             // statisticsToolStripMenuItem
             // 
             statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
-            statisticsToolStripMenuItem.Size = new System.Drawing.Size(211, 40);
+            statisticsToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             statisticsToolStripMenuItem.Text = "Statistics";
             statisticsToolStripMenuItem.Click += statisticsToolStripMenuItem_Click;
             // 
@@ -259,44 +257,45 @@
             // 
             helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { aboutToolStripMenuItem });
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            helpToolStripMenuItem.Size = new System.Drawing.Size(74, 34);
+            helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new System.Drawing.Size(188, 40);
+            aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             aboutToolStripMenuItem.Text = "About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // richTextBoxSnippetContent
             // 
             richTextBoxSnippetContent.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            richTextBoxSnippetContent.Location = new System.Drawing.Point(803, 104);
-            richTextBoxSnippetContent.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            richTextBoxSnippetContent.MinimumSize = new System.Drawing.Size(760, 664);
+            richTextBoxSnippetContent.Location = new System.Drawing.Point(535, 69);
+            richTextBoxSnippetContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            richTextBoxSnippetContent.MinimumSize = new System.Drawing.Size(508, 444);
             richTextBoxSnippetContent.Name = "richTextBoxSnippetContent";
-            richTextBoxSnippetContent.Size = new System.Drawing.Size(760, 664);
+            richTextBoxSnippetContent.Size = new System.Drawing.Size(508, 444);
             richTextBoxSnippetContent.TabIndex = 13;
             richTextBoxSnippetContent.Text = "";
             richTextBoxSnippetContent.TextChanged += richTextBoxSnippetContent_TextChanged;
             // 
-            // button1
+            // buttonCopySnippet
             // 
-            button1.Location = new System.Drawing.Point(1432, 790);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(131, 40);
-            button1.TabIndex = 14;
-            button1.Text = "buttonCopySnippet";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            buttonCopySnippet.Location = new System.Drawing.Point(955, 527);
+            buttonCopySnippet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            buttonCopySnippet.Name = "buttonCopySnippet";
+            buttonCopySnippet.Size = new System.Drawing.Size(87, 27);
+            buttonCopySnippet.TabIndex = 14;
+            buttonCopySnippet.Text = "buttonCopySnippet";
+            buttonCopySnippet.UseVisualStyleBackColor = true;
+            buttonCopySnippet.Click += button1_Click;
             // 
             // MainWindow
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1583, 892);
-            Controls.Add(button1);
+            ClientSize = new System.Drawing.Size(1055, 595);
+            Controls.Add(buttonCopySnippet);
             Controls.Add(richTextBoxSnippetContent);
             Controls.Add(buttonRemoveSnippet);
             Controls.Add(buttonNewSnippet);
@@ -309,8 +308,8 @@
             Controls.Add(label1);
             Controls.Add(menuStrip);
             MainMenuStrip = menuStrip;
-            Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            MinimumSize = new System.Drawing.Size(1594, 912);
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            MinimumSize = new System.Drawing.Size(1069, 624);
             Name = "MainWindow";
             Text = "Form1";
             menuStrip.ResumeLayout(false);
@@ -343,6 +342,6 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statisticsToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonCopySnippet;
     }
 }
