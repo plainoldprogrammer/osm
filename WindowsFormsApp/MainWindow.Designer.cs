@@ -282,11 +282,11 @@
             // buttonCopySnippet
             // 
             buttonCopySnippet.Location = new System.Drawing.Point(955, 527);
-            buttonCopySnippet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            buttonCopySnippet.Margin = new System.Windows.Forms.Padding(2);
             buttonCopySnippet.Name = "buttonCopySnippet";
             buttonCopySnippet.Size = new System.Drawing.Size(87, 27);
             buttonCopySnippet.TabIndex = 14;
-            buttonCopySnippet.Text = "buttonCopySnippet";
+            buttonCopySnippet.Text = "Copy";
             buttonCopySnippet.UseVisualStyleBackColor = true;
             buttonCopySnippet.Click += button1_Click;
             // 
