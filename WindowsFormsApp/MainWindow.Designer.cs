@@ -288,7 +288,7 @@
             buttonCopySnippet.TabIndex = 14;
             buttonCopySnippet.Text = "Copy";
             buttonCopySnippet.UseVisualStyleBackColor = true;
-            buttonCopySnippet.Click += button1_Click;
+            buttonCopySnippet.Click += buttonCopySnippet_Click;
             // 
             // MainWindow
             // 

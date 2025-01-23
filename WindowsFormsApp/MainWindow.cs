@@ -617,7 +617,7 @@ namespace WindowsFormsApp
             this.richTextBoxSnippetContent.WordWrap = isWordWrapEnabled;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonCopySnippet_Click(object sender, EventArgs e)
         {
 
         }
