@@ -619,7 +619,7 @@ namespace WindowsFormsApp
 
         private void buttonCopySnippet_Click(object sender, EventArgs e)
         {
-
+            Clipboard.SetText(richTextBoxSnippetContent.Text, TextDataFormat.UnicodeText);
         }
     }
 }
