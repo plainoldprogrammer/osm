@@ -106,6 +106,7 @@ namespace WindowsFormsApp
             {
                 this.buttonRemoveCategory.Enabled = false;
                 this.buttonNewSnippet.Enabled = false;
+                this.buttonCopySnippet.Enabled = false;
                 this.textBoxSnippetTitle.Enabled = false;
                 this.richTextBoxSnippetContent.Enabled = false;
             }
@@ -348,6 +349,7 @@ namespace WindowsFormsApp
                         this.buttonRemoveCategory.Enabled = false;
                         this.buttonNewSnippet.Enabled = false;
                         this.buttonRemoveSnippet.Enabled = false;
+                        this.buttonCopySnippet.Enabled = false;
 
                         this.listBoxSnippets.Enabled = false;
                         this.textBoxSnippetTitle.Enabled = false;
@@ -399,6 +401,11 @@ namespace WindowsFormsApp
                 this.buttonRemoveSnippet.Enabled = true;
             }
 
+            if (this.buttonCopySnippet.Enabled == false)
+            {
+                this.buttonCopySnippet.Enabled = true;
+            }
+
             this.textBoxSnippetTitle.Focus();
         }
 
@@ -428,6 +435,7 @@ namespace WindowsFormsApp
                     this.textBoxSnippetTitle.Enabled = false;
                     this.richTextBoxSnippetContent.Enabled = false;
                     this.buttonRemoveSnippet.Enabled = false;
+                    this.buttonCopySnippet.Enabled = false;
 
                     this.textBoxSnippetTitle.Text = "";
                     this.richTextBoxSnippetContent.Text = "";
