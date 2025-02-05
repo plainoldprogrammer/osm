@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Drawing;
 using ConsoleApp;
 using ConsoleApp.Models;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace WindowsFormsApp
 {
@@ -44,6 +45,8 @@ namespace WindowsFormsApp
             this.InitializeDatabaseAcess();
 
             this._createCategoryWindow = new CreateCategoryWindow(this, this._databaseAccess);
+            this._createCategoryWindow.MaximizeBox = false;
+            this._createCategoryWindow.MinimizeBox = true;
             this._optionsWindow = new OptionsWindow(this, this._databaseAccess);
             this._statisticsWindow = new StatisticsWindow(this, this._databaseAccess);
 
