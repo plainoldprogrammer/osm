@@ -31,7 +31,6 @@ namespace WindowsFormsApp
         private OptionsWindow _optionsWindow;
         private StatisticsWindow _statisticsWindow;
 
-
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool AllocConsole();
