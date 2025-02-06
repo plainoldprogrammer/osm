@@ -11,7 +11,6 @@ using System.Runtime.InteropServices;
 using System.Drawing;
 using ConsoleApp;
 using ConsoleApp.Models;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace WindowsFormsApp
 {
