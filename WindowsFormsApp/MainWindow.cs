@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Drawing;
+using System.IO;
 using ConsoleApp;
 using ConsoleApp.Models;
 
@@ -256,14 +257,27 @@ namespace WindowsFormsApp
         {
             if (listBoxCategories.Items.Count > 0)
             {
-                e.DrawBackground();
-                e.Graphics.DrawIcon(new Icon("icons/folder.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
+                if (Directory.Exists("icons"))
+                {
+                    e.DrawBackground();
+                    e.Graphics.DrawIcon(new Icon("icons/folder.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
 
-                Rectangle textRectangle = e.Bounds;
-                textRectangle.X += 18;
+                    Rectangle textRectangle = e.Bounds;
+                    textRectangle.X += 18;
 
-                e.Graphics.DrawString((listBoxCategories.Items[e.Index] as Category).Category1, e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
-                e.DrawFocusRectangle();
+                    e.Graphics.DrawString((listBoxCategories.Items[e.Index] as Category).Category1, e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+                    e.DrawFocusRectangle();
+                }
+                else
+                {
+                    e.DrawBackground();
+
+                    Rectangle textRectangle = e.Bounds;
+                    textRectangle.X += 18;
+
+                    e.Graphics.DrawString((listBoxCategories.Items[e.Index] as Category).Category1, e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+                    e.DrawFocusRectangle();
+                }
             }
         }
 
@@ -271,14 +285,27 @@ namespace WindowsFormsApp
         {
             if (listBoxCategories.Items.Count > 0)
             {
-                e.DrawBackground();
-                e.Graphics.DrawIcon(new Icon("icons/folder.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
+                if (Directory.Exists("icons"))
+                {
+                    e.DrawBackground();
+                    e.Graphics.DrawIcon(new Icon("icons/folder.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
 
-                Rectangle textRectangle = e.Bounds;
-                textRectangle.X += 18;
+                    Rectangle textRectangle = e.Bounds;
+                    textRectangle.X += 18;
 
-                e.Graphics.DrawString((listBoxCategories.Items[e.Index] as Category).Category1, e.Font, Brushes.White, textRectangle, StringFormat.GenericDefault);
-                e.DrawFocusRectangle();
+                    e.Graphics.DrawString((listBoxCategories.Items[e.Index] as Category).Category1, e.Font, Brushes.White, textRectangle, StringFormat.GenericDefault);
+                    e.DrawFocusRectangle();
+                }
+                else
+                {
+                    e.DrawBackground();
+
+                    Rectangle textRectangle = e.Bounds;
+                    textRectangle.X += 18;
+
+                    e.Graphics.DrawString((listBoxCategories.Items[e.Index] as Category).Category1, e.Font, Brushes.White, textRectangle, StringFormat.GenericDefault);
+                    e.DrawFocusRectangle();
+                }
             }
         }
 
@@ -286,16 +313,31 @@ namespace WindowsFormsApp
         {
             if (listBoxSnippets.Items.Count > 0)
             {
-                e.DrawBackground();
-                e.Graphics.DrawIcon(new Icon("icons/file.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
+                if (Directory.Exists("icons"))
+                {
+                    e.DrawBackground();
+                    e.Graphics.DrawIcon(new Icon("icons/file.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
 
-                Rectangle textRectangle = e.Bounds;
-                textRectangle.X += 18;
+                    Rectangle textRectangle = e.Bounds;
+                    textRectangle.X += 18;
 
-                e.Graphics.DrawString((listBoxSnippets.Items[e.Index] as Snippet).Title,
-                    e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+                    e.Graphics.DrawString((listBoxSnippets.Items[e.Index] as Snippet).Title,
+                        e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
 
-                e.DrawFocusRectangle();
+                    e.DrawFocusRectangle();
+                }
+                else
+                {
+                    e.DrawBackground();
+
+                    Rectangle textRectangle = e.Bounds;
+                    textRectangle.X += 18;
+
+                    e.Graphics.DrawString((listBoxSnippets.Items[e.Index] as Snippet).Title,
+                        e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+
+                    e.DrawFocusRectangle();
+                }
             }
         }
 
@@ -303,16 +345,31 @@ namespace WindowsFormsApp
         {
             if (listBoxSnippets.Items.Count > 0)
             {
-                e.DrawBackground();
-                e.Graphics.DrawIcon(new Icon("icons/file.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
+                if (Directory.Exists("icons"))
+                {
+                    e.DrawBackground();
+                    e.Graphics.DrawIcon(new Icon("icons/file.ico", 16, 16), e.Bounds.X, e.Bounds.Y);
 
-                Rectangle textRectangle = e.Bounds;
-                textRectangle.X += 18;
+                    Rectangle textRectangle = e.Bounds;
+                    textRectangle.X += 18;
 
-                e.Graphics.DrawString((listBoxSnippets.Items[e.Index] as Snippet).Title,
-                    e.Font, Brushes.White, textRectangle, StringFormat.GenericDefault);
+                    e.Graphics.DrawString((listBoxSnippets.Items[e.Index] as Snippet).Title,
+                        e.Font, Brushes.White, textRectangle, StringFormat.GenericDefault);
 
-                e.DrawFocusRectangle();
+                    e.DrawFocusRectangle();
+                }
+                else
+                {
+                    e.DrawBackground();
+
+                    Rectangle textRectangle = e.Bounds;
+                    textRectangle.X += 18;
+
+                    e.Graphics.DrawString((listBoxSnippets.Items[e.Index] as Snippet).Title,
+                        e.Font, Brushes.White, textRectangle, StringFormat.GenericDefault);
+
+                    e.DrawFocusRectangle();
+                }
             }
         }
 
