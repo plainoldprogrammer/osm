@@ -93,7 +93,8 @@ namespace WindowsFormsApp
 
             if (applicationFontSizeOnConfig == "")
             {
-                applicationFontSizeOnConfig = "9";
+                const string DefaultFontSize = "9"; 
+                applicationFontSizeOnConfig = DefaultFontSize;
             }
 
             this._optionsWindow.SetFontSize(Int32.Parse(applicationFontSizeOnConfig));
