@@ -45,8 +45,8 @@ namespace WindowsFormsApp
             this.InitializeDatabaseAcess();
 
             this._createCategoryWindow = new CreateCategoryWindow(this, this._databaseAccess);
-            this._createCategoryWindow.MaximizeBox = false;
-            this._createCategoryWindow.MinimizeBox = true;
+            this.DisableMaximizeAndMinimizeButtons(this._createCategoryWindow);
+
             this._optionsWindow = new OptionsWindow(this, this._databaseAccess);
             this._statisticsWindow = new StatisticsWindow(this, this._databaseAccess);
 
@@ -687,6 +687,12 @@ namespace WindowsFormsApp
         private void buttonCopySnippet_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(richTextBoxSnippetContent.Text, TextDataFormat.UnicodeText);
+        }
+
+        public void DisableMaximizeAndMinimizeButtons(Form window)
+        {
+            window.MaximizeBox = false;
+            window.MinimizeBox = true;
         }
     }
 }
