@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Drawing;
+using System.Diagnostics;
 using System.IO;
 using ConsoleApp;
 using ConsoleApp.Models;
@@ -57,7 +58,7 @@ namespace WindowsFormsApp
 
         private void EnableDebuggingConsole()
         {
-            if (System.Diagnostics.Debugger.IsAttached)
+            if (Debugger.IsAttached)
             {
                 AllocConsole();
             }
