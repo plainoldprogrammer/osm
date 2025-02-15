@@ -284,7 +284,7 @@ namespace WindowsFormsApp
 
         private void listBoxCategories_DrawItemDarkTheme(object sender, DrawItemEventArgs e)
         {
-            if (listBoxCategories.Items.Count > 0)
+            if (this.listBoxCategories.Items.Count > 0)
             {
                 if (Directory.Exists("icons"))
                 {
