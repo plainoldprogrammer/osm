@@ -182,7 +182,7 @@ namespace WindowsFormsApp
 
         private void listBoxCategories_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (listBoxCategories.SelectedIndex >= 0)
+            if (this.listBoxCategories.SelectedIndex >= 0)
             {
                 Category selectedCategory = listBoxCategories.SelectedItem as Category;
                 this.listBoxSnippets.Items.Clear();
