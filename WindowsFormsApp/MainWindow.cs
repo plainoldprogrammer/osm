@@ -220,7 +220,7 @@ namespace WindowsFormsApp
 
         private void listBoxSnippets_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (listBoxSnippets.Items.Count > 0)
+            if (this.listBoxSnippets.Items.Count > 0)
             {
                 Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 
