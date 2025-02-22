@@ -313,7 +313,7 @@ namespace WindowsFormsApp
 
         private void listBoxSnippets_DrawItem(object sender, DrawItemEventArgs e)
         {
-            if (listBoxSnippets.Items.Count > 0)
+            if (this.listBoxSnippets.Items.Count > 0)
             {
                 if (Directory.Exists("icons"))
                 {
