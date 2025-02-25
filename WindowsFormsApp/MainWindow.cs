@@ -505,7 +505,7 @@ namespace WindowsFormsApp
 
         private void textBoxSnippetTitle_TextChanged(object sender, EventArgs e)
         {
-            if (listBoxSnippets.Items.Count > 0)
+            if (this.listBoxSnippets.Items.Count > 0)
             {
                 String title = ((TextBox)sender).Text;
                 Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
