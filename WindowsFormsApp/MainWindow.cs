@@ -476,8 +476,10 @@ namespace WindowsFormsApp
             {
                 Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
                 int index = this.listBoxSnippets.SelectedIndex;
+
                 this._databaseAccess.RemoveSnippet(selectedSnippet);
                 this.listBoxSnippets.Items.RemoveAt(index);
+
                 index--;
 
                 if (index == -1)
