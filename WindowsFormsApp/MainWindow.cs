@@ -18,14 +18,14 @@ namespace WindowsFormsApp
 {
     public partial class MainWindow : System.Windows.Forms.Form
     {
-        private const String _RELEASE_TYPE = "Alpha";
-        private const String _VERSION_NUMBER = "0.5";
-        private const String _VERSION = $"{_VERSION_NUMBER} ({_RELEASE_TYPE})";
+        private const String _ReleaseType = "Alpha";
+        private const String _VersionNumber = "0.5";
+        private const String _Version = $"{_VersionNumber} ({_ReleaseType})";
 
-        private const String _YEAR = "2023";
-        private const String _MONTH = "August";
-        private const String _DAY = "11";
-        private const String _RELEASE_DATE = $"{_YEAR} {_MONTH} {_DAY}";
+        private const String _Year = "2023";
+        private const String _Month = "August";
+        private const String _Day = "11";
+        private const String _ReleaseDate = $"{_Year} {_Month} {_Day}";
 
         private const string _DefaultFontSize = "9";
 
@@ -73,7 +73,7 @@ namespace WindowsFormsApp
 
         private void InitializeGui()
         {
-            this.Text = $"Osm v{_VERSION}";
+            this.Text = $"Osm v{_Version}";
             this.richTextBoxSnippetContent.AcceptsTab = true;
             SetTabWidth(this.richTextBoxSnippetContent, 1);
 
@@ -253,7 +253,7 @@ namespace WindowsFormsApp
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String message = $"Osm\nOther Snippet Manager\nVersion: {_VERSION}\nRelease Date: {_RELEASE_DATE}\nDeveloper: PlainOldProgrammer";
+            String message = $"Osm\nOther Snippet Manager\nVersion: {_Version}\nRelease Date: {_ReleaseDate}\nDeveloper: PlainOldProgrammer";
             MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
