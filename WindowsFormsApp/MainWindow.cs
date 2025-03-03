@@ -27,6 +27,8 @@ namespace WindowsFormsApp
         private const String _DAY = "11";
         private const String _RELEASE_DATE = $"{_YEAR} {_MONTH} {_DAY}";
 
+        private const string _DefaultFontSize = "9";
+
         private DatabaseAccess _databaseAccess;
 
         private CreateCategoryWindow _createCategoryWindow;
@@ -94,8 +96,7 @@ namespace WindowsFormsApp
 
             if (applicationFontSizeOnConfig == "")
             {
-                const string DefaultFontSize = "9"; 
-                applicationFontSizeOnConfig = DefaultFontSize;
+                applicationFontSizeOnConfig = _DefaultFontSize;
             }
 
             this._optionsWindow.SetFontSize(Int32.Parse(applicationFontSizeOnConfig));
