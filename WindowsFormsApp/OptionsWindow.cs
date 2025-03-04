@@ -119,8 +119,8 @@ namespace WindowsFormsApp
 
             String filePath = this.textBoxDbFile.Text; ;
             String directory = filePath.Substring(0, filePath.LastIndexOf("\\"));
-            openFileDialog.InitialDirectory = directory;
 
+            openFileDialog.InitialDirectory = directory;
             openFileDialog.ShowDialog();
         }
 
