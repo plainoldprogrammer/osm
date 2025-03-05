@@ -237,7 +237,7 @@ namespace WindowsFormsApp
         [DllImport("User32.dll", CharSet = CharSet.Auto)]
         public static extern IntPtr SendMessage(IntPtr h, int msg, int wParam, int[] lParam);
 
-        public static void SetTabWidth(RichTextBox textbox, int tabWidth)
+        private static void SetTabWidth(RichTextBox textbox, int tabWidth)
         {
             const int _EM_SETTABSTOPS = 0x00CB;
             Graphics graphics = textbox.CreateGraphics();
