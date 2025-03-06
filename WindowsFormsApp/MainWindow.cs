@@ -694,7 +694,7 @@ namespace WindowsFormsApp
             Clipboard.SetText(richTextBoxSnippetContent.Text, TextDataFormat.UnicodeText);
         }
 
-        public void DisableMaximizeAndMinimizeButtons(Form window)
+        private void DisableMaximizeAndMinimizeButtons(Form window)
         {
             window.MaximizeBox = false;
             window.MinimizeBox = true;
