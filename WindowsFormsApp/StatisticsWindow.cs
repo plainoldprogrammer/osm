@@ -39,7 +39,7 @@ namespace WindowsFormsApp
 			this._mainWindow.Enabled = true;
 		}
 
-		public void RefreshStatistics()
+		private void RefreshStatistics()
 		{
 			this.labelValueNumberOfCategories.Text = _databaseAccess.GetNumberOfCategories().ToString();
 			this.labelValueNumberOfSnippets.Text = _databaseAccess.GetNumberOfSnippets().ToString();
