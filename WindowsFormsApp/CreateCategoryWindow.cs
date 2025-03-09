@@ -37,7 +37,7 @@ namespace WindowsFormsApp
             if (category != String.Empty)
             {
                 
-                _databaseAccess.CreateCategory(category);
+                this._databaseAccess.CreateCategory(category);
                 _mainWindow.RefreshCategoriesListBox();
                 textBoxCategoryName.Text = "";
                 textBoxCategoryName.Select();
