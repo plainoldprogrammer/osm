@@ -38,7 +38,7 @@ namespace WindowsFormsApp
             {
                 
                 this._databaseAccess.CreateCategory(category);
-                _mainWindow.RefreshCategoriesListBox();
+                this._mainWindow.RefreshCategoriesListBox();
                 textBoxCategoryName.Text = "";
                 textBoxCategoryName.Select();
                 _mainWindow.EnableRemoveCategoryButton();
