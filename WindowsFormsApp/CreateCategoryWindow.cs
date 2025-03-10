@@ -32,7 +32,7 @@ namespace WindowsFormsApp
         private void buttonOk_Click(object sender, EventArgs e)
         {
             String category = textBoxCategoryName.Text;
-            _mainWindow.Enabled = true;
+            this._mainWindow.Enabled = true;
 
             if (category != String.Empty)
             {
