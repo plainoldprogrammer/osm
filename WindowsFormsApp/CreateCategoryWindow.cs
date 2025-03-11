@@ -41,7 +41,7 @@ namespace WindowsFormsApp
                 this._mainWindow.RefreshCategoriesListBox();
                 textBoxCategoryName.Text = "";
                 textBoxCategoryName.Select();
-                _mainWindow.EnableRemoveCategoryButton();
+                this._mainWindow.EnableRemoveCategoryButton();
                 _mainWindow.EnableButtonNewSnippet();
             }
 
