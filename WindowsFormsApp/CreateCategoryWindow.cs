@@ -40,7 +40,7 @@ namespace WindowsFormsApp
                 this._databaseAccess.CreateCategory(category);
                 this._mainWindow.RefreshCategoriesListBox();
                 this.textBoxCategoryName.Text = "";
-                textBoxCategoryName.Select();
+                this.textBoxCategoryName.Select();
                 this._mainWindow.EnableRemoveCategoryButton();
                 _mainWindow.EnableButtonNewSnippet();
             }
