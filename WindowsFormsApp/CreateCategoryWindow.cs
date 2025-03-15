@@ -42,7 +42,7 @@ namespace WindowsFormsApp
                 this.textBoxCategoryName.Text = "";
                 this.textBoxCategoryName.Select();
                 this._mainWindow.EnableRemoveCategoryButton();
-                _mainWindow.EnableButtonNewSnippet();
+                this._mainWindow.EnableButtonNewSnippet();
             }
 
             this.Hide();
