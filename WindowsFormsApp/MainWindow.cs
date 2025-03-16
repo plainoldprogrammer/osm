@@ -79,7 +79,8 @@ namespace WindowsFormsApp
 
             var applicationThemeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationTheme"];
 
-            if (applicationThemeOnConfig.ToString().ToLower().Equals("") || applicationThemeOnConfig.ToString().ToLower().Equals("light"))
+            if (applicationThemeOnConfig.ToString().ToLower().Equals("") || 
+                applicationThemeOnConfig.ToString().ToLower().Equals("light"))
             {
                 this.ConfigureListBoxCategoriesLightTheme();
                 this.ConfigureListBoxSnippetsLightTheme();
