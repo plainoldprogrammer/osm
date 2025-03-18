@@ -242,7 +242,7 @@ namespace WindowsFormsApp
         {
             const int _EM_SETTABSTOPS = 0x00CB;
             Graphics graphics = textbox.CreateGraphics();
-            var characterWidth = (int)graphics.MeasureString("M", textbox.Font).Width;
+            int characterWidth = (int)graphics.MeasureString("M", textbox.Font).Width;
 
             SendMessage(textbox.Handle, _EM_SETTABSTOPS, 1, new int[] { tabWidth * characterWidth });
         }
