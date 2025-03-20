@@ -93,7 +93,7 @@ namespace WindowsFormsApp
                 this.SetDarkTheme();
             }
 
-            var applicationFontSizeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationFontSize"].ToString();
+            String applicationFontSizeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationFontSize"].ToString();
 
             if (applicationFontSizeOnConfig == "")
             {
