@@ -25,7 +25,7 @@ namespace WindowsFormsApp
             this._databaseAccess = databaseAccess;
 
             this.textBoxDbFile.Text = _databaseAccess.GetDatabasePath();
-            this.GetAllSystemInstalledFonts();
+            this.InitializeComboBoxFont();
             this.AcceptButton = this.buttonOk;
             this.CancelButton = this.buttonCancel;
 
@@ -102,7 +102,7 @@ namespace WindowsFormsApp
             this.Hide();
         }
 
-        private void GetAllSystemInstalledFonts()
+        private void InitializeComboBoxFont()
         {
             using (InstalledFontCollection fontCollection = new InstalledFontCollection())
             {
