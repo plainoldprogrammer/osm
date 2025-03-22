@@ -27,6 +27,7 @@ namespace WindowsFormsApp
             this.CancelButton = this.buttonCancel;
             this.CenterToScreen();
             this.MaximizeBox = false;
+            this.MinimizeBox = true;
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
