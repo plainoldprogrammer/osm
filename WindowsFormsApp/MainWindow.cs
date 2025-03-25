@@ -93,7 +93,7 @@ namespace WindowsFormsApp
 
             String applicationFontSizeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationFontSize"].ToString();
 
-            if (applicationFontSizeOnConfig == "")
+            if (applicationFontSizeOnConfig == String.Empty)
             {
                 applicationFontSizeOnConfig = _DefaultFontSize;
             }
