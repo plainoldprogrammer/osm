@@ -427,7 +427,7 @@ namespace WindowsFormsApp
 
         private void buttonNewSnippet_Click(object sender, EventArgs e)
         {
-            this.richTextBoxSnippetContent.Text = "";
+            this.richTextBoxSnippetContent.Text = String.Empty;
             String titleOfNewSnippet = "New Snippet";
 
             Category selectedCategory = this.listBoxCategories.SelectedItem as Category;
