@@ -56,7 +56,7 @@ namespace WindowsFormsApp
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            _mainWindow.Enabled = true;
+            this._mainWindow.Enabled = true;
 
             if (this.comboBoxTheme.SelectedItem == "Light")
             {
