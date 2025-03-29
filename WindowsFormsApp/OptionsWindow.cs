@@ -98,7 +98,7 @@ namespace WindowsFormsApp
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            _mainWindow.Enabled = true;
+            this._mainWindow.Enabled = true;
             this.Hide();
         }
 
