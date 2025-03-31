@@ -129,7 +129,7 @@ namespace WindowsFormsApp
             this.Hide();
             e.Cancel = true;
 
-            _mainWindow.Enabled = true;
+            this._mainWindow.Enabled = true;
         }
 
         public void SetFontSize(int fontSize)
