@@ -91,7 +91,7 @@ namespace WindowsFormsApp
                 Properties.Settings.Default.Save();
             }
 
-            _mainWindow.EnableWordWrap(this.checkBoxWordWrap.Checked);
+            this._mainWindow.EnableWordWrap(this.checkBoxWordWrap.Checked);
 
             this.Hide();
         }
