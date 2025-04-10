@@ -60,7 +60,7 @@ namespace WindowsFormsApp
 
             if (this.comboBoxTheme.SelectedItem == "Light")
             {
-                _mainWindow.SetLightTheme();
+                this._mainWindow.SetLightTheme();
 
                 Properties.Settings.Default["ApplicationTheme"] = "Light";
                 Properties.Settings.Default.Save();
