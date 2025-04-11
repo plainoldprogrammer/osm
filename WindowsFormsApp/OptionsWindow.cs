@@ -67,7 +67,7 @@ namespace WindowsFormsApp
             }
             else if (this.comboBoxTheme.SelectedItem == "Dark")
             {
-                _mainWindow.SetDarkTheme();
+                this._mainWindow.SetDarkTheme();
 
                 Properties.Settings.Default["ApplicationTheme"] = "Dark";
                 Properties.Settings.Default.Save();
