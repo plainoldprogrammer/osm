@@ -76,7 +76,7 @@ namespace WindowsFormsApp
             if (this.comboBoxFont.SelectedItem is not null)
             {
                 String selectedFont = this.comboBoxFont.SelectedItem.ToString();
-                _mainWindow.SetFont(selectedFont, Int32.Parse(this.comboBoxFontSize.SelectedItem.ToString()));
+                this._mainWindow.SetFont(selectedFont, Int32.Parse(this.comboBoxFontSize.SelectedItem.ToString()));
 
                 Properties.Settings.Default["ApplicationFontFamily"] = selectedFont;
             }
