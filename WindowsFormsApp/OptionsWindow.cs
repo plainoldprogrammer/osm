@@ -85,7 +85,7 @@ namespace WindowsFormsApp
             {
                 int fontSize = 9;
                 Int32.TryParse(this.comboBoxFontSize.SelectedItem.ToString(), out fontSize);
-                _mainWindow.SetFontSize(fontSize);
+                this._mainWindow.SetFontSize(fontSize);
 
                 Properties.Settings.Default["ApplicationFontSize"] = fontSize.ToString();
                 Properties.Settings.Default.Save();
