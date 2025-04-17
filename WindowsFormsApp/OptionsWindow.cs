@@ -40,7 +40,7 @@ namespace WindowsFormsApp
                 this.comboBoxTheme.SelectedIndex = 1;
             }
 
-            Font font = _mainWindow.GetRichTextBoxSnippetContentFont();
+            Font font = this._mainWindow.GetRichTextBoxSnippetContentFont();
             int indexFont = this.comboBoxFont.Items.IndexOf(font.FontFamily.Name);
             this.comboBoxFont.SelectedIndex = indexFont;
 
