@@ -44,7 +44,7 @@ namespace WindowsFormsApp
             int indexFont = this.comboBoxFont.Items.IndexOf(font.FontFamily.Name);
             this.comboBoxFont.SelectedIndex = indexFont;
 
-            float fontSize = _mainWindow.GetRichTextBoxSnippetContentFontSize();
+            float fontSize = this._mainWindow.GetRichTextBoxSnippetContentFontSize();
             int indexFontSize = this.comboBoxFontSize.Items.IndexOf(((int)fontSize).ToString());
             this.comboBoxFontSize.SelectedIndex = indexFontSize;
 
