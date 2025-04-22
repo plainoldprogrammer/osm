@@ -513,7 +513,7 @@ namespace WindowsFormsApp
                 String title = ((TextBox)sender).Text;
                 Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
                 selectedSnippet.Title = title;
-                _databaseAccess.UpdateSnippet(selectedSnippet);
+                this._databaseAccess.UpdateSnippet(selectedSnippet);
             }
         }
 
