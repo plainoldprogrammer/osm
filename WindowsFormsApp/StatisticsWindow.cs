@@ -42,7 +42,7 @@ namespace WindowsFormsApp
 		private void RefreshStatistics()
 		{
 			this.labelValueNumberOfCategories.Text = this._databaseAccess.GetNumberOfCategories().ToString();
-			this.labelValueNumberOfSnippets.Text = _databaseAccess.GetNumberOfSnippets().ToString();
+			this.labelValueNumberOfSnippets.Text = this._databaseAccess.GetNumberOfSnippets().ToString();
 		}
 	}
 }
