@@ -19,8 +19,8 @@ namespace WindowsFormsApp
     public partial class MainWindow : System.Windows.Forms.Form
     {
         private const String _ReleaseType = "Alpha";
-        private const String _VersionNumber = "0.5";
-        private const String _Version = $"{_VersionNumber} ({_ReleaseType})";
+        private const String _ReleaseNumber = "0.5";
+        private const String _Version = $"{_ReleaseNumber} ({_ReleaseType})";
 
         private const String _Year = "2023";
         private const String _Month = "August";
