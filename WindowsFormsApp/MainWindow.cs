@@ -510,7 +510,7 @@ namespace WindowsFormsApp
         {
             if (this.listBoxSnippets.Items.Count > 0)
             {
-                String title = ((TextBox)sender).Text;
+                String title = ((TextBox) sender).Text;
                 Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
                 selectedSnippet.Title = title;
                 this._databaseAccess.UpdateSnippet(selectedSnippet);
