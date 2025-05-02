@@ -540,7 +540,7 @@ namespace WindowsFormsApp
 
         private void richTextBoxSnippetContent_TextChanged(object sender, EventArgs e)
         {
-            String content = ((RichTextBox)sender).Text;
+            String content = ((RichTextBox) sender).Text;
             Snippet selectedSnippet = this.listBoxSnippets.SelectedItem as Snippet;
 
             if (selectedSnippet is not null)
