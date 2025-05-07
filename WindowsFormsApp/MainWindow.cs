@@ -252,7 +252,13 @@ namespace WindowsFormsApp
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String message = $"Osm{Environment.NewLine}Other Snippet Manager{Environment.NewLine}Version: {_Version}{Environment.NewLine}Release Date: {_ReleaseDate}{Environment.NewLine}Developer: PlainOldProgrammer";
+            String message = 
+                $"Osm {Environment.NewLine}" +
+                $"Other Snippet Manager{Environment.NewLine}" +
+                $"Version: {_Version}{Environment.NewLine}" +
+                $"Release Date: {_ReleaseDate}{Environment.NewLine}" +
+                "Developer: PlainOldProgrammer";
+
             MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
