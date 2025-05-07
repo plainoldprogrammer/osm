@@ -391,7 +391,7 @@ namespace WindowsFormsApp
                 if (userSelection == DialogResult.OK)
                 {
                     int index = this.listBoxCategories.SelectedIndex;
-                    Category selectedCategory = listBoxCategories.SelectedItem as Category;
+                    Category selectedCategory = this.listBoxCategories.SelectedItem as Category;
                     this.listBoxCategories.Items.RemoveAt(index);
 
                     if (index > 0)
