@@ -284,7 +284,7 @@ namespace WindowsFormsApp
                     Rectangle textRectangle = e.Bounds;
                     textRectangle.X += 18;
 
-                    e.Graphics.DrawString((listBoxCategories.Items[e.Index] as Category).Category1, e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
+                    e.Graphics.DrawString((this.listBoxCategories.Items[e.Index] as Category).Category1, e.Font, Brushes.Black, textRectangle, StringFormat.GenericDefault);
                     e.DrawFocusRectangle();
                 }
             }
