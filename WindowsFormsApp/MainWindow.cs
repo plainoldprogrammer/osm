@@ -392,7 +392,8 @@ namespace WindowsFormsApp
         {
             if (this.listBoxCategories.Items.Count > 0)
             {
-                DialogResult userSelection = MessageBox.Show("Remove category and all related snippets?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                DialogResult userSelection = MessageBox.Show("Remove category and all related snippets?", "Confirmation", 
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
                 if (userSelection == DialogResult.OK)
                 {
