@@ -362,7 +362,7 @@ namespace WindowsFormsApp
                     Rectangle textRectangle = e.Bounds;
                     textRectangle.X += 18;
 
-                    e.Graphics.DrawString((listBoxSnippets.Items[e.Index] as Snippet).Title,
+                    e.Graphics.DrawString((this.listBoxSnippets.Items[e.Index] as Snippet).Title,
                         e.Font, Brushes.White, textRectangle, StringFormat.GenericDefault);
 
                     e.DrawFocusRectangle();
