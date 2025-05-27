@@ -259,7 +259,9 @@ namespace WindowsFormsApp
                 $"Release Date: {_ReleaseDate}{Environment.NewLine}" +
                 "Developer: PlainOldProgrammer";
 
-            MessageBox.Show(message, "About Osm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            String title = "About Osm";
+
+            MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void listBoxCategories_DrawItem(object sender, DrawItemEventArgs e)
