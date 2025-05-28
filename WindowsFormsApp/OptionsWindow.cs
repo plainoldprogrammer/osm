@@ -134,7 +134,7 @@ namespace WindowsFormsApp
 
         public void SetFontSize(int fontSize)
         {
-            int indexFontSize = this.comboBoxFontSize.Items.IndexOf(((int)fontSize).ToString());
+            int indexFontSize = this.comboBoxFontSize.Items.IndexOf(((int) fontSize).ToString());
 
             this.comboBoxFontSize.SelectedIndex = indexFontSize;
             this._mainWindow.SetFontSize(fontSize);
