@@ -73,7 +73,9 @@ namespace WindowsFormsApp
         {
             this.Text = $"Osm v{_Version}";
             this.richTextBoxSnippetContent.AcceptsTab = true;
-            SetTabWidth(this.richTextBoxSnippetContent, 1);
+
+            int tabWidth = 1;
+            SetTabWidth(this.richTextBoxSnippetContent, tabWidth);
 
             var applicationThemeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationTheme"];
 
