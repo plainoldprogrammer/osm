@@ -259,7 +259,7 @@ namespace WindowsFormsApp
                 $"Other Snippet Manager{Environment.NewLine}" +
                 $"Version: {_Version}{Environment.NewLine}" +
                 $"Release Date: {_ReleaseDate}{Environment.NewLine}" +
-                "Developer: PlainOldProgrammer";
+                $"Developer: PlainOldProgrammer";
 
             String title = "About Osm";
 
