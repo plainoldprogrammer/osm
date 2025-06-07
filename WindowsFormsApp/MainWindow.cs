@@ -41,7 +41,7 @@ namespace WindowsFormsApp
 
         public MainWindow()
         {
-            // this.EnableDebuggingConsole();
+            this.EnableDebuggingConsole();
 
             InitializeComponent();
 
