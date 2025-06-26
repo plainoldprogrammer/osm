@@ -17,7 +17,7 @@
 ### Version History
 **Version 0.5 (Alpha)**
 * It's possible to select the theme, font and size in the options window.
-* Enabled the cut, copy, paste and select all options
+* Enabled the cut, copy, paste and select all options.
 * Values on the options window are stored in the application settings.
 * Introduced a new statistics windows to show a brief report of the snippets.
 * The application default size has been adjusted to be more productive.
