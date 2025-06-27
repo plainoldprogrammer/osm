@@ -42,7 +42,7 @@
 * Enabling saving and editing of categories and snippets in the DB.
 
 **Version 0.2 (Alpha)**
-* Upgraded to .NET 5
+* Upgraded to .NET 5.
 * Each category has a folder icon to make more intuitive the GUI.
 * Each snippet has a file icon to make more intuitive the GUI.
 
