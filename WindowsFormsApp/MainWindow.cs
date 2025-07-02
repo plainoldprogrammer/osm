@@ -28,7 +28,7 @@ namespace WindowsFormsApp
         private const String _ReleaseDate = $"{_Year} {_Month} {_Day}";
 
         private const string _DefaultFontSize = "9";
-        private int tabWidth = 1;
+        private const int _TabWidth = 1;
 
         private DatabaseAccess _databaseAccess;
 
@@ -75,7 +75,7 @@ namespace WindowsFormsApp
             this.Text = $"Osm v{_Version}";
             this.richTextBoxSnippetContent.AcceptsTab = true;
 
-            SetTabWidth(this.richTextBoxSnippetContent, tabWidth);
+            SetTabWidth(this.richTextBoxSnippetContent, _TabWidth);
 
             var applicationThemeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationTheme"];
 
