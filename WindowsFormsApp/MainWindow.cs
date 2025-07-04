@@ -21,6 +21,7 @@ namespace WindowsFormsApp
         private const String _ReleaseType = "Alpha";
         private const String _ReleaseNumber = "0.5";
         private const String _Version = $"{_ReleaseNumber} ({_ReleaseType})";
+        private const String _Developer = "PlainOldProgrammer";
 
         private const String _Year = "2023";
         private const String _Month = "August";
@@ -259,7 +260,7 @@ namespace WindowsFormsApp
                 $"Other Snippet Manager{Environment.NewLine}" +
                 $"Version: {_Version}{Environment.NewLine}" +
                 $"Release Date: {_ReleaseDate}{Environment.NewLine}" +
-                $"Developer: PlainOldProgrammer";
+                $"Developer: {_Developer}";
 
             String title = "About Osm";
 
