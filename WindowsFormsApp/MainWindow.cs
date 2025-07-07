@@ -28,7 +28,7 @@ namespace WindowsFormsApp
         private const String _Day = "11";
         private const String _ReleaseDate = $"{_Year} {_Month} {_Day}";
 
-        private const string _DefaultFontSize = "9";
+        private const String _DefaultFontSize = "9";
         private const int _TabWidth = 1;
 
         private DatabaseAccess _databaseAccess;
