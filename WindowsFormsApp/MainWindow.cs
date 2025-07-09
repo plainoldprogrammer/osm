@@ -44,9 +44,7 @@ namespace WindowsFormsApp
         public MainWindow()
         {
             this.EnableDebuggingConsole();
-
             InitializeComponent();
-
             this.InitializeDatabaseAcess();
 
             this._createCategoryWindow = new CreateCategoryWindow(this, this._databaseAccess);
@@ -54,7 +52,6 @@ namespace WindowsFormsApp
             this._statisticsWindow = new StatisticsWindow(this, this._databaseAccess);
 
             this.InitializeGui();
-
             this.CenterToScreen();
         }
 
