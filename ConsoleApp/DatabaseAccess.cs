@@ -18,7 +18,7 @@ namespace ConsoleApp
 
         public DatabaseAccess()
         {
-            snippetsContext = new SnippetsContext();
+            this.snippetsContext = new SnippetsContext();
         }
 
         public void CreateCategory(String categoryName)
