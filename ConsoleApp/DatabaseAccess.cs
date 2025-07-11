@@ -59,7 +59,7 @@ namespace ConsoleApp
 
         public List<Snippet> GetAllSnippetsFromCategory(Category category)
         {
-            List<Snippet> snippets = snippetsContext.Snippets.Select(x => x).Where(y => y.Category == category).ToList<Snippet>();
+            List<Snippet> snippets = this.snippetsContext.Snippets.Select(x => x).Where(y => y.Category == category).ToList<Snippet>();
             return snippets;
         }
 
