@@ -43,7 +43,7 @@ namespace WindowsFormsApp
 
         public MainWindow()
         {
-            this.EnableDebuggingConsole();
+            this.EnableDebuggingConsole(true);
             InitializeComponent();
             this.InitializeDatabaseAcess();
 
@@ -55,11 +55,14 @@ namespace WindowsFormsApp
             this.CenterToScreen();
         }
 
-        private void EnableDebuggingConsole()
+        private void EnableDebuggingConsole(bool isEnabled)
         {
-            if (Debugger.IsAttached)
+            if (isEnabled)
             {
-                AllocConsole();
+                if (Debugger.IsAttached)
+                {
+                    AllocConsole();
+                }
             }
         }
 
