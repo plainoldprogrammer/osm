@@ -207,7 +207,8 @@ namespace WindowsFormsApp
                 }
             }
 
-            if (this.listBoxCategories.Items.Count == 0 || this.listBoxSnippets.Items.Count == 0)
+            if (this.listBoxCategories.Items.Count == 0 
+                || this.listBoxSnippets.Items.Count == 0)
             {
                 this.buttonRemoveSnippet.Enabled = false;
                 this.textBoxSnippetTitle.Enabled = false;
