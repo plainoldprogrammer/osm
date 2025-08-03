@@ -71,7 +71,7 @@ namespace ConsoleApp
 
         public String GetDatabasePath()
         {
-            String db = snippetsContext.Database.GetDbConnection().DataSource;
+            String db = this.snippetsContext.Database.GetDbConnection().DataSource;
             return db;
         }
 
