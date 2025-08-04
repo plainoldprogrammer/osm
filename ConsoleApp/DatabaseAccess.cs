@@ -27,7 +27,7 @@ namespace ConsoleApp
             {
                 Category1 = categoryName
             };
-            snippetsContext.Add<Category>(category);
+            this.snippetsContext.Add<Category>(category);
             snippetsContext.SaveChanges();
         }
 
