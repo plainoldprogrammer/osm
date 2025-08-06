@@ -28,7 +28,7 @@ namespace ConsoleApp
                 Category1 = categoryName
             };
             this.snippetsContext.Add<Category>(category);
-            snippetsContext.SaveChanges();
+            this.snippetsContext.SaveChanges();
         }
 
         public void RemoveCategory(Category category)
