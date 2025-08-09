@@ -41,7 +41,7 @@ namespace ConsoleApp
 
         public List<Category> GetCategories()
         {
-            List<Category> categories = snippetsContext.Categories.Select(x => x).ToList<Category>();
+            List<Category> categories = this.snippetsContext.Categories.Select(x => x).ToList<Category>();
             return categories;
         }
 
