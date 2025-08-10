@@ -83,7 +83,7 @@ namespace ConsoleApp
 
         public int GetNumberOfCategories()
         {
-            var result = snippetsContext.Categories.Count();
+            var result = this.snippetsContext.Categories.Count();
             return result;
         }
     }
