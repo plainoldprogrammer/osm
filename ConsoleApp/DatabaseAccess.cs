@@ -65,7 +65,7 @@ namespace ConsoleApp
 
         public void UpdateSnippet(Snippet snippet)
         {
-            snippetsContext.Snippets.Update(snippet);
+            this.snippetsContext.Snippets.Update(snippet);
             snippetsContext.SaveChanges();
         }
 
