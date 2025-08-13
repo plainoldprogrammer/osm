@@ -66,7 +66,7 @@ namespace ConsoleApp
         public void UpdateSnippet(Snippet snippet)
         {
             this.snippetsContext.Snippets.Update(snippet);
-            snippetsContext.SaveChanges();
+            this.snippetsContext.SaveChanges();
         }
 
         public String GetDatabasePath()
