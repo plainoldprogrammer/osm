@@ -47,7 +47,7 @@ namespace ConsoleApp
 
         public void CreateSnippet(Snippet snippet)
         {
-            snippetsContext.Add<Snippet>(snippet);
+            this.snippetsContext.Add<Snippet>(snippet);
             snippetsContext.SaveChanges();
         }
 
