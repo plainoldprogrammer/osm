@@ -53,7 +53,7 @@ namespace ConsoleApp
 
         public void RemoveSnippet(Snippet snippet)
         {
-            snippetsContext.Snippets.Remove(snippet);
+            this.snippetsContext.Snippets.Remove(snippet);
             snippetsContext.SaveChanges();
         }
 
