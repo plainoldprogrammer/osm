@@ -54,7 +54,7 @@ namespace ConsoleApp
         public void RemoveSnippet(Snippet snippet)
         {
             this.snippetsContext.Snippets.Remove(snippet);
-            snippetsContext.SaveChanges();
+            this.snippetsContext.SaveChanges();
         }
 
         public List<Snippet> GetAllSnippetsFromCategory(Category category)
