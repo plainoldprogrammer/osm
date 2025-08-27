@@ -10,7 +10,7 @@ namespace ConsoleApp
 {
     public class Program
     {
-        static void Main(String[] args)
+        public static void Main(String[] args)
         {
             DatabaseAccess databaseAccess = new DatabaseAccess();
         }
