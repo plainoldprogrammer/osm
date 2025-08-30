@@ -467,7 +467,7 @@ namespace WindowsFormsApp
             this.textBoxSnippetTitle.Text = titleOfNewSnippet;
             this.textBoxSnippetTitle.Focus();
 
-            if (!this.textBoxSnippetTitle.Enabled && !this.richTextBoxSnippetContent.Enabled)
+            if ((!this.textBoxSnippetTitle.Enabled) && (!this.richTextBoxSnippetContent.Enabled))
             {
                 this.textBoxSnippetTitle.Enabled = true;
                 this.richTextBoxSnippetContent.Enabled = true;
