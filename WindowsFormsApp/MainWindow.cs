@@ -203,7 +203,7 @@ namespace WindowsFormsApp
                 else
                 {
                     this.textBoxSnippetTitle.Text = String.Empty;
-                    this.richTextBoxSnippetContent.Text = "";
+                    this.richTextBoxSnippetContent.Text = String.Empty;
                 }
             }
 
