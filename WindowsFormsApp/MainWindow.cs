@@ -432,7 +432,7 @@ namespace WindowsFormsApp
                         this.textBoxSnippetTitle.Enabled = false;
                         this.richTextBoxSnippetContent.Enabled = false;
 
-                        this.textBoxSnippetTitle.Text = "";
+                        this.textBoxSnippetTitle.Text = String.Empty;
                         this.richTextBoxSnippetContent.Text = "";
                     }
 
