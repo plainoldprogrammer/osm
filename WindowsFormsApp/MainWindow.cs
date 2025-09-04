@@ -433,7 +433,7 @@ namespace WindowsFormsApp
                         this.richTextBoxSnippetContent.Enabled = false;
 
                         this.textBoxSnippetTitle.Text = String.Empty;
-                        this.richTextBoxSnippetContent.Text = "";
+                        this.richTextBoxSnippetContent.Text = String.Empty;
                     }
 
                     this._databaseAccess.RemoveCategory(selectedCategory);
