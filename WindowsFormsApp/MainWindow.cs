@@ -516,7 +516,7 @@ namespace WindowsFormsApp
                     this.buttonRemoveSnippet.Enabled = false;
                     this.buttonCopySnippet.Enabled = false;
 
-                    this.textBoxSnippetTitle.Text = "";
+                    this.textBoxSnippetTitle.Text = String.Empty;
                     this.richTextBoxSnippetContent.Text = "";
                 }
             }
