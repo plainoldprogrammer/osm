@@ -57,12 +57,9 @@ namespace WindowsFormsApp
 
         private void EnableDebuggingConsole(bool isEnabled)
         {
-            if (isEnabled)
+            if (isEnabled && Debugger.IsAttached)
             {
-                if (Debugger.IsAttached)
-                {
-                    AllocConsole();
-                }
+                AllocConsole();
             }
         }
 
