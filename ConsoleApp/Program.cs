@@ -10,9 +10,7 @@ namespace ConsoleApp
 {
     public class Program
     {
-        /*
-         * Only for testing purposes.
-         */
+        // Only for testing purposes.
         public static void Main(String[] args)
         {
             DatabaseAccess databaseAccess = new DatabaseAccess();
