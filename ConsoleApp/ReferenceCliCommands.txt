@@ -27,7 +27,9 @@ Create the database (have created the folder structure C:\Plainoldprogrammer_dev
 Using PM in Visual Studio 2022
 --------------------------------------------------------------------------------------------------------------------------------
 
-NOTE: When using PM in Visual Studio make sure to select the correct project in "Default project" select box.
+NOTE 1: When using PM in Visual Studio make sure to select the correct project in "Default project" select box.
+
+NOTE 2: In order to use these commands, you need to have installed the appropiate NuGet packages.
 
 Scaffold DbContext using PM:
 PM> Scaffold-DbContext "DataSource=C:\Plainoldprogrammer_dev\Osm\db\snippets.db" Microsoft.EntityFrameworkCore.Sqlite -Context SnippetsContext -OutputDir Models -Force
