@@ -44,6 +44,7 @@ namespace WindowsFormsApp
         public MainWindow()
         {
             this.EnableDebuggingConsole(true);
+
             InitializeComponent();
             this.InitializeDatabaseAcess();
 
