@@ -77,7 +77,7 @@ namespace ConsoleApp
 
         public int GetNumberOfSnippets()
         {
-            var result = this.snippetsContext.Snippets.Count();
+            int result = this.snippetsContext.Snippets.Count();
             return result;
         }
 
