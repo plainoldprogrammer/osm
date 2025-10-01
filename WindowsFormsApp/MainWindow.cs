@@ -76,7 +76,7 @@ namespace WindowsFormsApp
 
             SetTabWidth(this.richTextBoxSnippetContent, _TabWidth);
 
-            var applicationThemeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationTheme"];
+            Object applicationThemeOnConfig = WindowsFormsApp.Properties.Settings.Default["ApplicationTheme"];
 
             if (applicationThemeOnConfig.ToString().ToLower().Equals(String.Empty) || 
                 applicationThemeOnConfig.ToString().ToLower().Equals("light"))
