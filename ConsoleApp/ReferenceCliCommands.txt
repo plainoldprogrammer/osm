@@ -17,7 +17,7 @@ Add a migration:
 Update the database based on migrations:
 > dotnet ef database update
 
-Create the database (have created the folder structure C:\Plainoldprogrammer_dev\Osm\db):
+Create the database (requieres that the folder C:\Plainoldprogrammer_dev\Osm\db\ already exists):
 > dotnet ef database update
 
 
