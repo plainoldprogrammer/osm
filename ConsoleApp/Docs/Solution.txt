@@ -1,0 +1,3 @@
+Osm
+    -Console Application
+    -WinForms Application
