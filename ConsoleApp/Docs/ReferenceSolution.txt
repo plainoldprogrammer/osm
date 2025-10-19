@@ -1,3 +1,3 @@
 Osm (.NET Core)
-    -Console Application  (C#) (Database) (Entity Framework)
+    -Console Application  (C#) (Entity Framework) (Database) 
     -WinForms Application (C#)
