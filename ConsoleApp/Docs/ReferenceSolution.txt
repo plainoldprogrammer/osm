@@ -1,3 +1,3 @@
-Osm (.NET Core)
+Osm (.NET Core) (Solution)
     -Console Application  (C#) (Linq) (Entity Framework) (Database) 
     -WinForms Application (C#) (Linq) (UI)
