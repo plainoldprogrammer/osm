@@ -1,3 +1,3 @@
 Osm (.NET Core) (Solution)
-    -Console Application  (C#) (Linq) (Entity Framework) (Database) 
-    -WinForms Application (C#) (Linq) (UI)
+    -Console Application  (C#) (Linq) (Entity Framework) (Database) (Project)
+    -WinForms Application (C#) (Linq) (UI) (Project)
