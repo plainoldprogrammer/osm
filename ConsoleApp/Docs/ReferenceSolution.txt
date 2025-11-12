@@ -1,5 +1,5 @@
 Osm (.NET Core) (Solution)
     - Console Application  (C#) (LINQ) (Entity Framework) (Database) (Project)
+        - Sqlite (DB) (Entity Framework)
+        - Docs (TXT) (CLI) (SQL) (Files)
     - WinForms Application (C#) (LINQ) (UI) (WinForms) (Project)
-    - Sqlite (DB) (Entity Framework)
-    - Docs (TXT) (CLI) (SQL) (Files)
