@@ -1,4 +1,4 @@
-Osm (.NET Core) (Solution)
+Osm (.NET Core) (Solution) (Visual Studio)
     - Console Application  (C#) (LINQ) (Entity Framework) (DB) (Project)
         - Sqlite (DB) (Entity Framework)
         - Docs (TXT) (CLI) (SQL) (Files)
